@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title>rails</dc:title>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<title>rails</title>
+<desc>Created with Sketch.</desc>
+<g transform="matrix(1.1111 0 0 1.6 36.834 12.202)" fill="#f5df4d" stroke="#f5df4d">
+<g fill="#f5df4d" fill-rule="evenodd" stroke="#f5df4d">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,50)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(144)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,50)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,100)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,50)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(144)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,50)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+<g transform="translate(0,10)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,20)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,30)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+<g transform="translate(0,40)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(72)">
+<g transform="translate(-34.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(-16.651 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(1.3495 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+<g transform="translate(19.349 -8.126)">
+<g fill="#f5df4d" stroke="#f5df4d">
+<path d="m16 6h-10v4h-2v-4h-2v-2h2v-4h2v4h10v-4h2v4h2v2h-2v4h-2z" fill="#f5df4d" stroke="#f5df4d"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

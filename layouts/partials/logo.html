@@ -1,0 +1,55 @@
+
+ <div class="logo-wrapper">
+
+	  <div class="my-logo">
+	    <h1 class="name"><a href="{{ "" | absURL }}">Alan Ryan</a></h1>
+	  </div>	
+</div>
+
+<style>
+.logo-wrapper{
+  visibility: hidden;
+}
+.my-logo,
+.tagline {
+  overflow:hidden;
+  margin-left: auto;
+}
+.name
+ {
+  margin-left: var(--gap);
+  text-align: left;
+  width: 220px;
+  line-height: 1.2;
+  font-size: 40px;
+  color: #F5DF4D;
+}
+.tag
+ {
+  margin: 0;
+  text-align: left;
+  width: 584px;
+  font-size: 28px;
+  color: white;
+  letter-spacing: 1px; 
+}
+</style>
+<script>
+
+gsap.registerPlugin(SplitText, GSDevTools);
+
+function init(){
+ gsap.set(".logo-wrapper", {autoAlpha:1})
+	
+ let taglineSplit = new SplitText( ".tag", {type:"chars, words"})
+ 
+ let animation = gsap.timeline()
+ .from(".my-logo", {width:0, ease:"power1.in", duration:0.3})
+ .from(taglineSplit.chars, {yPercent:-140, stagger:0.05})
+
+
+}
+ 
+window.addEventListener("load", init);
+</script>
+
