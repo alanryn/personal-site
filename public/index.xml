@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Alan Ryan</title>
-    <link>http://example.org/</link>
+    <link>sleepy-cori-fc6bbb.netlify.app/</link>
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jan 2021 16:19:53 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jan 2021 16:19:53 +0000</lastBuildDate><atom:link href="sleepy-cori-fc6bbb.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
-      <link>http://example.org/contact/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/contact/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/contact/</guid>
       <description>Name  Email Address  Your Message  Send  </description>
     </item>
     
     <item>
       <title>Adding Metafields to Product Variants</title>
-      <link>http://example.org/blog/product-variant-metafields/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/blog/product-variant-metafields/</link>
       <pubDate>Sat, 02 Jan 2021 16:19:53 +0000</pubDate>
       
-      <guid>http://example.org/blog/product-variant-metafields/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/blog/product-variant-metafields/</guid>
       <description>B y By using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.
 The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, here&amp;rsquo;s how.
 A metafield consists of a namespace, a key, a value, and an optional description.</description>
@@ -29,28 +29,28 @@ A metafield consists of a namespace, a key, a value, and an optional description
     
     <item>
       <title>Adding a Custom Font</title>
-      <link>http://example.org/blog/add-custom-font/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/blog/add-custom-font/</link>
       <pubDate>Thu, 31 Dec 2020 16:20:05 +0000</pubDate>
       
-      <guid>http://example.org/blog/add-custom-font/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/blog/add-custom-font/</guid>
       <description>Coming soon&amp;hellip;</description>
     </item>
     
     <item>
       <title>Customized Header &amp; Footer</title>
-      <link>http://example.org/blog/customized-header-footer/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/blog/customized-header-footer/</link>
       <pubDate>Thu, 31 Dec 2020 16:20:00 +0000</pubDate>
       
-      <guid>http://example.org/blog/customized-header-footer/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/blog/customized-header-footer/</guid>
       <description>Work in progress&amp;hellip;</description>
     </item>
     
     <item>
       <title>Adding a Customized Size Swatch</title>
-      <link>http://example.org/blog/adding-swatches/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/blog/adding-swatches/</link>
       <pubDate>Wed, 30 Dec 2020 16:20:14 +0000</pubDate>
       
-      <guid>http://example.org/blog/adding-swatches/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/blog/adding-swatches/</guid>
       <description>M any Many themes come with a dropdown as the default size selector. Here&amp;rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&amp;rsquo;m using Shopify&amp;rsquo;s Venture theme, but it should be similar for most other themes.
 In the product-template.liquid file in the sections folder search for the code beginning with:
  {% unless product.has_only_default_variant %} and ending with :</description>
@@ -58,60 +58,60 @@ In the product-template.liquid file in the sections folder search for the code b
     
     <item>
       <title>Self-Contained</title>
-      <link>http://example.org/projects/self-contained/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/projects/self-contained/</link>
       <pubDate>Mon, 28 Dec 2020 17:15:42 +0000</pubDate>
       
-      <guid>http://example.org/projects/self-contained/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/projects/self-contained/</guid>
       <description>Garden solutions for the spatially challenged
 View site</description>
     </item>
     
     <item>
       <title>Umbrella Store</title>
-      <link>http://example.org/projects/umbrella-store/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/projects/umbrella-store/</link>
       <pubDate>Mon, 28 Dec 2020 17:14:45 +0000</pubDate>
       
-      <guid>http://example.org/projects/umbrella-store/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/projects/umbrella-store/</guid>
       <description>Sunny Day Umbrellas.
 View Site</description>
     </item>
     
     <item>
       <title>Oporto Call</title>
-      <link>http://example.org/projects/oportocall/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/projects/oportocall/</link>
       <pubDate>Mon, 28 Dec 2020 17:14:21 +0000</pubDate>
       
-      <guid>http://example.org/projects/oportocall/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/projects/oportocall/</guid>
       <description>Relocation and Tourist Services in the City of Porto and beyond.
 View site</description>
     </item>
     
     <item>
       <title>Sydney Brown</title>
-      <link>http://example.org/projects/sydney-brown/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/projects/sydney-brown/</link>
       <pubDate>Mon, 28 Dec 2020 17:14:00 +0000</pubDate>
       
-      <guid>http://example.org/projects/sydney-brown/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/projects/sydney-brown/</guid>
       <description>Vegan Shoes and Bags
 View site</description>
     </item>
     
     <item>
       <title>Abstract Art Store</title>
-      <link>http://example.org/projects/abstract-art/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/projects/abstract-art/</link>
       <pubDate>Mon, 28 Dec 2020 17:13:40 +0000</pubDate>
       
-      <guid>http://example.org/projects/abstract-art/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/projects/abstract-art/</guid>
       <description>Abstract art is art that does not attempt to represent an accurate depiction of a visual reality but instead use shapes, colours, forms and gestural marks to achieve its effect.
 View Site</description>
     </item>
     
     <item>
       <title>Word Reformed</title>
-      <link>http://example.org/projects/word-reformed/</link>
+      <link>sleepy-cori-fc6bbb.netlify.app/projects/word-reformed/</link>
       <pubDate>Sun, 27 Dec 2020 17:15:03 +0000</pubDate>
       
-      <guid>http://example.org/projects/word-reformed/</guid>
+      <guid>sleepy-cori-fc6bbb.netlify.app/projects/word-reformed/</guid>
       <description>A translation &amp;amp; content writing service
 View site</description>
     </item>
