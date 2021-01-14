@@ -1,4 +1,4 @@
-baseURL = "sleepy-cori-fc6bbb.netlify.app"
+baseURL = "https://sleepy-cori-fc6bbb.netlify.app"
 languageCode = "en-us"
 title = "Alan Ryan"
 theme = "alan-ryan"
