@@ -60,6 +60,7 @@ label {
 	font-weight: 500;
 	line-height: 1;
 	margin-bottom: -5px;
+        color:var(--primary);
 }
 input + label {
 	margin-top: 2rem;

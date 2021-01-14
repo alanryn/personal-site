@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/projects/</loc>
+    <lastmod>2020-12-28T17:13:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/</loc>
+    <lastmod>2020-12-28T17:13:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/product-variant-metafields/</loc>
+    <lastmod>2021-01-02T16:19:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2021-01-02T16:19:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/add-custom-font/</loc>
+    <lastmod>2020-12-31T16:20:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/customized-header-footer/</loc>
+    <lastmod>2020-12-31T16:20:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/blog/adding-swatches/</loc>
+    <lastmod>2020-12-30T16:20:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/projects/self-contained/</loc>
+    <lastmod>2020-12-28T17:15:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/projects/umbrella-store/</loc>
+    <lastmod>2020-12-28T17:14:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/projects/oportocall/</loc>
+    <lastmod>2020-12-28T17:14:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/projects/sydney-brown/</loc>
+    <lastmod>2020-12-28T17:14:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/projects/abstract-art/</loc>
+    <lastmod>2020-12-28T17:13:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/projects/word-reformed/</loc>
+    <lastmod>2020-12-27T17:15:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+  
+</urlset>

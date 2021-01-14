@@ -1,0 +1,12 @@
+name = "alan-ryan"
+description = "Shopify Portfolio Site"
+homepage = ""
+
+[author]
+  name = "Alan Ryan"
+  homepage = ""
+
+[original]
+  name = ""
+  homepage = ""
+  repo = ""

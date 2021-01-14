@@ -1,57 +1,41 @@
 {{- partial "header.html" . }}
 
-<header class="bio"><h1>Shopify developer. Customizations, fixes, complete store development, content creation and more.</h1></header>
+<header><h1>Shopify developer. Customizations, fixes, complete store development, content creation and more.</h1></header>
 
 <div class="wrapper">
 <h2>{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</h2>
-
 <ul class="reusable-grid">
 {{ range where .Site.RegularPages "Section" "projects" }}
-	<a href="{{.Permalink}}">
-	<li >
+	<a class="gallery-link" href="{{.Permalink}}">
+	<li>
 	<div class="container" style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}">
-			     
-	<div class="overlay"> </div>
 	</div>
 	</li>
 	 <h2>{{ .Title }}</h2> 
 	</a>
 {{- end }}
 </ul>
-
-
 <h2>{{ with .Site.GetPage "section" "blog" }}{{ .Title }}{{ end }}</h2>
 <ul class="reusable-grid">
-
 {{ range where .Site.RegularPages "Section" "blog" }}
-<a href="{{.Permalink}}">
+<a class="gallery-link" href="{{.Permalink}}">
 <li >
-<div class="container"style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}">
-<div class="overlay"> </div>
-</div>
+<div class="container"style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"></div>
 </li>
- <h2>{{ .Title }}</h2> 
+<h2>{{ .Title }}</h2> 
 </a>
 {{- end }}
 </ul>
-
-
 </div>
 
 
 {{- partial "footer.html" . }}
 
 <style>
-img {
-  display: block;
-  width: 100%;
- }
-
 .wrapper{
   max-width: 65rem;
   margin:1em auto;
-  
-  padding: 0 ;
+  padding: 1rem;
   overflow: hidden;
 }
 .reusable-grid {
@@ -73,28 +57,12 @@ li {
 h2 {
   text-align: center;
   font-size: 1.2em;
-  padding: 0.5em;
+  padding: 0.5rem;
   }
+
 .container {
   position: relative;
   height: 250px;
- 
-}
-.container:hover .overlay {
-  opacity: 0.75;
-  
-}
-.overlay {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: white;
 }
 
 </style>
