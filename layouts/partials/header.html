@@ -48,7 +48,7 @@
       <nav class="nav">
    	{{- partial "logo.html" . }}
         {{- if .Site.Menus.main }}
-        <ul class="menu">
+        <ul style="margin-top: 1rem"class="menu">
           {{- range .Site.Menus.main }}
           <li>
             <a href="{{ .URL }}">{{ .Name }}</a>
