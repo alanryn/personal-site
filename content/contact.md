@@ -5,3 +5,5 @@ weight: 3
 ---
 
 {{< form >}}
+{{< contact-links >}}
+

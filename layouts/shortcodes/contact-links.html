@@ -1,0 +1,28 @@
+<ul class="contacts-ul">
+<li class="contacts-li"><a href='https://community.shopify.com/c/user/viewprofilepage/user-id/340403'>Shopify Profile</a></li>
+<li class="contacts-li"><a href='https://github.com/al1973'>Github</a></li>
+<li class="contacts-li"><a href='https://codepen.io/al1973'>Codepen</a></li>
+</ul>
+
+<style>
+.contacts-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 1fr);
+  grid-gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1rem 0;
+}
+.contacts-li {
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.contacts-li a:hover,
+.contacts-li a:focus{
+  color:var(--focus);
+}
+.contacts-li a:focus{
+  outline:2px dotted;
+}
+</style>

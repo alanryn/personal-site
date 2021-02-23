@@ -6,14 +6,18 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jan 2021 16:19:53 +0000</lastBuildDate><atom:link href="https://shopify-portfolio.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Jan 2021 16:19:53 +0000</lastBuildDate>
+    
+	<atom:link href="https://shopify-portfolio.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Contact</title>
       <link>https://shopify-portfolio.netlify.app/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shopify-portfolio.netlify.app/contact/</guid>
-      <description>Name  Email Address  Your Message  Send  </description>
+      <description>Name  Email Address  Your Message  Send  Shopify Profile Github Codepen   .contacts-ul { display: grid; grid-template-columns: repeat(auto-fill, 1fr); grid-gap: 1rem; list-style: none; padding: 0; margin: 1rem 0 1rem 0; } .contacts-li { padding: 1rem; text-align: center; font-size: 2rem; } .contacts-li a:hover, .contacts-li a:focus{ color:var(--focus); } .contacts-li a:focus{ outline:2px dotted; }  </description>
     </item>
     
     <item>

@@ -6,7 +6,11 @@
     <description>Recent content in Latest Posts on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 28 Dec 2020 17:13:40 +0000</lastBuildDate><atom:link href="https://shopify-portfolio.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Dec 2020 17:13:40 +0000</lastBuildDate>
+    
+	<atom:link href="https://shopify-portfolio.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Adding Metafields to Product Variants</title>
       <link>https://shopify-portfolio.netlify.app/blog/product-variant-metafields/</link>
