@@ -131,6 +131,19 @@ gsap
 
 <article class="post-entry gallery-link">
   <header class="entry-header">
+    <h2>A customized subscribe modal popup</h2>
+  </header>
+  <section class="entry-content">
+   <p>Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
+ &lt;script&gt; var ready = (callback) =&gt; { if (document.readyState != &#34;loading&#34;) callback(); else document.addEventListener(&#34;DOMContentLoaded&#34;, callback); }; ready(() =&gt; { let fadeIn = {{settings.fadein}} * 1000; console.log(`fade in time is set to ${fadeIn}`); console.log(typeof(fadeIn)); const modal = document.getElementById(&#34;modal-id&#34;); const overlay = document.getElementById(&#34;overlay-id&#34;); setTimeout(function () { modal.classList.add(&#34;visible&#34;); overlay.classList.add(&#34;visible&#34;); }, fadeIn); document .querySelector(&#34;.closeBtn&#34;) .addEventListener(&#34;click&#34;, (e) =&gt; { modal....</p>
+  </section>
+  <footer class="entry-footer">
+    <time>March 7, 2021</time>
+  </footer>
+  <a class="entry-link" href="https://shopify-portfolio.netlify.app/blog/customized-subscribe-modal-popup/"></a>
+</article>
+<article class="post-entry gallery-link">
+  <header class="entry-header">
     <h2>Adding Metafields to Product Variants</h2>
   </header>
   <section class="entry-content">
@@ -142,18 +155,6 @@ A metafield consists of a namespace, a key, a value, and an optional description
     <time>January 2, 2021</time>
   </footer>
   <a class="entry-link" href="https://shopify-portfolio.netlify.app/blog/product-variant-metafields/"></a>
-</article>
-<article class="post-entry gallery-link">
-  <header class="entry-header">
-    <h2>Adding a Custom Font</h2>
-  </header>
-  <section class="entry-content">
-   <p>Coming soon…...</p>
-  </section>
-  <footer class="entry-footer">
-    <time>December 31, 2020</time>
-  </footer>
-  <a class="entry-link" href="https://shopify-portfolio.netlify.app/blog/add-custom-font/"></a>
 </article>
 <article class="post-entry gallery-link">
   <header class="entry-header">

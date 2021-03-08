@@ -6,7 +6,7 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Jan 2021 16:19:53 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 07 Mar 2021 16:20:05 +0000</lastBuildDate>
     
 	<atom:link href="https://shopify-portfolio.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,6 +21,16 @@
     </item>
     
     <item>
+      <title>A customized subscribe modal popup</title>
+      <link>https://shopify-portfolio.netlify.app/blog/customized-subscribe-modal-popup/</link>
+      <pubDate>Sun, 07 Mar 2021 16:20:05 +0000</pubDate>
+      
+      <guid>https://shopify-portfolio.netlify.app/blog/customized-subscribe-modal-popup/</guid>
+      <description>Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
+ &amp;lt;script&amp;gt; var ready = (callback) =&amp;gt; { if (document.readyState != &amp;quot;loading&amp;quot;) callback(); else document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, callback); }; ready(() =&amp;gt; { let fadeIn = {{settings.fadein}} * 1000; console.log(`fade in time is set to ${fadeIn}`); console.log(typeof(fadeIn)); const modal = document.getElementById(&amp;quot;modal-id&amp;quot;); const overlay = document.getElementById(&amp;quot;overlay-id&amp;quot;); setTimeout(function () { modal.classList.add(&amp;quot;visible&amp;quot;); overlay.classList.add(&amp;quot;visible&amp;quot;); }, fadeIn); document .querySelector(&amp;quot;.closeBtn&amp;quot;) .addEventListener(&amp;quot;click&amp;quot;, (e) =&amp;gt; { modal.</description>
+    </item>
+    
+    <item>
       <title>Adding Metafields to Product Variants</title>
       <link>https://shopify-portfolio.netlify.app/blog/product-variant-metafields/</link>
       <pubDate>Sat, 02 Jan 2021 16:19:53 +0000</pubDate>
@@ -29,15 +39,6 @@
       <description>B y By using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.
 The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, here&amp;rsquo;s how.
 A metafield consists of a namespace, a key, a value, and an optional description.</description>
-    </item>
-    
-    <item>
-      <title>Adding a Custom Font</title>
-      <link>https://shopify-portfolio.netlify.app/blog/add-custom-font/</link>
-      <pubDate>Thu, 31 Dec 2020 16:20:05 +0000</pubDate>
-      
-      <guid>https://shopify-portfolio.netlify.app/blog/add-custom-font/</guid>
-      <description>Coming soon&amp;hellip;</description>
     </item>
     
     <item>
