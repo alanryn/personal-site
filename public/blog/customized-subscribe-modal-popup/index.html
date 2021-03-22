@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
-    <title>A customized subscribe modal popup - Alan Ryan</title>
+    <title>Alan Ryan | Shopify Dev</title>
     
     <meta name="description" content="Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
  &lt;script&gt; var ready = (callback) =&gt; { if (document.readyState != &quot;loading&quot;) callback(); else document.addEventListener(&quot;DOMContentLoaded&quot;, callback); }; ready(() =&gt; { let fadeIn = {{settings.fadein}} * 1000; console.log(`fade in time is set to ${fadeIn}`); console.log(typeof(fadeIn)); const modal = document.getElementById(&quot;modal-id&quot;); const overlay = document.getElementById(&quot;overlay-id&quot;); setTimeout(function () { modal.classList.add(&quot;visible&quot;); overlay.classList.add(&quot;visible&quot;); }, fadeIn); document .querySelector(&quot;.closeBtn&quot;) .addEventListener(&quot;click&quot;, (e) =&gt; { modal.">
@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     
+
     <link href="https://shopify-portfolio.netlify.app/style.css" rel="stylesheet">
     <link href="https://shopify-portfolio.netlify.app/custom.css" rel="stylesheet">
     
@@ -24,8 +25,9 @@
 
     <script src="https://shopify-portfolio.netlify.app/custom.js"></script>
     
-    <link rel="apple-touch-icon" href="https://shopify-portfolio.netlify.app/apple-touch-icon.png">
-    <link rel="icon" href="https://shopify-portfolio.netlify.app/favicon.ico">
+
+ <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+
     <meta name="generator" content="Hugo 0.68.3" />
     
     
@@ -331,7 +333,8 @@ input[type=&quot;submit&quot;] {
 </code></pre><p>To make the popup content customizable in the theme editor.</p>
 <p>Finally add the following code to your theme.liquid file. Place the code before the closing body tag <!-- raw HTML omitted -->.</p>
 <p>The popup should now appear in your customizable theme settings:
-<img src="settings.png" alt="alt text"></p>
+<img src="images/settings1.png" alt="shopify theme settings"></p>
+<p><img src="images/settings.png" alt="shopify theme settings"></p>
 </div>
   
 </article></main>

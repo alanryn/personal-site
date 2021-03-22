@@ -17,7 +17,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://shopify-portfolio.netlify.app/contact/</guid>
-      <description>Name  Email Address  Your Message  Send  Shopify Profile Github Codepen   .contacts-ul { display: grid; grid-template-columns: repeat(auto-fill, 1fr); grid-gap: 1rem; list-style: none; padding: 0; margin: 1rem 0 1rem 0; } .contacts-li { padding: 1rem; text-align: center; font-size: 2rem; } .contacts-li a:hover, .contacts-li a:focus{ color:var(--focus); } .contacts-li a:focus{ outline:2px dotted; }  </description>
+      <description>I am a freelance frontend developer, specializing in all things Shopify. Contact me with any queries about Shopify or other related issues. I&#39;m avaialable for jobs big and small or if you just want some free advice. Name  Email Address  Your Message  Send  Shopify Profile Github Codepen   .contacts-ul { display: grid; grid-template-columns: repeat(auto-fill, 1fr); grid-gap: 1rem; list-style: none; padding: 0; margin: 1rem 0 1rem 0; } .</description>
     </item>
     
     <item>
@@ -28,6 +28,36 @@
       <guid>https://shopify-portfolio.netlify.app/blog/customized-subscribe-modal-popup/</guid>
       <description>Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
  &amp;lt;script&amp;gt; var ready = (callback) =&amp;gt; { if (document.readyState != &amp;quot;loading&amp;quot;) callback(); else document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, callback); }; ready(() =&amp;gt; { let fadeIn = {{settings.fadein}} * 1000; console.log(`fade in time is set to ${fadeIn}`); console.log(typeof(fadeIn)); const modal = document.getElementById(&amp;quot;modal-id&amp;quot;); const overlay = document.getElementById(&amp;quot;overlay-id&amp;quot;); setTimeout(function () { modal.classList.add(&amp;quot;visible&amp;quot;); overlay.classList.add(&amp;quot;visible&amp;quot;); }, fadeIn); document .querySelector(&amp;quot;.closeBtn&amp;quot;) .addEventListener(&amp;quot;click&amp;quot;, (e) =&amp;gt; { modal.</description>
+    </item>
+    
+    <item>
+      <title>Sydney Brown</title>
+      <link>https://shopify-portfolio.netlify.app/projects/sydney-brown/</link>
+      <pubDate>Mon, 01 Feb 2021 17:14:00 +0000</pubDate>
+      
+      <guid>https://shopify-portfolio.netlify.app/projects/sydney-brown/</guid>
+      <description>Vegan Shoes and Bags
+View site</description>
+    </item>
+    
+    <item>
+      <title>Abstract Art Store</title>
+      <link>https://shopify-portfolio.netlify.app/projects/abstract-art/</link>
+      <pubDate>Thu, 28 Jan 2021 17:13:40 +0000</pubDate>
+      
+      <guid>https://shopify-portfolio.netlify.app/projects/abstract-art/</guid>
+      <description>Abstract art is art that does not attempt to represent an accurate depiction of a visual reality but instead use shapes, colours, forms and gestural marks to achieve its effect.
+View Site</description>
+    </item>
+    
+    <item>
+      <title>Umbrella Store</title>
+      <link>https://shopify-portfolio.netlify.app/projects/umbrella-store/</link>
+      <pubDate>Wed, 27 Jan 2021 17:14:45 +0000</pubDate>
+      
+      <guid>https://shopify-portfolio.netlify.app/projects/umbrella-store/</guid>
+      <description>Sunny Day Umbrellas.
+View Site</description>
     </item>
     
     <item>
@@ -72,16 +102,6 @@ View site</description>
     </item>
     
     <item>
-      <title>Umbrella Store</title>
-      <link>https://shopify-portfolio.netlify.app/projects/umbrella-store/</link>
-      <pubDate>Mon, 28 Dec 2020 17:14:45 +0000</pubDate>
-      
-      <guid>https://shopify-portfolio.netlify.app/projects/umbrella-store/</guid>
-      <description>Sunny Day Umbrellas.
-View Site</description>
-    </item>
-    
-    <item>
       <title>Oporto Call</title>
       <link>https://shopify-portfolio.netlify.app/projects/oportocall/</link>
       <pubDate>Mon, 28 Dec 2020 17:14:21 +0000</pubDate>
@@ -92,26 +112,6 @@ View site</description>
     </item>
     
     <item>
-      <title>Sydney Brown</title>
-      <link>https://shopify-portfolio.netlify.app/projects/sydney-brown/</link>
-      <pubDate>Mon, 28 Dec 2020 17:14:00 +0000</pubDate>
-      
-      <guid>https://shopify-portfolio.netlify.app/projects/sydney-brown/</guid>
-      <description>Vegan Shoes and Bags
-View site</description>
-    </item>
-    
-    <item>
-      <title>Abstract Art Store</title>
-      <link>https://shopify-portfolio.netlify.app/projects/abstract-art/</link>
-      <pubDate>Mon, 28 Dec 2020 17:13:40 +0000</pubDate>
-      
-      <guid>https://shopify-portfolio.netlify.app/projects/abstract-art/</guid>
-      <description>Abstract art is art that does not attempt to represent an accurate depiction of a visual reality but instead use shapes, colours, forms and gestural marks to achieve its effect.
-View Site</description>
-    </item>
-    
-    <item>
       <title>Word Reformed</title>
       <link>https://shopify-portfolio.netlify.app/projects/word-reformed/</link>
       <pubDate>Sun, 27 Dec 2020 17:15:03 +0000</pubDate>
@@ -119,6 +119,29 @@ View Site</description>
       <guid>https://shopify-portfolio.netlify.app/projects/word-reformed/</guid>
       <description>A translation &amp;amp; content writing service
 View site</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://shopify-portfolio.netlify.app/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shopify-portfolio.netlify.app/about/</guid>
+      <description>I am a freelance frontend developer, specializing in all things Shopify. Contact me with any queries about Shopify or any related issues. I&amp;rsquo;m avaialable for jobs big and small or if you just want some free advice advice or solutions.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://shopify-portfolio.netlify.app/resources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://shopify-portfolio.netlify.app/resources/</guid>
+      <description>RESOURCES
+SHOPIFY
+GRAPHQL
+JS
+CSS
+REACT</description>
     </item>
     
   </channel>
