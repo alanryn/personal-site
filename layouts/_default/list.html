@@ -15,7 +15,9 @@
 {{- else if .Data.Term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
+<a class="entry-link" href="{{ .Permalink }}">
 <article class="{{ $class }} gallery-link">
+
   <header class="entry-header">
     <h2>{{ .Title }}</h2>
   </header>
@@ -25,8 +27,9 @@
   <footer class="entry-footer">
     <time>{{ .Date.Format "January 2, 2006" }}</time>
   </footer>
-  <a class="entry-link" href="{{ .Permalink }}"></a>
+
 </article>
+</a>
 {{- end }}
 
 {{- if gt $paginator.TotalPages 1 }}

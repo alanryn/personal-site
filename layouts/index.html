@@ -1,69 +1,74 @@
 {{- partial "header.html" . }}
 
-<header><h1>Shopify developer. Customizations, fixes, complete store development, content creation and more.</h1></header>
+<header>
+  <h2 style="font-size: 3rem">
+    Shopify developer. Customizations, fixes, complete store development,
+    content creation and more.
+  </h2>
+</header>
 
 <div class="wrapper">
-<h2>{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</h2>
-<ul class="reusable-grid">
-{{ range where .Site.RegularPages "Section" "projects" }}
-	<a class="gallery-link" href="{{.Permalink}}">
-	<li>
-	<div class="container" style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}">
-	</div>
-	</li>
-	 <h2>{{ .Title }}</h2> 
-	</a>
-{{- end }}
-</ul>
-<h2>{{ with .Site.GetPage "section" "blog" }}{{ .Title }}{{ end }}</h2>
-<ul class="reusable-grid">
-{{ range where .Site.RegularPages "Section" "blog" }}
-<a class="gallery-link" href="{{.Permalink}}">
-<li >
-<div class="container"style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"></div>
-</li>
-<h2>{{ .Title }}</h2> 
-</a>
-{{- end }}
-</ul>
+  <h3>{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</h3>
+  <ul class="reusable-grid">
+    {{ range where .Site.RegularPages "Section" "projects" }}
+    <li class="gallery-link">
+      <a href="{{.Permalink}}">
+        <div
+          class="card"
+          style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"
+        ></div>
+
+        <h4>{{ .Title }}</h4>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
+  <h3>{{ with .Site.GetPage "section" "blog" }}{{ .Title }}{{ end }}</h3>
+  <ul class="reusable-grid">
+    {{ range where .Site.RegularPages "Section" "blog" }}
+    <li class="gallery-link">
+      <a href="{{.Permalink}}">
+        <div
+          class="card"
+          style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"
+        ></div>
+
+        <h4>{{ .Title }}</h4>
+      </a>
+    </li>
+    {{- end }}
+  </ul>
 </div>
 
-
 {{- partial "footer.html" . }}
-
 <style>
-.wrapper{
+/* home page grids */
+.wrapper {
   max-width: 65rem;
-  margin:1em auto;
+  margin: 1em auto;
   padding: 1rem;
   overflow: hidden;
+}
+.wrapper h3{
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+.wrapper h4 {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 0.5rem;
 }
 .reusable-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 1rem;
-}
-ul {
   list-style: none;
   padding: 0;
   margin: 1rem 0;
 }
-li {
-  padding: 0;
-  text-align: center;
-  color: #ffffff;
-  }
-
-h2 {
-  text-align: center;
-  font-size: 1.2em;
-  padding: 0.5rem;
-  }
-
-.container {
+.card {
   position: relative;
   height: 250px;
 }
-
 </style>
-
