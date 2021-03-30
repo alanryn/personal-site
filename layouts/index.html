@@ -8,7 +8,7 @@
 </header>
 
 <div class="wrapper">
-  <h3>{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</h3>
+  <h3><a href="/projects">{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</a></h3>
   <ul class="reusable-grid">
     {{ range where .Site.RegularPages "Section" "projects" }}
     <li class="gallery-link">
@@ -23,9 +23,9 @@
     </li>
     {{- end }}
   </ul>
-  <h3>{{ with .Site.GetPage "section" "blog" }}{{ .Title }}{{ end }}</h3>
+ <h3><a href="/tips">{{ with .Site.GetPage "section" "tips" }}{{ .Title }}{{ end }}</a></h3>
   <ul class="reusable-grid">
-    {{ range where .Site.RegularPages "Section" "blog" }}
+    {{ range where .Site.RegularPages "Section" "tips" }}
     <li class="gallery-link">
       <a href="{{.Permalink}}">
         <div
