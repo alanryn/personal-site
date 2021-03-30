@@ -8,34 +8,32 @@
 </header>
 
 <div class="wrapper">
-  <h3><a href="/projects">{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</a></h3>
+  <h3><a class="home-links" href="/projects">{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</a></h3>
   <ul class="reusable-grid">
     {{ range where .Site.RegularPages "Section" "projects" }}
-    <li class="gallery-link">
-      <a href="{{.Permalink}}">
+    <a class="gallery-link" href="{{.Permalink}}">
+    <li>
         <div
           class="card"
           style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"
         ></div>
-
-        <h4>{{ .Title }}</h4>
-      </a>
+        <h4>{{ .Title }}</h4>  
     </li>
+  </a>
     {{- end }}
   </ul>
- <h3><a href="/tips">{{ with .Site.GetPage "section" "tips" }}{{ .Title }}{{ end }}</a></h3>
+ <h3 ><a class="home-links" href="/tips">{{ with .Site.GetPage "section" "tips" }}{{ .Title }}{{ end }}</a></h3>
   <ul class="reusable-grid">
     {{ range where .Site.RegularPages "Section" "tips" }}
-    <li class="gallery-link">
-      <a href="{{.Permalink}}">
+    <a class="gallery-link" href="{{.Permalink}}">
+    <li>
         <div
           class="card"
           style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"
         ></div>
-
         <h4>{{ .Title }}</h4>
-      </a>
     </li>
+  </a>
     {{- end }}
   </ul>
 </div>
@@ -53,6 +51,13 @@
   text-align: center;
   font-size: 2rem;
   padding: 0.5rem;
+}
+.home-links :hover,
+.home-links:focus{
+  color:var(--focus);
+}
+.home-links:focus{
+  outline:2px dotted;
 }
 .wrapper h4 {
   text-align: center;
