@@ -26,7 +26,7 @@
 
     <meta name="generator" content="Hugo 0.68.3" />
     
-    <link rel="alternate" type="application/rss+xml" href="https://shopify-portfolio.netlify.app/projects/index.xml" title="Alan Ryan" />
+    <link rel="alternate" type="application/rss+xml" href="https://shopify-portfolio.netlify.app/tips/index.xml" title="Alan Ryan" />
     
     
   </head>
@@ -64,100 +64,69 @@
     </header>
     <main class="main">
 
-<header class="page-header"><h1>Projects</h1></header>
+<header class="page-header"><h1>Tips</h1></header>
 
-<a class="entry-link" href="https://shopify-portfolio.netlify.app/projects/sydney-brown/">
+<a class="entry-link" href="https://shopify-portfolio.netlify.app/tips/customized-subscribe-modal-popup/">
 <article class="post-entry gallery-link">
 
   <header class="entry-header">
-    <h2>Sydney Brown</h2>
+    <h2>A customized subscribe modal popup</h2>
   </header>
   <section class="entry-content">
-   <p>Vegan Shoes and Bags
-View site...</p>
+   <p>Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
+ &lt;script&gt; var ready = (callback) =&gt; { if (document.readyState != &#34;loading&#34;) callback(); else document.addEventListener(&#34;DOMContentLoaded&#34;, callback); }; ready(() =&gt; { let fadeIn = {{settings.fadein}} * 1000; console.log(`fade in time is set to ${fadeIn}`); console.log(typeof(fadeIn)); const modal = document.getElementById(&#34;modal-id&#34;); const overlay = document.getElementById(&#34;overlay-id&#34;); setTimeout(function () { modal.classList.add(&#34;visible&#34;); overlay.classList.add(&#34;visible&#34;); }, fadeIn); document .querySelector(&#34;.closeBtn&#34;) .addEventListener(&#34;click&#34;, (e) =&gt; { modal....</p>
   </section>
   <footer class="entry-footer">
-    <time>February 1, 2021</time>
+    <time>March 7, 2021</time>
   </footer>
 
 </article>
 </a>
-<a class="entry-link" href="https://shopify-portfolio.netlify.app/projects/abstract-art/">
+<a class="entry-link" href="https://shopify-portfolio.netlify.app/tips/product-variant-metafields/">
 <article class="post-entry gallery-link">
 
   <header class="entry-header">
-    <h2>Abstract Art Store</h2>
+    <h2>Adding Metafields to Product Variants</h2>
   </header>
   <section class="entry-content">
-   <p>Abstract art is art that does not attempt to represent an accurate depiction of a visual reality but instead use shapes, colours, forms and gestural marks to achieve its effect.
-View Site...</p>
+   <p>B y By using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.
+The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, here’s how.
+A metafield consists of a namespace, a key, a value, and an optional description....</p>
   </section>
   <footer class="entry-footer">
-    <time>January 28, 2021</time>
+    <time>January 2, 2021</time>
   </footer>
 
 </article>
 </a>
-<a class="entry-link" href="https://shopify-portfolio.netlify.app/projects/umbrella-store/">
+<a class="entry-link" href="https://shopify-portfolio.netlify.app/tips/customized-header-footer/">
 <article class="post-entry gallery-link">
 
   <header class="entry-header">
-    <h2>Umbrella Store</h2>
+    <h2>Customized Header &amp; Footer</h2>
   </header>
   <section class="entry-content">
-   <p>Sunny Day Umbrellas.
-View Site...</p>
+   <p>Work in progress…...</p>
   </section>
   <footer class="entry-footer">
-    <time>January 27, 2021</time>
+    <time>December 31, 2020</time>
   </footer>
 
 </article>
 </a>
-<a class="entry-link" href="https://shopify-portfolio.netlify.app/projects/self-contained/">
+<a class="entry-link" href="https://shopify-portfolio.netlify.app/tips/adding-swatches/">
 <article class="post-entry gallery-link">
 
   <header class="entry-header">
-    <h2>Self-Contained</h2>
+    <h2>Adding a Customized Size Swatch</h2>
   </header>
   <section class="entry-content">
-   <p>Garden solutions for the spatially challenged
-View site...</p>
+   <p>M any Many themes come with a dropdown as the default size selector. Here’s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I’m using Shopify’s Venture theme, but it should be similar for most other themes.
+In the product-template.liquid file in the sections folder search for the code beginning with:
+ {% unless product.has_only_default_variant %} and ending with :...</p>
   </section>
   <footer class="entry-footer">
-    <time>December 28, 2020</time>
-  </footer>
-
-</article>
-</a>
-<a class="entry-link" href="https://shopify-portfolio.netlify.app/projects/oportocall/">
-<article class="post-entry gallery-link">
-
-  <header class="entry-header">
-    <h2>Oporto Call</h2>
-  </header>
-  <section class="entry-content">
-   <p>Relocation and Tourist Services in the City of Porto and beyond.
-View site...</p>
-  </section>
-  <footer class="entry-footer">
-    <time>December 28, 2020</time>
-  </footer>
-
-</article>
-</a>
-<a class="entry-link" href="https://shopify-portfolio.netlify.app/projects/word-reformed/">
-<article class="post-entry gallery-link">
-
-  <header class="entry-header">
-    <h2>Word Reformed</h2>
-  </header>
-  <section class="entry-content">
-   <p>A translation &amp; content writing service
-View site...</p>
-  </section>
-  <footer class="entry-footer">
-    <time>December 27, 2020</time>
+    <time>December 30, 2020</time>
   </footer>
 
 </article>

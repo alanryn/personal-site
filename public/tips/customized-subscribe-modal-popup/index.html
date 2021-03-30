@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Alan Ryan | Shopify Dev</title>
+    
+    <meta name="description" content="Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
+ &lt;script&gt; var ready = (callback) =&gt; { if (document.readyState != &quot;loading&quot;) callback(); else document.addEventListener(&quot;DOMContentLoaded&quot;, callback); }; ready(() =&gt; { let fadeIn = {{settings.fadein}} * 1000; console.log(`fade in time is set to ${fadeIn}`); console.log(typeof(fadeIn)); const modal = document.getElementById(&quot;modal-id&quot;); const overlay = document.getElementById(&quot;overlay-id&quot;); setTimeout(function () { modal.classList.add(&quot;visible&quot;); overlay.classList.add(&quot;visible&quot;); }, fadeIn); document .querySelector(&quot;.closeBtn&quot;) .addEventListener(&quot;click&quot;, (e) =&gt; { modal.">
+    <meta name="author" content="">
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
+
+    <link href="https://shopify-portfolio.netlify.app/style.css" rel="stylesheet">
+    <link href="https://shopify-portfolio.netlify.app/custom.css" rel="stylesheet">
+    
+  
+    <script src="https://shopify-portfolio.netlify.app/custom.js"></script>
+    
+
+ <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    
+    
+  </head>
+  <body>
+   <header class="header">
+      <nav class="nav">
+   <h1 class="name"><a href="https://shopify-portfolio.netlify.app">Alan Ryan</a></h1>
+
+
+<style>
+.name
+ {
+  font-size:4rem;
+  margin-left: var(--gap);
+  text-align: left;
+  margin-top: 1rem;
+}
+
+</style>
+
+
+
+        <ul style="margin-top: 1rem"class="menu">
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/tips/">Tips</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<div class="">
+  <header class="post-header">
+    <h1 class="post-title">A customized subscribe modal popup</h1>
+  </header>
+<p>Create a new liquid file in your snippets folder called popup.liquid.
+Add the following code to the file:</p>
+<pre><code> &lt;script&gt;
+  var ready = (callback) =&gt; {
+  if (document.readyState != &quot;loading&quot;) callback();
+  else document.addEventListener(&quot;DOMContentLoaded&quot;, callback);
+};
+
+ready(() =&gt; {
+      let fadeIn = {{settings.fadein}} * 1000;
+      console.log(`fade in time is set to ${fadeIn}`);
+console.log(typeof(fadeIn));
+  const modal = document.getElementById(&quot;modal-id&quot;);
+ const overlay = document.getElementById(&quot;overlay-id&quot;);
+
+  setTimeout(function () {
+    modal.classList.add(&quot;visible&quot;);
+ overlay.classList.add(&quot;visible&quot;);
+  }, fadeIn);
+
+
+  document
+    .querySelector(&quot;.closeBtn&quot;)
+    .addEventListener(&quot;click&quot;, (e) =&gt; {
+      modal.classList.remove(&quot;visible&quot;);
+    overlay.classList.remove(&quot;visible&quot;);
+    });
+ 
+  document
+    .querySelector(&quot;.subscribe-overlay&quot;)
+    .addEventListener(&quot;click&quot;, (e) =&gt; {
+      modal.classList.remove(&quot;visible&quot;);
+    overlay.classList.remove(&quot;visible&quot;);
+    });
+ 
+  addEventListener(&quot;keydown&quot;, escapeFunc);
+  function escapeFunc(event) {
+    if (event.keyCode === 27) {
+      modal.classList.remove(&quot;visible&quot;);
+      overlay.classList.remove(&quot;visible&quot;);
+    }
+  }
+});
+
+&lt;/script&gt;
+
+
+&lt;div class=&quot;subscribe-overlay&quot; id=&quot;overlay-id&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;subscribe-modal&quot; id=&quot;modal-id&quot;&gt;
+  &lt;button type=&quot;button&quot; class=&quot;closeBtn&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;h1&gt;{{settings.popup_title}}&lt;/h1&gt;
+    &lt;p class=&quot;message&quot;&gt;{{settings.popup_message}}&lt;/p&gt;
+
+    &lt;form&gt;
+      &lt;input type=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
+      &lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot;&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;style&gt;
+    
+.subscribe-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+}
+.subscribe-modal {
+  display: none;
+  width: 500px;
+  max-width: 100%;
+  max-height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+}
+.container {
+  margin-top: 3rem ;
+  text-align: center;
+  width:100%;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.message {
+  line-height: 1.5;
+  font-size: 1.2em;
+  padding: 1rem;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+}
+form &gt; input {
+  flex: 1 1 10ch;
+  margin: 0.5rem;
+}
+form &gt; input[type=&quot;email&quot;] {
+  flex: 3 1 30ch;
+}
+input {
+  border: none;
+  background: hsl(0 0% 93%);
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+}
+input[type=&quot;submit&quot;] {
+  background: {{settings.button_color}};
+  color: white;
+}
+
+.closeBtn {
+  position: absolute;
+  z-index: 1000;
+  top: 0px;
+  right: 0px;
+  color: darkgray;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  }
+
+.closeBtn:focus,
+.closeBtn:hover {
+  outline: none;
+  color: black;
+}
+.visible {
+  display: flex;
+ 
+  animation: fade-in 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+&lt;/style&gt;
+</code></pre><p>Now you need to edit the code in the settings_schema.json file. It&rsquo;s located in your theme&rsquo;s config folder. The formatting of this file can be difficult, you can find Shopify&rsquo;s guidelines here: <a href="https://shopify.dev/docs/themes/settings">https://shopify.dev/docs/themes/settings</a></p>
+<p>Adding this code will make the popup content customizable through the theme editor:</p>
+<pre><code> {
+    &quot;name&quot;: {
+      &quot;en&quot;: &quot;Subscribe Popup&quot;
+    },
+    &quot;settings&quot;: [  
+      {
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;id&quot;: &quot;popup_title&quot;,
+        &quot;default&quot;: &quot;Sign-up&quot;,
+        &quot;label&quot;: &quot;Title&quot;
+      },
+      {
+        &quot;type&quot;: &quot;textarea&quot;,
+        &quot;id&quot;: &quot;popup_message&quot;,
+        &quot;default&quot;: &quot;Subscribe to our newsletter&quot;,
+        &quot;label&quot;: &quot;Message&quot;
+      },
+      {
+         &quot;type&quot;: &quot;color&quot;,
+         &quot;id&quot;: &quot;button_color&quot;,
+         &quot;label&quot;: &quot;Button color&quot;,
+         &quot;default&quot;: &quot;#ff4500&quot;
+      },   
+      {
+        &quot;type&quot;: &quot;range&quot;,
+        &quot;id&quot;: &quot;fadein&quot;,
+        &quot;min&quot;: 0,
+        &quot;max&quot;: 10,
+        &quot;step&quot;: 1,
+        &quot;unit&quot;: &quot;sec&quot;,
+        &quot;label&quot;: &quot;Time before popup to appear&quot;,
+        &quot;default&quot;: 4
+      },
+      {
+        &quot;type&quot;: &quot;checkbox&quot;,
+        &quot;id&quot;: &quot;home_page&quot;,
+        &quot;default&quot;: true,
+        &quot;label&quot;: &quot;Show only on Home page&quot;
+      }
+    ]
+  },
+</code></pre><p>To make the popup content customizable in the theme editor.</p>
+<p>Finally add the following code to your theme.liquid file. Place the code before the closing body tag <!-- raw HTML omitted -->.</p>
+<p>The popup should now appear in your customizable theme settings:
+<img src="images/settings1.png" alt="shopify theme settings"></p>
+<p><img src="images/settings.png" alt="shopify theme settings"></p>
+
+ 
+ 
+</div></main>
+<footer class="footer" role="contentinfo" aria-labelledby="label-footer">
+  <h2 id="label-footer" class="sr-only">Page footer</h2>
+  <span>&copy; 2021 <a href="https://shopify-portfolio.netlify.app">Alan Ryan</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+</footer>
+<script src="https://shopify-portfolio.netlify.app/highlight.min.js"></script>
+
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

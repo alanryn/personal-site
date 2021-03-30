@@ -8,7 +8,7 @@
   </url>
   
   <url>
-    <loc>https://shopify-portfolio.netlify.app/blog/</loc>
+    <loc>https://shopify-portfolio.netlify.app/tips/</loc>
     <lastmod>2020-12-28T17:13:40+00:00</lastmod>
   </url>
   
@@ -17,7 +17,7 @@
   </url>
   
   <url>
-    <loc>https://shopify-portfolio.netlify.app/blog/customized-subscribe-modal-popup/</loc>
+    <loc>https://shopify-portfolio.netlify.app/tips/customized-subscribe-modal-popup/</loc>
     <lastmod>2021-03-07T16:20:05+00:00</lastmod>
   </url>
   
@@ -42,17 +42,17 @@
   </url>
   
   <url>
-    <loc>https://shopify-portfolio.netlify.app/blog/product-variant-metafields/</loc>
+    <loc>https://shopify-portfolio.netlify.app/tips/product-variant-metafields/</loc>
     <lastmod>2021-01-02T16:19:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://shopify-portfolio.netlify.app/blog/customized-header-footer/</loc>
+    <loc>https://shopify-portfolio.netlify.app/tips/customized-header-footer/</loc>
     <lastmod>2020-12-31T16:20:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://shopify-portfolio.netlify.app/blog/adding-swatches/</loc>
+    <loc>https://shopify-portfolio.netlify.app/tips/adding-swatches/</loc>
     <lastmod>2020-12-30T16:20:14+00:00</lastmod>
   </url>
   
@@ -69,16 +69,6 @@
   <url>
     <loc>https://shopify-portfolio.netlify.app/projects/word-reformed/</loc>
     <lastmod>2020-12-27T17:15:03+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://shopify-portfolio.netlify.app/about/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://shopify-portfolio.netlify.app/resources/</loc>
-    <priority>0</priority>
   </url>
   
   <url>

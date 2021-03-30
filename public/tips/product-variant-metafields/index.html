@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Alan Ryan | Shopify Dev</title>
+    
+    <meta name="description" content="B y By using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.
+The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, here&rsquo;s how.
+A metafield consists of a namespace, a key, a value, and an optional description.">
+    <meta name="author" content="">
+    
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    
+
+    <link href="https://shopify-portfolio.netlify.app/style.css" rel="stylesheet">
+    <link href="https://shopify-portfolio.netlify.app/custom.css" rel="stylesheet">
+    
+  
+    <script src="https://shopify-portfolio.netlify.app/custom.js"></script>
+    
+
+ <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
+
+    <meta name="generator" content="Hugo 0.68.3" />
+    
+    
+    
+  </head>
+  <body>
+   <header class="header">
+      <nav class="nav">
+   <h1 class="name"><a href="https://shopify-portfolio.netlify.app">Alan Ryan</a></h1>
+
+
+<style>
+.name
+ {
+  font-size:4rem;
+  margin-left: var(--gap);
+  text-align: left;
+  margin-top: 1rem;
+}
+
+</style>
+
+
+
+        <ul style="margin-top: 1rem"class="menu">
+          <li>
+            <a href="/projects/">Projects</a>
+          </li>
+          <li>
+            <a href="/tips/">Tips</a>
+          </li>
+          <li>
+            <a href="/contact/">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+
+
+<div class="">
+  <header class="post-header">
+    <h1 class="post-title">Adding Metafields to Product Variants</h1>
+  </header>
+<p><span aria-hidden="true"><span class="drop-cap">
+B</span>
+y</span>
+ <span class="sr-only">By</span>
+ using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.</p>
+<p>The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, <a href="">here&rsquo;s how</a>.</p>
+<p>A metafield consists of a namespace, a key, a value, and an optional description. The namespace is used to logically group different metafields.</p>
+<p>You can also add metafields to the product variants, but it is more complcated to access the variant metafield information on your page. Variant metafields can display some different information depending on the selected variant. To achieve this it&rsquo;s necessary to update the information depending on a change to the selected variant. The involves updating the javascript connected to the selctor.</p>
+<p>Here is an explanation on how to achive this with the Debut theme, it may differ slightly depending the themes you are using.</p>
+<p>For example, here&rsquo;s how to display different shipping inforamtion depending on a selected product variant:</p>
+<ul>
+<li>Add some html like this to the product-template.liquid file (position it where you would like to display the shipping information):</li>
+</ul>
+<pre><code>&lt;p class=&quot;variant_shipping_info&quot; style=&quot;display: none;&quot;&gt;&lt;/p&gt;
+</code></pre><ul>
+<li>Below this add some liquid code:</li>
+</ul>
+<pre><code class="language-liquid" data-lang="liquid">{% capture 'meta_data' %}
+{% for variant in product.variants %}
+{{variant.id}}:{{ variant.metafields.shipping.time | json }}{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+{% endcapture %}
+</code></pre><ul>
+<li>Then, add this javascript inside <!-- raw HTML omitted --> <!-- raw HTML omitted --> tags:</li>
+</ul>
+<pre><code>  const currentVariantId = {{ product.selected_or_first_available_variant.id }}; 
+  const metaData = { {{ meta_data }} };
+  const shippingInfo = (id) =&gt; {
+  var selector = document.querySelector('.variant_shipping_info');
+    if (metaData[id]) {
+     selector.style.display = 'block'
+     selector.innerHTML = metaData[id];
+    } 
+  }
+  shippingInfo(currentVariantId);  
+</code></pre><p>Make sure to change the naming to match your metafields. Mine are variant.metafields.shipping.time</p>
+<p>Next you need to update the theme.js file. Find the code for the <strong>Event handler for when a variant input changes</strong>, and add these few lines near the end.</p>
+<pre><code> if (variant) {
+	  var id = variant.id 
+	  shippingInfo(id);
+      }
+</code></pre><p>Like this:</p>
+<pre><code> _onSelectChange: function() {
+      var variant = this._getVariantFromOptions();
+ 
+      this.$container.trigger({
+        type: 'variantChange',
+        variant: variant
+      });
+ 
+      if (!variant) {
+        return;
+      }
+ 
+      this._updateMasterSelect(variant);
+      this._updateImages(variant);
+      this._updatePrice(variant);
+      this._updateSKU(variant);
+      this.currentVariant = variant;
+ 
+      if (this.enableHistoryState) {
+        this._updateHistoryState(variant);
+      }
+      
+      
+      if (variant) {
+	  var id = variant.id 
+	  shippingInfo(id);
+      }
+      
+    }, 
+</code></pre><p>Now your variant metafield should update as you select different options.</p>
+
+ 
+ 
+</div></main>
+<footer class="footer" role="contentinfo" aria-labelledby="label-footer">
+  <h2 id="label-footer" class="sr-only">Page footer</h2>
+  <span>&copy; 2021 <a href="https://shopify-portfolio.netlify.app">Alan Ryan</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+</footer>
+<script src="https://shopify-portfolio.netlify.app/highlight.min.js"></script>
+
+
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+
