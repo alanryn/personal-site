@@ -9,11 +9,11 @@
   --footer-height: 60px;
   --radius: 8px;
 
-  --theme: #D9CB9E;
-  --entry: #F8FFA8;
+  --theme: #e5e0c9;
+  --entry: #f8ffa8;
   --focus: hsl(149, 32%, 41%);
-  --primary: hsl(266, 61%, 23%);
-  --secondary: #F8FFA8;
+  --primary: #55245a;
+  --secondary: #f8ffa8;
   --tertiary: rgba(255, 255, 255, 0.16);
   --content: rgba(255, 255, 255, 0.64);
 
@@ -35,9 +35,9 @@ html {
 body {
   margin: 0;
   color: var(--primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, Oxygen, Ubuntu, Cantarell,
-  'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: calc( 14px + (18 - 14) * (( 100vw - 300px) / (1400 - 300)));
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1400 - 300)));
   line-height: 1.8;
   word-break: break-word;
   background: var(--theme);
@@ -99,8 +99,8 @@ textarea {
   -webkit-appearance: none;
 }
 button,
-input[type='button'],
-input[type='submit'] {
+input[type="button"],
+input[type="submit"] {
   cursor: pointer;
 }
 input,
@@ -132,11 +132,11 @@ img {
 }
 
 .nav a:hover,
-.nav a:focus{
-  color:var(--focus);
+.nav a:focus {
+  color: var(--focus);
 }
-.nav a:focus{
-  outline:2px dotted;
+.nav a:focus {
+  outline: 2px dotted;
 }
 .logo,
 .menu {
@@ -155,13 +155,12 @@ img {
 }
 .menu li + li {
   margin-left: var(--gap);
-  
 }
-.menu li{
-  margin:3px;
+.menu li {
+  margin: 3px;
 }
 .menu a {
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 
 /* Main
@@ -261,9 +260,8 @@ img {
   font-size: 0.8125rem;
 }
 .entry-link {
-
 }
-.entry-link:focus{
+.entry-link:focus {
   outline: 3px solid rgb(42, 147, 181);
 }
 /* Post single
@@ -328,7 +326,8 @@ img {
 }
 .post-content del {
   text-decoration: none;
-  background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0 50% / 1px 1px repeat-x;
+  background: linear-gradient(to right, var(--primary) 100%, transparent 0) 0
+    50% / 1px 1px repeat-x;
 }
 .post-content p,
 .post-content ul,
@@ -425,7 +424,7 @@ img {
   margin-left: 4px;
   margin-right: 4px;
   padding: 4px 6px;
-  font-family: Menlo, Monaco, 'Courier New', Courier, monospace;
+  font-family: Menlo, Monaco, "Courier New", Courier, monospace;
   font-size: 0.78em;
   line-height: 1.5;
   background: var(--code-bg);
@@ -501,8 +500,8 @@ img {
   color: #468966;
   border-bottom: 1px solid var(--primary);
 }
-.footer a:focus{
-  outline:2px dotted;
+.footer a:focus {
+  outline: 2px dotted;
   color: var(--focus);
 }
 /* 404
@@ -521,7 +520,6 @@ img {
 /* homepage gallery and list pages
 -------------------------------------------------- */
 .gallery-link {
-
   transition-duration: 0.15s;
   transition-property: box-shadow, transform;
   transition-timing-function: ease-in;
@@ -530,53 +528,42 @@ img {
 .gallery-link:focus {
   box-shadow: 0 0.25em 1em rgba(0, 0, 0, 0.25);
   transform: scale(1.025);
- 
 }
 .gallery-link:focus {
   outline: 3px solid rgb(42, 147, 181);
 }
 
-
-
-
-
-
-
-
 /* https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
 --------------------------------------------------- */
 
 .sr-only:not(:focus):not(:active) {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
 
- .drop-cap{
- font-size: 5rem;
- float:left;
- margin: 0.1em 0.1em 0.1em 0;
- line-height: 1;
- background: var(--primary);
- color: var(--theme);
- padding: 0.15em 0 0.1em 0;
- }
- 
- .drop-cap:before,
- .drop-cap:after{
- content:"";
- display: block;
- }
- .drop-cap:before{
- margin-top: -0.2em;
- }
-  .drop-cap:after{
- margin-bottom: -0.15em;
- }
+.drop-cap {
+  font-size: 5rem;
+  float: left;
+  margin: 0.1em 0.1em 0.1em 0;
+  line-height: 1;
+  background: var(--primary);
+  color: var(--theme);
+  padding: 0.15em 0 0.1em 0;
+}
 
-
-
+.drop-cap:before,
+.drop-cap:after {
+  content: "";
+  display: block;
+}
+.drop-cap:before {
+  margin-top: -0.2em;
+}
+.drop-cap:after {
+  margin-bottom: -0.15em;
+}

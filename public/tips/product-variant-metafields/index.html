@@ -96,52 +96,52 @@ y</span>
 </code></pre><ul>
 <li>Then, add this javascript inside <!-- raw HTML omitted --> <!-- raw HTML omitted --> tags:</li>
 </ul>
-<pre><code>  const currentVariantId = {{ product.selected_or_first_available_variant.id }}; 
+<pre><code>  const currentVariantId = {{ product.selected_or_first_available_variant.id }};
   const metaData = { {{ meta_data }} };
   const shippingInfo = (id) =&gt; {
   var selector = document.querySelector('.variant_shipping_info');
     if (metaData[id]) {
      selector.style.display = 'block'
      selector.innerHTML = metaData[id];
-    } 
+    }
   }
-  shippingInfo(currentVariantId);  
+  shippingInfo(currentVariantId);
 </code></pre><p>Make sure to change the naming to match your metafields. Mine are variant.metafields.shipping.time</p>
 <p>Next you need to update the theme.js file. Find the code for the <strong>Event handler for when a variant input changes</strong>, and add these few lines near the end.</p>
 <pre><code> if (variant) {
-	  var id = variant.id 
+	  var id = variant.id
 	  shippingInfo(id);
       }
 </code></pre><p>Like this:</p>
 <pre><code> _onSelectChange: function() {
       var variant = this._getVariantFromOptions();
- 
+
       this.$container.trigger({
         type: 'variantChange',
         variant: variant
       });
- 
+
       if (!variant) {
         return;
       }
- 
+
       this._updateMasterSelect(variant);
       this._updateImages(variant);
       this._updatePrice(variant);
       this._updateSKU(variant);
       this.currentVariant = variant;
- 
+
       if (this.enableHistoryState) {
         this._updateHistoryState(variant);
       }
-      
-      
+
+
       if (variant) {
-	  var id = variant.id 
+	  var id = variant.id
 	  shippingInfo(id);
       }
-      
-    }, 
+
+    },
 </code></pre><p>Now your variant metafield should update as you select different options.</p>
 </div>
   

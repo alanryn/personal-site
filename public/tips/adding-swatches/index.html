@@ -77,44 +77,44 @@ any</span>
  <span class="sr-only">Many</span>
  themes come with a dropdown as the default size selector. Here&rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&rsquo;m using Shopify&rsquo;s Venture theme, but it should be similar for most other themes.</p>
 <p>In the <strong>product-template.liquid</strong> file in the <strong>sections folder</strong> search for the code beginning with:</p>
-<pre><code> {% unless product.has_only_default_variant %} 
+<pre><code> {% unless product.has_only_default_variant %}
 </code></pre><p>and ending with :</p>
 <pre><code>{% endunless %}
 </code></pre><p>and replaace everything between with this code:</p>
 <pre><code> {% unless product.has_only_default_variant %}
             {% for option in product.options_with_values %}
-              
+
               &lt;div class=&quot;selector-wrapper js product-form__item&quot;&gt;
-                
+
                 {% if option.name == &quot;Size&quot; %}
                 &lt;label&gt;{{ option.name }}&lt;/label&gt;
-                
+
                 {% assign index = forloop.index %}
-               
-                &lt;div class=&quot;size-swatch&quot;&gt;  
+
+                &lt;div class=&quot;size-swatch&quot;&gt;
                 {% for value in option.values %}
-       
+
                     {% assign variant_label_state = true %}
                       {% if product.options.size == 1 %}
                       {% unless product.variants[forloop.index0].available  %}
                       {% assign variant_label_state = false %}
                       {% endunless %}
                       {% endif %}
-                         
-                	&lt;input class=&quot;single-option-selector-{{ section.id }}&quot; 
-                           id=&quot;size-{{forloop.index}}&quot; 
-                           type=&quot;radio&quot; 
-                           name=&quot;size&quot; 
-                           value=&quot;{{ value | escape }}&quot; 
-                           data-index=&quot;option{{ index }}&quot; 
+
+                	&lt;input class=&quot;single-option-selector-{{ section.id }}&quot;
+                           id=&quot;size-{{forloop.index}}&quot;
+                           type=&quot;radio&quot;
+                           name=&quot;size&quot;
+                           value=&quot;{{ value | escape }}&quot;
+                           data-index=&quot;option{{ index }}&quot;
                            {% if option.selected_value == value %} checked=&quot;checked&quot;{% endif %}
                            {% unless variant_label_state %} disabled=&quot;disabled&quot;{% endunless %}
               		/&gt;
                     &lt;label for=&quot;size-{{forloop.index}}&quot;&gt;{{value}}&lt;/label&gt;
-                                  
+
                 {% endfor %}
                 &lt;/div&gt;
-                 
+
                 {% else %}
                 &lt;!-- default selector start--&gt;
                 &lt;label {% if option.name == 'default' %}class=&quot;label--hidden&quot; {% endif %}for=&quot;SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}&quot;&gt;{{ option.name }}&lt;/label&gt;
@@ -123,21 +123,21 @@ any</span>
                   data-name=&quot;{{ option.name }}&quot;
                   data-index=&quot;option{{ forloop.index }}&quot;&gt;
                   {% for value in option.values %}
-                    &lt;option value=&quot;{{ value | escape }}&quot;{% if option.selected_value == value %} 
+                    &lt;option value=&quot;{{ value | escape }}&quot;{% if option.selected_value == value %}
                             selected=&quot;selected&quot;{% endif %}&gt;{{ value }}&lt;/option&gt;
                   {% endfor %}
                 &lt;/select&gt;
                  &lt;!-- default selector end--&gt;
                 {% endif %}
-                
+
               &lt;/div&gt;
             {% endfor %}
           {% endunless %}
 </code></pre><p>Add styling to the end of the theme.css file in the assets folder; something like this:</p>
 <pre><code>                  .size-swatch{
                     display: flex;
-                   
-                  }       
+
+                  }
                   .size-swatch input{
                     opacity: 0;
                     width: 0;
@@ -148,19 +148,19 @@ any</span>
                     max-height:44px;
                     border: 1px solid lightgray;
                     display: block;
-                  
+
 
                   }
                  .size-swatch input:disabled + label {
-                   opacity: 0.35;           
+                   opacity: 0.35;
                    cursor: default;
                    text-decoration: line-through;
                   }
-              
+
                   .size-swatch input:focus + label {
                     box-shadow: 0 0 0 0.05em #fff, 0 0 0.15em 0.1em green;
                   }
-  
+
 </code></pre></div>
   
 </article></main>

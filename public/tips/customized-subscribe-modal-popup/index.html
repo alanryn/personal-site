@@ -97,14 +97,14 @@ console.log(typeof(fadeIn));
       modal.classList.remove(&quot;visible&quot;);
     overlay.classList.remove(&quot;visible&quot;);
     });
- 
+
   document
     .querySelector(&quot;.subscribe-overlay&quot;)
     .addEventListener(&quot;click&quot;, (e) =&gt; {
       modal.classList.remove(&quot;visible&quot;);
     overlay.classList.remove(&quot;visible&quot;);
     });
- 
+
   addEventListener(&quot;keydown&quot;, escapeFunc);
   function escapeFunc(event) {
     if (event.keyCode === 27) {
@@ -132,7 +132,7 @@ console.log(typeof(fadeIn));
 &lt;/div&gt;
 
 &lt;style&gt;
-    
+
 .subscribe-overlay {
   display: none;
   position: fixed;
@@ -208,7 +208,7 @@ input[type=&quot;submit&quot;] {
 }
 .visible {
   display: flex;
- 
+
   animation: fade-in 2s;
 }
 
@@ -228,7 +228,7 @@ input[type=&quot;submit&quot;] {
     &quot;name&quot;: {
       &quot;en&quot;: &quot;Subscribe Popup&quot;
     },
-    &quot;settings&quot;: [  
+    &quot;settings&quot;: [
       {
         &quot;type&quot;: &quot;text&quot;,
         &quot;id&quot;: &quot;popup_title&quot;,
@@ -246,7 +246,7 @@ input[type=&quot;submit&quot;] {
          &quot;id&quot;: &quot;button_color&quot;,
          &quot;label&quot;: &quot;Button color&quot;,
          &quot;default&quot;: &quot;#ff4500&quot;
-      },   
+      },
       {
         &quot;type&quot;: &quot;range&quot;,
         &quot;id&quot;: &quot;fadein&quot;,
