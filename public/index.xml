@@ -31,13 +31,23 @@
     </item>
     
     <item>
+      <title>Studio Nous Nous</title>
+      <link>https://alanryan.dev/projects/studio-nous-nous/</link>
+      <pubDate>Mon, 01 Feb 2021 17:14:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/projects/studio-nous-nous/</guid>
+      <description>A Shopify site for the Dutch Studio Nous Nous. Original design is by Thomas van Dongen, I have been tweaking the code under the creative direction of Hakim El Amrani.
+Visit the site here</description>
+    </item>
+    
+    <item>
       <title>Sydney Brown</title>
       <link>https://alanryan.dev/projects/sydney-brown/</link>
       <pubDate>Mon, 01 Feb 2021 17:14:00 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/sydney-brown/</guid>
-      <description>Vegan Shoes and Bags
-View site</description>
+      <description>A Shopify site selling Vegan Shoes and Bags. An almost three year collaboration, with a revamp is in the offing, stay tuned.
+Visit the store here</description>
     </item>
     
     <item>
@@ -46,8 +56,8 @@ View site</description>
       <pubDate>Thu, 28 Jan 2021 17:13:40 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/abstract-art/</guid>
-      <description>Abstract art is art that does not attempt to represent an accurate depiction of a visual reality but instead use shapes, colours, forms and gestural marks to achieve its effect.
-View Site</description>
+      <description>Abstract art is art that does not attempt to represent an accurate depiction of a visual reality but instead use shapes, colours, forms and gestural marks to achieve its effect. Yes indeed. This is a sample Shopify store, easily adapted to something more practical and less abstract.
+See it live here</description>
     </item>
     
     <item>
@@ -56,7 +66,7 @@ View Site</description>
       <pubDate>Wed, 27 Jan 2021 17:14:45 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/umbrella-store/</guid>
-      <description>Sunny Day Umbrellas.
+      <description>A quick and simple Shopify store, for demo purposes only.
 View Site</description>
     </item>
     
@@ -97,8 +107,8 @@ In the product-template.liquid file in the sections folder search for the code b
       <pubDate>Mon, 28 Dec 2020 17:15:42 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/self-contained/</guid>
-      <description>Garden solutions for the spatially challenged
-View site</description>
+      <description>A garden design business. My own personal project. Built using Hugo, a static site generator. It needs more content and time.
+See it here</description>
     </item>
     
     <item>
@@ -107,7 +117,7 @@ View site</description>
       <pubDate>Mon, 28 Dec 2020 17:14:21 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/oportocall/</guid>
-      <description>Relocation and Tourist Services in the City of Porto and beyond.
+      <description>A business idea for a relocation and tourist service for the City of Porto and beyond. The site is built with 11ty. It integrates a Snipcart checkout
 View site</description>
     </item>
     
@@ -117,7 +127,17 @@ View site</description>
       <pubDate>Sun, 27 Dec 2020 17:15:03 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/word-reformed/</guid>
-      <description>A translation &amp;amp; content writing service
+      <description>A translation &amp;amp; content writing service. A standard Wordpress site, it&amp;rsquo;s more about the content.
+View site</description>
+    </item>
+    
+    <item>
+      <title>Template Design</title>
+      <link>https://alanryan.dev/projects/template-design/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/projects/template-design/</guid>
+      <description>This is a simple sample site easily modified to suit any small business. It&amp;rsquo;s a modified version (blatant rip-off) of Andy Bell&amp;rsquo;s Learn Eleventy From Scratch tutorial (don&amp;rsquo;t judge me, I paid for the tutorial and I&amp;rsquo;m going to update it), but it&amp;rsquo;s a great example of what can easily be achieved with the 11ty static site generator.
 View site</description>
     </item>
     
