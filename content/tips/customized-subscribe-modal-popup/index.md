@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let overlay = document.querySelector("#overlay-id");
   let store = document.querySelectorAll(".setStorage");
   let initialFocus = document.querySelector("#close");
- 
   
   if (popupdisplayed == "true") {
     modal.classList.remove("visible");
@@ -34,10 +33,9 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay.classList.remove("visible");
     });
   });
+
   document.querySelector("#Subscribe").addEventListener("click", (e) => { 
      sessionStorage.setItem("popupdisplayed", true);
-//       modal.classList.remove("visible");
-//       overlay.classList.remove("visible");
   });
   
   document.addEventListener("keydown", (e) => {
@@ -48,10 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-  
-  
-  
-   
+     
 </script>
 
 <div class="subscribe-overlay setStorage" id="overlay-id"></div>
@@ -70,9 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
       {%- endif -%}
       {% if form.posted_successfully? %}
  		 <script>
-//            let successFocus = document.querySelector("#close");
            sessionStorage.setItem("popupdisplayed", false);
-//      	   successFocus.focus();
          </script>
          <p class="form-message form-message--success">Thanks for joining</p>
       {% else %}
@@ -272,4 +265,4 @@ Finally add the following code to your theme.liquid file. Place the code before 
 The popup should now appear in your customizable theme settings:
 ![shopify theme settings](images/settings1.png)
 
-![shopify theme settings](images/settings.png)
+![shopify theme settings](images/dialog.png)
