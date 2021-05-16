@@ -12,18 +12,21 @@ Add the following code to the file:
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   let popupdisplayed = sessionStorage.getItem("popupdisplayed");
-  let modal = document.querySelector("#modal-id");
-  let overlay = document.querySelector("#overlay-id");
+  const modal = document.querySelector("#modal-id");
+  const overlay = document.querySelector("#overlay-id");
   let store = document.querySelectorAll(".setStorage");
   let initialFocus = document.querySelector("#close");
-  
+  let fadeIn = {{settings.fadein}} * 1000;
+    
   if (popupdisplayed == "true") {
     modal.classList.remove("visible");
     overlay.classList.remove("visible");
   } else {
+    setTimeout(function () {
     modal.classList.add("visible");
     overlay.classList.add("visible");
     initialFocus.focus();
+  }, fadeIn);    
   }
 
   store.forEach((stored) => {
@@ -33,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
       overlay.classList.remove("visible");
     });
   });
-
   document.querySelector("#Subscribe").addEventListener("click", (e) => { 
      sessionStorage.setItem("popupdisplayed", true);
   });
@@ -46,14 +48,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
-     
+   
 </script>
 
 <div class="subscribe-overlay setStorage" id="overlay-id"></div>
 <div class="subscribe-modal" id="modal-id">
    <button type="button" id="close" class="closeBtn setStorage" data-dismiss="subscribe-modal" aria-label="Close"><span aria-hidden="true">Close</span></button>
-
+    {%- if settings.popup_image -%}
     <img src="{{settings.popup_image | img_url: '400x'}}" alt="test">
+   {% else %}
+  <div style="height: 2rem;"></div>
+    {%- endif -%}
   	<h1>{{settings.popup_title}}</h1>
     <p>{{settings.popup_message}}</p>
   
@@ -62,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <div class="form-message form-message--error">
           {{ form.errors | default_errors }}
         </div>
-      {%- endif -%}
+     {%- endif -%}
       {% if form.posted_successfully? %}
  		 <script>
            sessionStorage.setItem("popupdisplayed", false);
@@ -197,6 +202,7 @@ input {
 }
 
 </style>
+
 
 ```
 
