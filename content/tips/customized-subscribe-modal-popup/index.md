@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
    {% form 'customer' %}
      {%- if form.errors -%}
-        <div class="form-message form-message--error">
+        <div class="subscribe-message">
           {{ form.errors | default_errors }}
         </div>
      {%- endif -%}
@@ -72,14 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
  		 <script>
            sessionStorage.setItem("popupdisplayed", false);
          </script>
-         <p class="form-message form-message--success">Thanks for joining</p>
+         <p class="subscribe-message">Thanks for joining</p>
       {% else %}
-        <div class="">
+        <div>
           <input type="hidden" name="contact[tags]" value="newsletter">
           <input type="email"
             name="contact[email]"
             id="Email"
-            class="input-group__field newsletter__input"
+            class="email"
             value="{% if customer %}{{ customer.email }}{% endif %}"
             placeholder="{{ 'general.newsletter_form.email_placeholder' | t }}"
             aria-label="{{ 'general.newsletter_form.email_placeholder' | t }}"
@@ -90,9 +90,9 @@ document.addEventListener("DOMContentLoaded", function () {
             autocapitalize="off"
 			required   
             autofocus>
-          <span class="input-group__btn">
-            <button type="submit" style="background:{{settings.button_color}};" class="btn newsletter__submit" stylename="commit" id="Subscribe">
-              <span class="newsletter__submit-text--large">SIGN-UP</span>
+          <span class="">
+            <button type="submit" class="button" id="Subscribe">
+             {{settings.button_text}}
             </button>
           </span>
         </div>
@@ -146,29 +146,23 @@ document.addEventListener("DOMContentLoaded", function () {
   margin-left: 1rem;
   margin-right: 1rem;
 }
-
-.subscribe-modal > :last-of-type:not(img, h1, p, input) {
+.subscribe-modal > :last-of-type:not(img, h1, p, input, button) {
   margin-bottom: 1rem;
 }
-
 .subscribe-modal h1 {
   text-align: center;
   font-size:1.5rem;
 }
-   
 .subscribe-modal p {
   text-align: center;
-}
-  
-form > :first-child {
-  margin-bottom: 0.5rem;}
-input {
+} 
+.email {
   width: 100%;
   border: none;
   background: hsl(0 0% 93%);
   border-radius: 0.25rem;
+  margin-bottom:0.5rem;
 }
-
 .closeBtn {
   position: absolute;
   z-index: 1000;
@@ -179,19 +173,19 @@ input {
   font-size: 1.2em;
   border: none;
   background: rgba(255, 255, 255, 0);
-  }
-
-.closeBtn:focus,
+}
 .closeBtn:hover {
   outline: none;
   color: black;
 }
-  
+ .closeBtn:focus{
+  outline: 1px dashed #3e68ff;
+  color: black;
+}
 .visible {
   display: flex;
   animation: fade-in 2s;
 }
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -200,9 +194,44 @@ input {
     opacity: 1;
   }
 }
-
+button.button {
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  background-color: {{settings.button_color}};
+  color: {{settings.button_text_color}};
+  border-radius: 8px;
+  padding: 0.25em 0.75em;
+  min-width: 100%;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.1;
+  transition: 220ms all ease-in-out;
+}
+button.button:hover,
+button.button:active{
+  background-color: {{settings.button_hover_color}};
+  }
+button.button:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px #3e68ff;
+  }  
+  
+.subscribe-message {
+  border: 1px solid #b8860b;
+  background-color: #fff;
+  color: #b8860b;
+  padding: 1rem 0.5rem;
+  font-size: 1.25rem;
+}  
 </style>
-
 
 ```
 
@@ -215,7 +244,7 @@ Adding this code will make the popup content customizable through the theme edit
     "name": {
       "en": "Subscribe Popup"
     },
-    "settings": [
+      "settings": [
       {
         "type": "text",
         "id": "popup_title",
@@ -229,9 +258,27 @@ Adding this code will make the popup content customizable through the theme edit
         "label": "Message"
       },
       {
+        "type": "text",
+        "id": "button_text",
+        "default": "SIGN-UP",
+        "label": "Title"
+      },
+      {
         "type": "color",
         "id": "button_color",
         "label": "Button color",
+        "default": "#ffa500"
+      },
+      {
+        "type": "color",
+        "id": "button_text_color",
+        "label": "Button text color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "button_hover_color",
+        "label": "Button hover color",
         "default": "#ff4500"
       },
       {
@@ -246,9 +293,9 @@ Adding this code will make the popup content customizable through the theme edit
       },
       {
         "type": "checkbox",
-        "id": "home_page",
+        "id": "show_popup",
         "default": true,
-        "label": "Show only on Home page"
+        "label": "Show popup"
       },
       {
         "type": "image_picker",
@@ -264,11 +311,14 @@ To make the popup content customizable in the theme editor.
 Finally add the following code to your theme.liquid file. Place the code before the closing body tag </body>.
 
 ```
+  {% assign show-popup = {{settings.show_popup}} %}
+  {% if show-popup == true %}
   {% render "popup" %}
+  {% endif %}
 </body>
 ```
 
 The popup should now appear in your customizable theme settings:
-![shopify theme settings](images/settings1.png)
+![shopify theme settings](images/settings.png)
 
-![shopify theme settings](images/dialog.png)
+![shopify theme settings](images/customize-popup.png)
