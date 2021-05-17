@@ -305,9 +305,6 @@ Adding this code will make the popup content customizable through the theme edit
     ]
   },
 ```
-
-To make the popup content customizable in the theme editor.
-
 Finally add the following code to your theme.liquid file. Place the code before the closing body tag </body>.
 
 ```
