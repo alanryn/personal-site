@@ -230,7 +230,7 @@ img {
   position: relative;
   margin-bottom: var(--gap);
   padding: var(--gap);
-  background: var(--secondary);
+  background: #fff;
   border-radius: var(--radius);
   transition: transform 0.1s;
 }

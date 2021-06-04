@@ -8,7 +8,7 @@
     <title>Alan Ryan | Shopify Dev</title>
     
     <meta name="description" content="Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
- &lt;script&gt; var ready = (callback) =&gt; { if (document.readyState != &quot;loading&quot;) callback(); else document.addEventListener(&quot;DOMContentLoaded&quot;, callback); }; ready(() =&gt; { let fadeIn = {{settings.fadein}} * 1000; console.log(`fade in time is set to ${fadeIn}`); console.log(typeof(fadeIn)); const modal = document.getElementById(&quot;modal-id&quot;); const overlay = document.getElementById(&quot;overlay-id&quot;); setTimeout(function () { modal.classList.add(&quot;visible&quot;); overlay.classList.add(&quot;visible&quot;); }, fadeIn); document .querySelector(&quot;.closeBtn&quot;) .addEventListener(&quot;click&quot;, (e) =&gt; { modal.">
+&lt;script&gt; document.addEventListener(&quot;DOMContentLoaded&quot;, function () { let popupdisplayed = sessionStorage.getItem(&quot;popupdisplayed&quot;); const modal = document.querySelector(&quot;#modal-id&quot;); const overlay = document.querySelector(&quot;#overlay-id&quot;); let store = document.querySelectorAll(&quot;.setStorage&quot;); let initialFocus = document.querySelector(&quot;#close&quot;); let fadeIn = {{settings.fadein}} * 1000; if (popupdisplayed == &quot;true&quot;) { modal.classList.remove(&quot;visible&quot;); overlay.classList.remove(&quot;visible&quot;); } else { setTimeout(function () { modal.classList.add(&quot;visible&quot;); overlay.classList.add(&quot;visible&quot;); initialFocus.focus(); }, fadeIn); } store.forEach((stored) =&gt; { stored.">
     <meta name="author" content="">
     
     
@@ -68,71 +68,102 @@
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">A customized subscribe modal popup</h1>
-    <div class="post-meta">March 7, 2021</div>
+    <div class="post-meta">May 7, 2021</div>
   </header>
   <div class="post-content"><p>Create a new liquid file in your snippets folder called popup.liquid.
 Add the following code to the file:</p>
-<pre><code> &lt;script&gt;
-  var ready = (callback) =&gt; {
-  if (document.readyState != &quot;loading&quot;) callback();
-  else document.addEventListener(&quot;DOMContentLoaded&quot;, callback);
-};
-
-ready(() =&gt; {
-      let fadeIn = {{settings.fadein}} * 1000;
-      console.log(`fade in time is set to ${fadeIn}`);
-console.log(typeof(fadeIn));
-  const modal = document.getElementById(&quot;modal-id&quot;);
- const overlay = document.getElementById(&quot;overlay-id&quot;);
-
-  setTimeout(function () {
+<pre><code>&lt;script&gt;
+document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+  let popupdisplayed = sessionStorage.getItem(&quot;popupdisplayed&quot;);
+  const modal = document.querySelector(&quot;#modal-id&quot;);
+  const overlay = document.querySelector(&quot;#overlay-id&quot;);
+  let store = document.querySelectorAll(&quot;.setStorage&quot;);
+  let initialFocus = document.querySelector(&quot;#close&quot;);
+  let fadeIn = {{settings.fadein}} * 1000;
+    
+  if (popupdisplayed == &quot;true&quot;) {
+    modal.classList.remove(&quot;visible&quot;);
+    overlay.classList.remove(&quot;visible&quot;);
+  } else {
+    setTimeout(function () {
     modal.classList.add(&quot;visible&quot;);
- overlay.classList.add(&quot;visible&quot;);
-  }, fadeIn);
+    overlay.classList.add(&quot;visible&quot;);
+    initialFocus.focus();
+  }, fadeIn);    
+  }
 
-
-  document
-    .querySelector(&quot;.closeBtn&quot;)
-    .addEventListener(&quot;click&quot;, (e) =&gt; {
+  store.forEach((stored) =&gt; {
+    stored.addEventListener(&quot;click&quot;, (e) =&gt; {
+      sessionStorage.setItem(&quot;popupdisplayed&quot;, true);
       modal.classList.remove(&quot;visible&quot;);
-    overlay.classList.remove(&quot;visible&quot;);
+      overlay.classList.remove(&quot;visible&quot;);
     });
-
-  document
-    .querySelector(&quot;.subscribe-overlay&quot;)
-    .addEventListener(&quot;click&quot;, (e) =&gt; {
-      modal.classList.remove(&quot;visible&quot;);
-    overlay.classList.remove(&quot;visible&quot;);
-    });
-
-  addEventListener(&quot;keydown&quot;, escapeFunc);
-  function escapeFunc(event) {
-    if (event.keyCode === 27) {
+  });
+  document.querySelector(&quot;#Subscribe&quot;).addEventListener(&quot;click&quot;, (e) =&gt; { 
+     sessionStorage.setItem(&quot;popupdisplayed&quot;, true);
+  });
+  
+  document.addEventListener(&quot;keydown&quot;, (e) =&gt; {
+    if (event.keyCode == 27) {
+      sessionStorage.setItem(&quot;popupdisplayed&quot;, true);
       modal.classList.remove(&quot;visible&quot;);
       overlay.classList.remove(&quot;visible&quot;);
     }
-  }
+  });
 });
-
+   
 &lt;/script&gt;
 
-
-&lt;div class=&quot;subscribe-overlay&quot; id=&quot;overlay-id&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;subscribe-overlay setStorage&quot; id=&quot;overlay-id&quot;&gt;&lt;/div&gt;
 &lt;div class=&quot;subscribe-modal&quot; id=&quot;modal-id&quot;&gt;
-  &lt;button type=&quot;button&quot; class=&quot;closeBtn&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
-  &lt;div class=&quot;container&quot;&gt;
-    &lt;h1&gt;{{settings.popup_title}}&lt;/h1&gt;
-    &lt;p class=&quot;message&quot;&gt;{{settings.popup_message}}&lt;/p&gt;
-
-    &lt;form&gt;
-      &lt;input type=&quot;email&quot; placeholder=&quot;Email Address&quot;&gt;
-      &lt;input type=&quot;submit&quot; value=&quot;Subscribe&quot;&gt;
-    &lt;/form&gt;
-  &lt;/div&gt;
+   &lt;button type=&quot;button&quot; id=&quot;close&quot; class=&quot;closeBtn setStorage&quot; data-dismiss=&quot;subscribe-modal&quot; aria-label=&quot;Close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+    {%- if settings.popup_image -%}
+    &lt;img src=&quot;{{settings.popup_image | img_url: '400x'}}&quot; alt=&quot;test&quot;&gt;
+   {% else %}
+  &lt;div style=&quot;height: 2rem;&quot;&gt;&lt;/div&gt;
+    {%- endif -%}
+  	&lt;h1&gt;{{settings.popup_title}}&lt;/h1&gt;
+    &lt;p&gt;{{settings.popup_message}}&lt;/p&gt;
+  
+   {% form 'customer' %}
+     {%- if form.errors -%}
+        &lt;div class=&quot;subscribe-message&quot;&gt;
+          {{ form.errors | default_errors }}
+        &lt;/div&gt;
+     {%- endif -%}
+      {% if form.posted_successfully? %}
+ 		 &lt;script&gt;
+           sessionStorage.setItem(&quot;popupdisplayed&quot;, false);
+         &lt;/script&gt;
+         &lt;p class=&quot;subscribe-message&quot;&gt;Thanks for joining&lt;/p&gt;
+      {% else %}
+        &lt;div&gt;
+          &lt;input type=&quot;hidden&quot; name=&quot;contact[tags]&quot; value=&quot;newsletter&quot;&gt;
+          &lt;input type=&quot;email&quot;
+            name=&quot;contact[email]&quot;
+            id=&quot;Email&quot;
+            class=&quot;email&quot;
+            value=&quot;{% if customer %}{{ customer.email }}{% endif %}&quot;
+            placeholder=&quot;{{ 'general.newsletter_form.email_placeholder' | t }}&quot;
+            aria-label=&quot;{{ 'general.newsletter_form.email_placeholder' | t }}&quot;
+            {%- if form.errors -%}
+              aria-invalid=&quot;true&quot;
+            {%- endif -%}
+            autocorrect=&quot;off&quot;
+            autocapitalize=&quot;off&quot;
+			required   
+            autofocus&gt;
+          &lt;span class=&quot;&quot;&gt;
+            &lt;button type=&quot;submit&quot; class=&quot;button&quot; id=&quot;Subscribe&quot;&gt;
+             {{settings.button_text}}
+            &lt;/button&gt;
+          &lt;/span&gt;
+        &lt;/div&gt;
+      {% endif %}
+    {% endform %}    
 &lt;/div&gt;
-
+   
 &lt;style&gt;
-
 .subscribe-overlay {
   display: none;
   position: fixed;
@@ -142,76 +173,82 @@ console.log(typeof(fadeIn));
   height: 100%;
   z-index: 50;
   background: rgba(0, 0, 0, 0.5);
-}
+} 
 .subscribe-modal {
-  display: none;
-  width: 500px;
+  --img-ratio: 3/2;
+  display:none;
+  width: max(20vw, 400px);
   max-width: 100%;
   max-height: 100%;
+  background:white;
   position: fixed;
   z-index: 100;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: white;
+  flex-direction: column;
+  border-radius: 0.5rem;
 }
-.container {
-  margin-top: 3rem ;
+.subscribe-modal &gt; * + * {
+  margin-top: 1rem;
+}
+.subscribe-modal &gt; img {
+  height: max(18vh, 12rem);
+  object-fit: cover;
+  width: 100%;
+  margin-top: 0;
+  border-radius: 0.5rem;
+}
+@supports (aspect-ratio: 1) {
+  .subscribe-modal &gt; img {
+    aspect-ratio: var(--img-ratio);
+    height: auto;
+  }
+}
+.subscribe-modal &gt; :not(img) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.subscribe-modal &gt; :last-of-type:not(img, h1, p, input, button) {
+  margin-bottom: 1rem;
+}
+.subscribe-modal h1 {
   text-align: center;
-  width:100%;
-  display: grid;
-  grid-template-columns: 1fr;
+  font-size:1.5rem;
 }
-.message {
-  line-height: 1.5;
-  font-size: 1.2em;
-  padding: 1rem;
-}
-form {
-  display: flex;
-  flex-wrap: wrap;
-}
-form &gt; input {
-  flex: 1 1 10ch;
-  margin: 0.5rem;
-}
-form &gt; input[type=&quot;email&quot;] {
-  flex: 3 1 30ch;
-}
-input {
+.subscribe-modal p {
+  text-align: center;
+} 
+.email {
+  width: 100%;
   border: none;
   background: hsl(0 0% 93%);
   border-radius: 0.25rem;
-  padding: 0.75rem 1rem;
+  margin-bottom:0.5rem;
 }
-input[type=&quot;submit&quot;] {
-  background: {{settings.button_color}};
-  color: white;
-}
-
 .closeBtn {
   position: absolute;
   z-index: 1000;
-  top: 0px;
+  top: 1rem;
   right: 0px;
   color: darkgray;
   padding: 5px 10px;
   font-size: 1.2em;
   border: none;
   background: rgba(255, 255, 255, 0);
-  }
-
-.closeBtn:focus,
+}
 .closeBtn:hover {
   outline: none;
   color: black;
 }
+ .closeBtn:focus{
+  outline: 1px dashed #3e68ff;
+  color: black;
+}
 .visible {
   display: flex;
-
   animation: fade-in 2s;
 }
-
 @keyframes fade-in {
   from {
     opacity: 0;
@@ -220,15 +257,52 @@ input[type=&quot;submit&quot;] {
     opacity: 1;
   }
 }
-
+button.button {
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-self: start;
+  background-color: {{settings.button_color}};
+  color: {{settings.button_text_color}};
+  border-radius: 8px;
+  padding: 0.25em 0.75em;
+  min-width: 100%;
+  min-height: 44px;
+  text-align: center;
+  line-height: 1.1;
+  transition: 220ms all ease-in-out;
+}
+button.button:hover,
+button.button:active{
+  background-color: {{settings.button_hover_color}};
+  }
+button.button:focus {
+    outline-style: solid;
+    outline-color: transparent;
+    box-shadow: 0 0 0 4px #3e68ff;
+  }  
+  
+.subscribe-message {
+  border: 1px solid #b8860b;
+  background-color: #fff;
+  color: #b8860b;
+  padding: 1rem 0.5rem;
+  font-size: 1.25rem;
+}  
 &lt;/style&gt;
+
 </code></pre><p>Now you need to edit the code in the settings_schema.json file. It&rsquo;s located in your theme&rsquo;s config folder. The formatting of this file can be difficult, you can find Shopify&rsquo;s guidelines here: <a href="https://shopify.dev/docs/themes/settings">https://shopify.dev/docs/themes/settings</a></p>
 <p>Adding this code will make the popup content customizable through the theme editor:</p>
 <pre><code> {
     &quot;name&quot;: {
       &quot;en&quot;: &quot;Subscribe Popup&quot;
     },
-    &quot;settings&quot;: [
+      &quot;settings&quot;: [
       {
         &quot;type&quot;: &quot;text&quot;,
         &quot;id&quot;: &quot;popup_title&quot;,
@@ -242,10 +316,28 @@ input[type=&quot;submit&quot;] {
         &quot;label&quot;: &quot;Message&quot;
       },
       {
-         &quot;type&quot;: &quot;color&quot;,
-         &quot;id&quot;: &quot;button_color&quot;,
-         &quot;label&quot;: &quot;Button color&quot;,
-         &quot;default&quot;: &quot;#ff4500&quot;
+        &quot;type&quot;: &quot;text&quot;,
+        &quot;id&quot;: &quot;button_text&quot;,
+        &quot;default&quot;: &quot;SIGN-UP&quot;,
+        &quot;label&quot;: &quot;Title&quot;
+      },
+      {
+        &quot;type&quot;: &quot;color&quot;,
+        &quot;id&quot;: &quot;button_color&quot;,
+        &quot;label&quot;: &quot;Button color&quot;,
+        &quot;default&quot;: &quot;#ffa500&quot;
+      },
+      {
+        &quot;type&quot;: &quot;color&quot;,
+        &quot;id&quot;: &quot;button_text_color&quot;,
+        &quot;label&quot;: &quot;Button text color&quot;,
+        &quot;default&quot;: &quot;#fff&quot;
+      },
+      {
+        &quot;type&quot;: &quot;color&quot;,
+        &quot;id&quot;: &quot;button_hover_color&quot;,
+        &quot;label&quot;: &quot;Button hover color&quot;,
+        &quot;default&quot;: &quot;#ff4500&quot;
       },
       {
         &quot;type&quot;: &quot;range&quot;,
@@ -259,17 +351,26 @@ input[type=&quot;submit&quot;] {
       },
       {
         &quot;type&quot;: &quot;checkbox&quot;,
-        &quot;id&quot;: &quot;home_page&quot;,
+        &quot;id&quot;: &quot;show_popup&quot;,
         &quot;default&quot;: true,
-        &quot;label&quot;: &quot;Show only on Home page&quot;
+        &quot;label&quot;: &quot;Show popup&quot;
+      },
+      {
+        &quot;type&quot;: &quot;image_picker&quot;,
+        &quot;id&quot;: &quot;popup_image&quot;,
+        &quot;label&quot;: &quot;Select an image for the popup&quot;
       }
     ]
   },
-</code></pre><p>To make the popup content customizable in the theme editor.</p>
-<p>Finally add the following code to your theme.liquid file. Place the code before the closing body tag <!-- raw HTML omitted -->.</p>
-<p>The popup should now appear in your customizable theme settings:
-<img src="images/settings1.png" alt="shopify theme settings"></p>
-<p><img src="images/settings.png" alt="shopify theme settings"></p>
+</code></pre><p>Finally add the following code to your theme.liquid file. Place the code before the closing body tag <!-- raw HTML omitted -->.</p>
+<pre><code>  {% assign show-popup = {{settings.show_popup}} %}
+  {% if show-popup == true %}
+  {% render &quot;popup&quot; %}
+  {% endif %}
+&lt;/body&gt;
+</code></pre><p>The popup should now appear in your customizable theme settings:
+<img src="images/settings.png" alt="shopify theme settings"></p>
+<p><img src="images/customize-popup.png" alt="shopify theme settings"></p>
 </div>
   
 </article></main>
