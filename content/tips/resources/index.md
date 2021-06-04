@@ -15,8 +15,8 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 ### General Shopify Information:   
 
 - Youtube video tutorials from [Coding with Jan](https://www.youtube.com/channel/UCwqNzzV8FmCyGWLfJW8MMSg)  
-- Shopify theme development from [{{ Kelly | plus: Kelly }}](https://www.youtube.com/watch?v=wR8L-0QnKZo)  
-- [How to Set Up a Local Theme Development Workflow with Theme Kit themekit](https://www.youtube.com/watch?v=SrtOXwjXJ1w)  
+- Series of streams on Shopify theme development from [{{ Kelly | plus: Kelly }}](https://www.youtube.com/watch?v=wR8L-0QnKZo)  
+- [How to Set Up a Local Theme Development Workflow with Theme Kit](https://www.youtube.com/watch?v=SrtOXwjXJ1w)  
 - [An example build process for Shopify theme development](https://github.com/the-taproom/build-process)  
 
 ### App Development:  
