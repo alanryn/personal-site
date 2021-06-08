@@ -18,15 +18,15 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 - Series of streams on Shopify theme development from [{{ Kelly | plus: Kelly }}](https://www.youtube.com/watch?v=wR8L-0QnKZo)  
 - [How to Set Up a Local Theme Development Workflow with Theme Kit](https://www.youtube.com/watch?v=SrtOXwjXJ1w)  
 - [An example build process for Shopify theme development](https://github.com/the-taproom/build-process)  
+- [An upcoming course on Shopify Frontend Development](https://shophackers.io/shopify)  
 
 ### App Development:  
 
 - [Shopify App CLI](https://shopify.dev/tools/cli)
-- [The Shopify GraphQL Learning Kit](https://www.shopify.com/partners/blog/shopify-graphql-learning-kit)
-- [Build a Shopify App with Node and React](https://shopify.dev/tutorials/build-a-shopify-app-with-node-and-react)
-- [Build a Shopify App with Node and React Video](https://www.youtube.com/watch?v=PIXN032XJJ8&t=2s)
-- [An upcoming course on Shopify Frontend Development](https://shophackers.io/shopify)
-- [How to Build a Shopify App: The Complete Guide](https://www.shopify.com/partners/blog/how-to-build-a-shopify-app)
+- [The Shopify GraphQL Learning Kit](https://www.shopify.com/partners/blog/shopify-graphql-learning-kit)  
+- [Build a Shopify App with Node and React](https://shopify.dev/tutorials/build-a-shopify-app-with-node-and-react)  
+- [Build a Shopify App with Node and React Video](https://www.youtube.com/watch?v=PIXN032XJJ8&t=2s)  
+- [How to Build a Shopify App: The Complete Guide](https://www.shopify.com/partners/blog/how-to-build-a-shopify-app)  
 
 ### Other:    
 
