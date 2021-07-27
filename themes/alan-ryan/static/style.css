@@ -40,6 +40,7 @@ body {
   font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1400 - 300)));
   line-height: 1.8;
   word-break: break-word;
+  hyphens: auto;
   background: var(--theme);
 }
 article,

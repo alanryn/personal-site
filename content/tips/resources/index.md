@@ -30,7 +30,7 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 
 ### Other:    
 
-- [Working with Shopify metafields without an app](https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app)  
+- [Working with Shopify metafields without an app](https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app) and a [youtube video ](https://www.youtube.com/watch?v=UbwhADWZzvQ)  
 - [Shopify Storefront API Examples](https://github.com/Shopify/storefront-api-examples)  
 - [Shopify Theme scripts](https://github.com/Shopify/theme-scripts)  
 - [Build a Custom Shopify Storefront using React (Headless CMS)](https://www.udemy.com/course/build-a-custom-shopify-storefront-using-react-headless-cms/) and the [github repo](https://github.com/iskurbanov/shopify-react-headless)

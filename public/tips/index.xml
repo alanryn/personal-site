@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Resources</title>
+      <title>Shopify Resources</title>
       <link>https://alanryan.dev/tips/resources/</link>
       <pubDate>Fri, 04 Jun 2021 09:20:14 +0000</pubDate>
       
       <guid>https://alanryan.dev/tips/resources/</guid>
-      <description>Resources
-Shopify App development: Shopify App CLI https://shopify.dev/tools/cli coding with Jan https://www.youtube.com/channel/UCwqNzzV8FmCyGWLfJW8MMSg {{ Kelly | plus: Kelly }} https://www.youtube.com/watch?v=wR8L-0QnKZo How to Set Up a Local Theme Development Workflow with Theme Kit themekit https://www.youtube.com/watch?v=SrtOXwjXJ1w An example build process for Shopify theme development https://github.com/iskurbanov/shopify-react-headless Build a Custom Shopify Storefront using React (Headless CMS) https://www.udemy.com/course/build-a-custom-shopify-storefront-using-react-headless-cms/ The Shopify GraphQL Learning Kit https://www.shopify.com/partners/blog/shopify-graphql-learning-kit Build a Shopify App with Node and React https://shopify.dev/tutorials/build-a-shopify-app-with-node-and-react How to Build a Shopify App with Node and React https://www.</description>
+      <description>A list of useful Shopify resources Liquid:  Learning Liquid: A guide to Shopify theme development Shopify Liquid REPL Shopify Liquid code examples  General Shopify Information:  Youtube video tutorials from Coding with Jan Series of streams on Shopify theme development from {{ Kelly | plus: Kelly }} How to Set Up a Local Theme Development Workflow with Theme Kit An example build process for Shopify theme development An upcoming course on Shopify Frontend Development  App Development:  Shopify App CLI The Shopify GraphQL Learning Kit Build a Shopify App with Node and React Build a Shopify App with Node and React Video How to Build a Shopify App: The Complete Guide  Other:  Working with Shopify metafields without an app and a youtube video  Shopify Storefront API Examples Shopify Theme scripts Build a Custom Shopify Storefront using React (Headless CMS) and the github repo Add a Shopify Wishlist  </description>
     </item>
     
     <item>
