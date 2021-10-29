@@ -34,7 +34,7 @@ For example, here's how to display different shipping inforamtion depending on a
 {% endcapture %}
 ```
 
-- Then, add this javascript inside ***script*** tags:
+- Then, add this javascript inside ***script*** tags in the product-template file:
 
 ```
 <script>
