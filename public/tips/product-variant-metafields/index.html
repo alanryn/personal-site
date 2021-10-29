@@ -7,9 +7,8 @@
     
     <title>Alan Ryan | Shopify Dev</title>
     
-    <meta name="description" content="B y By using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.
-The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, here&rsquo;s how.
-A metafield consists of a namespace, a key, a value, and an optional description.">
+    <meta name="description" content="B y By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
+Adding custom Metafields is now built into Shopify. It can be accessed via Settings -&gt; Metafields in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon).">
     <meta name="author" content="">
     
     
@@ -69,17 +68,17 @@ A metafield consists of a namespace, a key, a value, and an optional description
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">Adding Metafields to Product Variants</h1>
-    <div class="post-meta">January 2, 2021</div>
+    <div class="post-meta">October 28, 2021</div>
   </header>
   <div class="post-content"><p><span aria-hidden="true"><span class="drop-cap">
 B</span>
 y</span>
  <span class="sr-only">By</span>
- using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.</p>
-<p>The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, <a href="">here&rsquo;s how</a>.</p>
+ using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.</p>
+<p>Adding custom Metafields is now built into Shopify. It can be accessed via <em><strong>Settings -&gt; Metafields</strong></em> in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon). Previously, the easiest way to add metafields was by using an app, such as Metafields Guru. It is also still possible to add metafields without an app using the bulk editor, <a href="https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app">here&rsquo;s how</a>.</p>
 <p>A metafield consists of a namespace, a key, a value, and an optional description. The namespace is used to logically group different metafields.</p>
-<p>You can also add metafields to the product variants, but it is more complcated to access the variant metafield information on your page. Variant metafields can display some different information depending on the selected variant. To achieve this it&rsquo;s necessary to update the information depending on a change to the selected variant. The involves updating the javascript connected to the selctor.</p>
-<p>Here is an explanation on how to achive this with the Debut theme, it may differ slightly depending the themes you are using.</p>
+<p>You can also add metafields to the product variants, but it is more complcated to access the variant metafield information on your page. Variant metafields can display some different information depending on the selected variant. To achieve this it&rsquo;s necessary to update the information depending on a change to the selected variant. This involves updating the javascript connected to the selector.</p>
+<p>Here is an explanation on how to achieve this with the Debut theme, it may differ slightly depending the theme you are using.</p>
 <p>For example, here&rsquo;s how to display different shipping inforamtion depending on a selected product variant:</p>
 <ul>
 <li>Add some html like this to the product-template.liquid file (position it where you would like to display the shipping information):</li>
@@ -94,9 +93,10 @@ y</span>
   {% endfor %}
 {% endcapture %}
 </code></pre><ul>
-<li>Then, add this javascript inside <!-- raw HTML omitted --> <!-- raw HTML omitted --> tags:</li>
+<li>Then, add this javascript inside <em><strong>script</strong></em> tags:</li>
 </ul>
-<pre><code>  const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+<pre><code>&lt;script&gt;
+  const currentVariantId = {{ product.selected_or_first_available_variant.id }};
   const metaData = { {{ meta_data }} };
   const shippingInfo = (id) =&gt; {
   var selector = document.querySelector('.variant_shipping_info');
@@ -104,10 +104,12 @@ y</span>
      selector.style.display = 'block'
      selector.innerHTML = metaData[id];
     }
+    else selector.style.display = 'none'
   }
   shippingInfo(currentVariantId);
+&lt;/script&gt;
 </code></pre><p>Make sure to change the naming to match your metafields. Mine are variant.metafields.shipping.time</p>
-<p>Next you need to update the theme.js file. Find the code for the <strong>Event handler for when a variant input changes</strong>, and add these few lines near the end.</p>
+<p>Next you need to update the theme.js file in the Assets folder. Find the code for the <strong>Event handler for when a variant input changes</strong>, and add these few lines near the end.</p>
 <pre><code> if (variant) {
 	  var id = variant.id
 	  shippingInfo(id);

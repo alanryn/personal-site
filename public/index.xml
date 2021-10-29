@@ -6,7 +6,7 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 04 Jun 2021 09:20:14 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 Oct 2021 16:19:53 +0000</lastBuildDate>
     
 	<atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,16 @@
       
       <guid>https://alanryan.dev/contact/</guid>
       <description>I am a freelance frontend developer, currently specializing in Shopify. I am interested in CSS, GSAP, SVG, Image Optimization, Accessibility, and much more. For personal projects I use static site generators like 11ty and Hugo; I work as a Portuguese to English translator, and enjoy writing. Contact me with any queries about Shopify or anything else. I&#39;m avaialable for jobs big and small or if you just want some free advice.</description>
+    </item>
+    
+    <item>
+      <title>Adding Metafields to Product Variants</title>
+      <link>https://alanryan.dev/tips/product-variant-metafields/</link>
+      <pubDate>Thu, 28 Oct 2021 16:19:53 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/product-variant-metafields/</guid>
+      <description>B y By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
+Adding custom Metafields is now built into Shopify. It can be accessed via Settings -&amp;gt; Metafields in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon).</description>
     </item>
     
     <item>
@@ -77,17 +87,6 @@ See it live here</description>
       <guid>https://alanryan.dev/projects/umbrella-store/</guid>
       <description>A quick and simple Shopify store, for demo purposes only.
 View Site</description>
-    </item>
-    
-    <item>
-      <title>Adding Metafields to Product Variants</title>
-      <link>https://alanryan.dev/tips/product-variant-metafields/</link>
-      <pubDate>Sat, 02 Jan 2021 16:19:53 +0000</pubDate>
-      
-      <guid>https://alanryan.dev/tips/product-variant-metafields/</guid>
-      <description>B y By using metaafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafields object to display the information on you website pages using simple Liquid code.
-The easiest way to add metafields is by using an app, such as Metafields Guru. It is possible to add metafields without an app using the bulk editor, here&amp;rsquo;s how.
-A metafield consists of a namespace, a key, a value, and an optional description.</description>
     </item>
     
     <item>
