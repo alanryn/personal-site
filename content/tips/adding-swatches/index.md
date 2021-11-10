@@ -5,8 +5,7 @@ backgroundColor: "#e5e0c9"
 backgroundImage: "data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%2355245a' fill-opacity='1'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
 ---
 
-{{< aria-hidden-span >}}{{< drop-cap >}}
-M{{< /drop-cap >}}any{{< /aria-hidden-span >}} {{< sr-only-span >}}Many{{< /sr-only-span >}} themes come with a dropdown as the default size selector. Here's how to change this to, for example, a list of buttons, similar to a color swatch. In this example I'm using Shopify's Venture theme, but it should be similar for most other themes.
+Many themes come with a dropdown as the default size selector. Here's how to change this to, for example, a list of buttons, similar to a color swatch. In this example I'm using Shopify's Venture theme, but it should be similar for most other themes.
 
 In the **product-template.liquid** file in the **sections folder** search for the code beginning with:
 
