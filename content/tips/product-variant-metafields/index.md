@@ -86,8 +86,7 @@ Then add the ***updateMeta*** code further down with the other update methods:
   }
 
   updateMeta() {
-      let metaId = this.currentVariant.id
-	  shippingInfo(metaId);
+	  shippingInfo(this.currentVariant.id);
   }
   
   updateMedia() { ...
