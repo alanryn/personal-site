@@ -293,5 +293,5 @@ Now you should have 2 different variant metafield blocks in your customizer.
 The full code for the product.json is [here](https://gist.github.com/alanryn/bd6693619ff4beab129224ec188f3a4a).  
 The full code for the main-product.liquid is [here](https://gist.github.com/alanryn/0a656825b92ccbb19f73369c3afdb190).  
 This code adds 2 metafields to a product variant.  
-This solution is based on answers provided [here](https://community.shopify.com/c/technical-q-a/display-product-variants-metafields/td-p/555439).
+This solution is based on answers provided [here](https://community.shopify.com/c/technical-q-a/display-product-variants-metafields/td-p/555439). Credit where credit is due.
 
