@@ -6,7 +6,7 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Oct 2021 16:19:53 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 10 Nov 2021 16:19:53 +0000</lastBuildDate>
     
 	<atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,12 +21,12 @@
     </item>
     
     <item>
-      <title>Adding Metafields to Product Variants</title>
+      <title>Adding Metafields to Product Variants - Dawn Theme</title>
       <link>https://alanryan.dev/tips/product-variant-metafields/</link>
-      <pubDate>Thu, 28 Oct 2021 16:19:53 +0000</pubDate>
+      <pubDate>Wed, 10 Nov 2021 16:19:53 +0000</pubDate>
       
       <guid>https://alanryan.dev/tips/product-variant-metafields/</guid>
-      <description>B y By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
+      <description>By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
 Adding custom Metafields is now built into Shopify. It can be accessed via Settings -&amp;gt; Metafields in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon).</description>
     </item>
     
@@ -104,9 +104,10 @@ View Site</description>
       <pubDate>Wed, 30 Dec 2020 16:20:14 +0000</pubDate>
       
       <guid>https://alanryan.dev/tips/adding-swatches/</guid>
-      <description>M any Many themes come with a dropdown as the default size selector. Here&amp;rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&amp;rsquo;m using Shopify&amp;rsquo;s Venture theme, but it should be similar for most other themes.
+      <description>Many themes come with a dropdown as the default size selector. Here&amp;rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&amp;rsquo;m using Shopify&amp;rsquo;s Venture theme, but it should be similar for most other themes.
 In the product-template.liquid file in the sections folder search for the code beginning with:
- {% unless product.has_only_default_variant %} and ending with :</description>
+ {% unless product.has_only_default_variant %} and ending with :
+{% endunless %} and replaace everything between with this code:</description>
     </item>
     
     <item>

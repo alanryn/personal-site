@@ -7,9 +7,10 @@
     
     <title>Alan Ryan | Shopify Dev</title>
     
-    <meta name="description" content="M any Many themes come with a dropdown as the default size selector. Here&rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&rsquo;m using Shopify&rsquo;s Venture theme, but it should be similar for most other themes.
+    <meta name="description" content="Many themes come with a dropdown as the default size selector. Here&rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&rsquo;m using Shopify&rsquo;s Venture theme, but it should be similar for most other themes.
 In the product-template.liquid file in the sections folder search for the code beginning with:
- {% unless product.has_only_default_variant %} and ending with :">
+ {% unless product.has_only_default_variant %} and ending with :
+{% endunless %} and replaace everything between with this code:">
     <meta name="author" content="">
     
     
@@ -71,11 +72,7 @@ In the product-template.liquid file in the sections folder search for the code b
     <h1 class="post-title">Adding a Customized Size Swatch</h1>
     <div class="post-meta">December 30, 2020</div>
   </header>
-  <div class="post-content"><p><span aria-hidden="true"><span class="drop-cap">
-M</span>
-any</span>
- <span class="sr-only">Many</span>
- themes come with a dropdown as the default size selector. Here&rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&rsquo;m using Shopify&rsquo;s Venture theme, but it should be similar for most other themes.</p>
+  <div class="post-content"><p>Many themes come with a dropdown as the default size selector. Here&rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&rsquo;m using Shopify&rsquo;s Venture theme, but it should be similar for most other themes.</p>
 <p>In the <strong>product-template.liquid</strong> file in the <strong>sections folder</strong> search for the code beginning with:</p>
 <pre><code> {% unless product.has_only_default_variant %}
 </code></pre><p>and ending with :</p>

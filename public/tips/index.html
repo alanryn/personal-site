@@ -70,14 +70,14 @@
 <article class="post-entry gallery-link">
 
   <header class="entry-header">
-    <h2>Adding Metafields to Product Variants</h2>
+    <h2>Adding Metafields to Product Variants - Dawn Theme</h2>
   </header>
   <section class="entry-content">
-   <p>B y By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
+   <p>By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
 Adding custom Metafields is now built into Shopify. It can be accessed via Settings -&gt; Metafields in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon)....</p>
   </section>
   <footer class="entry-footer">
-    <time>October 28, 2021</time>
+    <time>November 10, 2021</time>
   </footer>
 
 </article>
@@ -135,9 +135,10 @@ Adding custom Metafields is now built into Shopify. It can be accessed via Setti
     <h2>Adding a Customized Size Swatch</h2>
   </header>
   <section class="entry-content">
-   <p>M any Many themes come with a dropdown as the default size selector. Here’s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I’m using Shopify’s Venture theme, but it should be similar for most other themes.
+   <p>Many themes come with a dropdown as the default size selector. Here’s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I’m using Shopify’s Venture theme, but it should be similar for most other themes.
 In the product-template.liquid file in the sections folder search for the code beginning with:
- {% unless product.has_only_default_variant %} and ending with :...</p>
+ {% unless product.has_only_default_variant %} and ending with :
+{% endunless %} and replaace everything between with this code:...</p>
   </section>
   <footer class="entry-footer">
     <time>December 30, 2020</time>

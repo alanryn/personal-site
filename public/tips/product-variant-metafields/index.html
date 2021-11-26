@@ -7,7 +7,7 @@
     
     <title>Alan Ryan | Shopify Dev</title>
     
-    <meta name="description" content="B y By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
+    <meta name="description" content="By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
 Adding custom Metafields is now built into Shopify. It can be accessed via Settings -&gt; Metafields in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon).">
     <meta name="author" content="">
     
@@ -67,84 +67,248 @@ Adding custom Metafields is now built into Shopify. It can be accessed via Setti
 
 <article class="post-single">
   <header class="post-header">
-    <h1 class="post-title">Adding Metafields to Product Variants</h1>
-    <div class="post-meta">October 28, 2021</div>
+    <h1 class="post-title">Adding Metafields to Product Variants - Dawn Theme</h1>
+    <div class="post-meta">November 10, 2021</div>
   </header>
-  <div class="post-content"><p><span aria-hidden="true"><span class="drop-cap">
-B</span>
-y</span>
- <span class="sr-only">By</span>
- using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.</p>
-<p>Adding custom Metafields is now built into Shopify. It can be accessed via <em><strong>Settings -&gt; Metafields</strong></em> in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon). Previously, the easiest way to add metafields was by using an app, such as Metafields Guru. It is also still possible to add metafields without an app using the bulk editor, <a href="https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app">here&rsquo;s how</a>.</p>
+  <div class="post-content"><p>By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.</p>
+<p>Adding custom Metafields is now built into Shopify. It can be accessed via <code>Settings -&gt; Metafields</code> in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon). Previously, the easiest way to add metafields was by using an app, such as Metafields Guru. It is also still possible to add metafields without an app using the bulk editor, <a href="https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app">here&rsquo;s how</a>.</p>
 <p>A metafield consists of a namespace, a key, a value, and an optional description. The namespace is used to logically group different metafields.</p>
-<p>You can also add metafields to the product variants, but it is more complcated to access the variant metafield information on your page. Variant metafields can display some different information depending on the selected variant. To achieve this it&rsquo;s necessary to update the information depending on a change to the selected variant. This involves updating the javascript connected to the selector.</p>
-<p>Here is an explanation on how to achieve this with the Debut theme, it may differ slightly depending the theme you are using.</p>
-<p>For example, here&rsquo;s how to display different shipping inforamtion depending on a selected product variant:</p>
+<p>You can also add metafields to the product variants, but it is a little more complicated to access the variant metafield information on your page. Variant metafields can display different information depending on the selected variant. To achieve this it&rsquo;s necessary to update the information depending on a change to the selected variant. This involves updating the javascript code connected to the selector.</p>
+<p>Here is an explanation on how to achieve this with the Dawn theme, it will differ slightly depending the theme you are using.
+These instructions assume that you have already added 2 metafields for a variant (in this case called <code>variant_info_1</code> and <code>variant_info_2</code>) and that you have added these two metafields to at least one of your product variants.</p>
+<p><img src="images/metafield-definitions.png" alt="shopify theme settings"></p>
+<p>First, here&rsquo;s how to display one extra information field depending on a selected product variant:</p>
 <ul>
-<li>Add some html like this to the product-template.liquid file (position it where you would like to display the shipping information):</li>
+<li>Add some html to the <code>main-product.liquid</code> file in the <code>Sections</code> folder (position it where you would like to display the shipping information), for example:</li>
 </ul>
-<pre><code>&lt;p class=&quot;variant_shipping_info&quot; style=&quot;display: none;&quot;&gt;&lt;/p&gt;
+<pre><code>&lt;div class=&quot;hideAll&quot;&gt;
+    &lt;p&gt;&lt;span&gt;Extra Info 1: &lt;/span&gt;&lt;span class=&quot;variant_info_1&quot;&gt;&lt;/span&gt;&lt;/p&gt;       
+&lt;/div&gt;
 </code></pre><ul>
-<li>Below this add some liquid code:</li>
+<li>Below this add some liquid code to capture the associated metafield data and store it in a variable, here called <code>meta_data_1</code>:</li>
 </ul>
-<pre><code class="language-liquid" data-lang="liquid">{% capture 'meta_data' %}
-{% for variant in product.variants %}
-{{variant.id}}:{{ variant.metafields.shipping.time | json }}{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-{% endcapture %}
+<pre><code>{% capture 'meta_data_1' %}       
+    {% for variant in product.variants %}
+        {{variant.id}}:{{ variant.metafields.my_fields.variant_info_1 | json }}
+        {% unless forloop.last %},{% endunless %}           
+   {% endfor %}
+{% endcapture %}  
 </code></pre><ul>
-<li>Then, add this javascript inside <em><strong>script</strong></em> tags:</li>
+<li>Then, add this javascript inside <code>script</code> tags in the <code>main-product.liquid</code> file:</li>
 </ul>
 <pre><code>&lt;script&gt;
   const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-  const metaData = { {{ meta_data }} };
-  const shippingInfo = (id) =&gt; {
-  var selector = document.querySelector('.variant_shipping_info');
+  const metaData = { {{ meta_data_1 }} };        
+  const extraVariantInfo = (id) =&gt; {
+  let selector = document.querySelector('.variant_info_1');
+  let hide = document.querySelector('.hideAll')
     if (metaData[id]) {
-     selector.style.display = 'block'
+     hide.style.display = 'block'
      selector.innerHTML = metaData[id];
     }
-    else selector.style.display = 'none'
+    else 
+     hide.style.display = 'none'
   }
-  shippingInfo(currentVariantId);
+  extraVariantInfo(currentVariantId);
+
 &lt;/script&gt;
-</code></pre><p>Make sure to change the naming to match your metafields. Mine are variant.metafields.shipping.time</p>
-<p>Next you need to update the theme.js file in the Assets folder. Find the code for the <strong>Event handler for when a variant input changes</strong>, and add these few lines near the end.</p>
-<pre><code> if (variant) {
-	  var id = variant.id
-	  shippingInfo(id);
+</code></pre><p>Make sure to change the naming to match your metafields. Mine is <code>variant.metafields.my_fields.variant_info_1</code>.</p>
+<p>Next, in the case of the Dawn theme, you need to update the <code>global.js</code> file in the <code>Assets</code> folder. Find the code starting with <code>onVariantChange()</code> (it should be around line 570). Below that, add another method call for <code>updateMeta()</code>:</p>
+<pre><code>  onVariantChange() {	
+    this.updateOptions();
+    this.updateMasterId();
+    this.updateMeta();
+    this.toggleAddButton(true, '', false);
+    this.updatePickupAvailability();
+    this.removeErrorMessage();
+
+</code></pre><p>Then add the <code>updateMeta</code> code further down with the other update methods:</p>
+<pre><code>  updateOptions() {
+    this.options = Array.from(this.querySelectorAll('select'), (select) =&gt; select.value);
+  }
+
+  updateMasterId() {
+    this.currentVariant = this.getVariantData().find((variant) =&gt; {
+      return !variant.options.map((option, index) =&gt; {
+        return this.options[index] === option;
+      }).includes(false);
+    });
+  }
+
+  updateMeta() {
+	  extraVariantInfo(this.currentVariant.id);
+  }
+  
+  updateMedia() { ...
+  
+</code></pre><p>Now your variant metafield should be appearing and updating as you select different variant options.</p>
+<p>We can also add the code as a block in the <code>main-product.liquid</code> file . In this way the variant metafield becomes visible in the theme customizer and gives the option of rearranging the block without changing the code. This involves changes to the <code>product.json</code> and the <code>main-product.liquid</code> files.<br>
+Update <code>product.json</code> in the <code>Templates folder</code> to include a new <code>block</code> (in this case, I am adding one new block called <code>variant_info_1</code>). Also, add the new block to the <code>block_order</code>(you may get an error when saving these changes until you update the <code>main-product.liquid</code> in the next step):</p>
+<pre><code>{
+  &quot;sections&quot;: {
+    &quot;main&quot;: {
+      &quot;type&quot;: &quot;main-product&quot;,
+      &quot;blocks&quot;: {
+        &quot;vendor&quot;: {
+          &quot;type&quot;: &quot;text&quot;,
+          &quot;settings&quot;: {
+            &quot;text&quot;: &quot;{{ product.vendor }}&quot;,
+            &quot;text_style&quot;: &quot;uppercase&quot;
+          }
+        },
+        &quot;title&quot;: {
+          &quot;type&quot;: &quot;title&quot;,
+          &quot;settings&quot;: {
+          }
+        },
+        &quot;subtitle&quot;: {
+          &quot;type&quot;: &quot;text&quot;,
+          &quot;settings&quot;: {
+            &quot;text&quot;: &quot;{{ product.metafields.descriptors.subtitle.value }}&quot;,
+            &quot;text_style&quot;: &quot;subtitle&quot;
+          }
+        },
+        &quot;price&quot;: {
+          &quot;type&quot;: &quot;price&quot;,
+          &quot;settings&quot;: {
+          }
+        },
+        &quot;variant_picker&quot;: {
+          &quot;type&quot;: &quot;variant_picker&quot;,
+          &quot;settings&quot;: {
+            &quot;picker_type&quot;: &quot;button&quot;
+          }
+        },
+        &quot;quantity_selector&quot;: {
+          &quot;type&quot;: &quot;quantity_selector&quot;,
+          &quot;settings&quot;: {
+          }
+        },
+        &quot;buy_buttons&quot;: {
+          &quot;type&quot;: &quot;buy_buttons&quot;,
+          &quot;settings&quot;: {
+            &quot;show_dynamic_checkout&quot;: true
+          }
+        },
+        &quot;description&quot;: {
+          &quot;type&quot;: &quot;description&quot;,
+          &quot;settings&quot;: {
+          }
+        },
+        &quot;share&quot;: {
+          &quot;type&quot;: &quot;share&quot;,
+          &quot;settings&quot;: {
+            &quot;share_label&quot;: &quot;Share&quot;
+          }
+        },
+        &quot;variant_info_1&quot;: {
+          &quot;type&quot;: &quot;variant_info_1&quot;,
+          &quot;settings&quot;: {
+          }
+        }
+      },
+      &quot;block_order&quot;: [
+        &quot;vendor&quot;,
+        &quot;title&quot;,
+        &quot;subtitle&quot;,
+        &quot;price&quot;,
+        &quot;variant_picker&quot;,
+        &quot;quantity_selector&quot;,
+        &quot;buy_buttons&quot;,
+        &quot;description&quot;,
+        &quot;share&quot;,
+        &quot;variant_info_1&quot;
+      ],
+      &quot;settings&quot;: {
+        &quot;enable_sticky_info&quot;: true,
+        &quot;hide_variants&quot;: false,
+        &quot;enable_video_looping&quot;: false
       }
-</code></pre><p>Like this:</p>
-<pre><code> _onSelectChange: function() {
-      var variant = this._getVariantFromOptions();
-
-      this.$container.trigger({
-        type: 'variantChange',
-        variant: variant
-      });
-
-      if (!variant) {
-        return;
-      }
-
-      this._updateMasterSelect(variant);
-      this._updateImages(variant);
-      this._updatePrice(variant);
-      this._updateSKU(variant);
-      this.currentVariant = variant;
-
-      if (this.enableHistoryState) {
-        this._updateHistoryState(variant);
-      }
-
-
-      if (variant) {
-	  var id = variant.id
-	  shippingInfo(id);
-      }
-
     },
-</code></pre><p>Now your variant metafield should update as you select different options.</p>
+    &quot;product-recommendations&quot;: {
+      &quot;type&quot;: &quot;product-recommendations&quot;,
+      &quot;settings&quot;: {
+        &quot;heading&quot;: &quot;You may also like&quot;,
+        &quot;image_ratio&quot;: &quot;adapt&quot;,
+        &quot;show_secondary_image&quot;: false,
+        &quot;add_image_padding&quot;: false,
+        &quot;show_image_outline&quot;: true,
+        &quot;show_vendor&quot;: false,
+        &quot;show_rating&quot;: false
+      }
+    }
+  },
+  &quot;order&quot;: [
+    &quot;main&quot;,
+    &quot;product-recommendations&quot;
+  ]
+}
+
+</code></pre><p>Next, in the <code>main-product.json</code>, place <code>{% when 'variant_info_1' %}</code> before the previous code:</p>
+<pre><code>{% when 'variant_info_1' %}
+    &lt;div class=&quot;hideAll&quot;&gt;
+        &lt;p&gt;&lt;span&gt;Extra Info 1: &lt;/span&gt;&lt;span class=&quot;variant_info_1&quot;&gt;&lt;/span&gt;&lt;/p&gt;       
+    &lt;/div&gt;
+    {% capture 'meta_data_1' %}       
+    	{% for variant in product.variants %}
+        	{{variant.id}}:{{ variant.metafields.my_fields.variant_info_1 | json }}
+        	{% unless forloop.last %},{% endunless %}           
+   		{% endfor %}
+    {% endcapture %}    
+</code></pre><p>There is a <code>{% schema %}</code> section at the end of the <code>main-product.liquid</code> file. Add <code>variant_info_1</code> to this schema (follow the pattern for the other fields):</p>
+<pre><code>    {
+      &quot;type&quot;: &quot;variant_info_1&quot;,
+      &quot;name&quot;: &quot;Extra Variant Info 1&quot;,
+      &quot;limit&quot;: 1
+    },
+</code></pre><p>Your new block should now appear in your theme customizer (if it doesn&rsquo;t show initially, click on <code>Add Block</code> and select <code>Extra Variant Info 1</code> from the list). Now you can drag the block up and down the list of blocks in the Product information section to change its position on the page. You may need to save your customizer changes (green &ldquo;Save&rdquo; button on top right of screen) for the variant description block to show on the product page.</p>
+<p><img src="images/customizer-meta.png" alt="shopify theme settings"></p>
+<p>If you need to add more than one extra metafield for a single variant, you will basically need to duplicate the steps above for as many extra metafiels as required. In the <code>product.json</code> add an extra block for each new metafield and add each one to the <code>block_order</code>:</p>
+<pre><code> &quot;variant_info_2&quot;: {
+ &quot;type&quot;: &quot;variant_info_2&quot;,
+ &quot;settings&quot;: {
+  }
+}
+</code></pre><p>In <code>main-product.liquid</code> add another <code>{% when %}</code> block of code, like before, just update with new names:</p>
+<pre><code>{% when 'variant_info_2' %}
+     &lt;div class=&quot;hideAll&quot;&gt;
+         &lt;p&gt;&lt;span&gt;Extra Info 2: &lt;/span&gt;&lt;span class=&quot;variant_info_2&quot;&gt;&lt;/span&gt;&lt;/p&gt;       
+     &lt;/div&gt;
+     {% capture 'meta_data_2' %}       
+    	{% for variant in product.variants %}
+        	{{variant.id}}:{{ variant.metafields.my_fields.variant_info_2 | json }}
+        	{% unless forloop.last %},{% endunless %}           
+   		{% endfor %}
+     {% endcapture %}    
+</code></pre><p>Add the new block to the <code>{% schema %}</code> at the end of the file.</p>
+<pre><code>    {
+      &quot;type&quot;: &quot;variant_info_2&quot;,
+      &quot;name&quot;: &quot;Extra Variant Info 2&quot;,
+      &quot;limit&quot;: 1
+    },
+</code></pre><p>To deal with multiple metafields for each variant, it&rsquo;s probably best to update your javascript to uses loops to avoid repeating the same code:</p>
+<pre><code>&lt;script&gt;                 
+const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
+const extraVariantInfo = (id) =&gt; {
+  const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
+  const hide = document.querySelectorAll('.hideAll');
+    for(let x = 0; x &lt; metaData.length; x++) {
+      if (metaData[x][id]) {  
+         hide[x].style.display = 'inline'; 
+         selector[x].innerHTML = metaData[x][id];
+     }  
+      else  hide[x].style.display = 'none';
+    }
+  }
+extraVariantInfo(currentVariantId);
+&lt;/script&gt;
+</code></pre><p>The <code>global.js</code> remains unchanged from before.</p>
+<p>Now you should have 2 different variant metafield blocks in your customizer.</p>
+<p>The full code for the product.json is <a href="https://gist.github.com/alanryn/bd6693619ff4beab129224ec188f3a4a">here</a>.<br>
+The full code for the main-product.liquid is <a href="https://gist.github.com/alanryn/0a656825b92ccbb19f73369c3afdb190">here</a>.<br>
+This code adds 2 metafields to a product variant.<br>
+This solution is based on answers provided <a href="https://community.shopify.com/c/technical-q-a/display-product-variants-metafields/td-p/555439">here</a>.</p>
 </div>
   
 </article></main>
