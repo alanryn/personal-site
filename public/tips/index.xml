@@ -12,12 +12,14 @@
     
     
     <item>
-      <title>Recently Viewed Products Without App or JQuery </title>
+      <title>Recently Viewed Products Without App or jQuery</title>
       <link>https://alanryan.dev/tips/customized-header-footer/</link>
       <pubDate>Fri, 03 Dec 2021 15:20:00 +0000</pubDate>
       
       <guid>https://alanryan.dev/tips/customized-header-footer/</guid>
-      <description>Work in progress&amp;hellip;</description>
+      <description>This code will store the last 4 visited product pages in the browsers memory and display them as a section on the Product page. The steps below are for the Dawn theme.
+Create a new section file, in this case called recent-products.liquid, and add the following code:
+&amp;lt;div class=&amp;quot;recently-viewed-wrapper&amp;quot;&amp;gt; &amp;lt;h2&amp;gt;Recently Viewed&amp;lt;/h2&amp;gt; &amp;lt;ul class=&amp;quot;recently-viewed-grid&amp;quot;&amp;gt; &amp;lt;!-- Recently viewed products will appear here --&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; function setRecentlyViewedProducts() { const productData = { productTitle: &amp;quot;{{ product.</description>
     </item>
     
     <item>
