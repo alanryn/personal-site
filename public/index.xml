@@ -6,7 +6,7 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 10 Nov 2021 16:19:53 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 03 Dec 2021 15:20:00 +0000</lastBuildDate>
     
 	<atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://alanryan.dev/contact/</guid>
       <description>I am a freelance frontend developer, currently specializing in Shopify. I am interested in CSS, GSAP, SVG, Image Optimization, Accessibility, and much more. For personal projects I use static site generators like 11ty and Hugo; I work as a Portuguese to English translator, and enjoy writing. Contact me with any queries about Shopify or anything else. I&#39;m avaialable for jobs big and small or if you just want some free advice.</description>
+    </item>
+    
+    <item>
+      <title>Recently Viewed Products Without App or JQuery </title>
+      <link>https://alanryan.dev/tips/customized-header-footer/</link>
+      <pubDate>Fri, 03 Dec 2021 15:20:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/customized-header-footer/</guid>
+      <description>Work in progress&amp;hellip;</description>
     </item>
     
     <item>
@@ -87,15 +96,6 @@ See it live here</description>
       <guid>https://alanryan.dev/projects/umbrella-store/</guid>
       <description>A quick and simple Shopify store, for demo purposes only.
 View Site</description>
-    </item>
-    
-    <item>
-      <title>Customized Header &amp; Footer</title>
-      <link>https://alanryan.dev/tips/customized-header-footer/</link>
-      <pubDate>Thu, 31 Dec 2020 16:20:00 +0000</pubDate>
-      
-      <guid>https://alanryan.dev/tips/customized-header-footer/</guid>
-      <description>Work in progress&amp;hellip;</description>
     </item>
     
     <item>

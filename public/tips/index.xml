@@ -12,6 +12,15 @@
     
     
     <item>
+      <title>Recently Viewed Products Without App or JQuery </title>
+      <link>https://alanryan.dev/tips/customized-header-footer/</link>
+      <pubDate>Fri, 03 Dec 2021 15:20:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/customized-header-footer/</guid>
+      <description>Work in progress&amp;hellip;</description>
+    </item>
+    
+    <item>
       <title>Adding Metafields to Product Variants - Dawn Theme</title>
       <link>https://alanryan.dev/tips/product-variant-metafields/</link>
       <pubDate>Wed, 10 Nov 2021 16:19:53 +0000</pubDate>
@@ -38,15 +47,6 @@ Adding custom Metafields is now built into Shopify. It can be accessed via Setti
       <guid>https://alanryan.dev/tips/customized-subscribe-modal-popup/</guid>
       <description>Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
 &amp;lt;script&amp;gt; document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function () { let popupdisplayed = sessionStorage.getItem(&amp;quot;popupdisplayed&amp;quot;); const modal = document.querySelector(&amp;quot;#modal-id&amp;quot;); const overlay = document.querySelector(&amp;quot;#overlay-id&amp;quot;); let store = document.querySelectorAll(&amp;quot;.setStorage&amp;quot;); let initialFocus = document.querySelector(&amp;quot;#close&amp;quot;); let fadeIn = {{settings.fadein}} * 1000; if (popupdisplayed == &amp;quot;true&amp;quot;) { modal.classList.remove(&amp;quot;visible&amp;quot;); overlay.classList.remove(&amp;quot;visible&amp;quot;); } else { setTimeout(function () { modal.classList.add(&amp;quot;visible&amp;quot;); overlay.classList.add(&amp;quot;visible&amp;quot;); initialFocus.focus(); }, fadeIn); } store.forEach((stored) =&amp;gt; { stored.</description>
-    </item>
-    
-    <item>
-      <title>Customized Header &amp; Footer</title>
-      <link>https://alanryan.dev/tips/customized-header-footer/</link>
-      <pubDate>Thu, 31 Dec 2020 16:20:00 +0000</pubDate>
-      
-      <guid>https://alanryan.dev/tips/customized-header-footer/</guid>
-      <description>Work in progress&amp;hellip;</description>
     </item>
     
     <item>
