@@ -57,9 +57,9 @@ const localViewed = localStorage.recentlyViewedProduct;
 function getRecentlyViewedProducts() {
   const productData = JSON.parse(localStorage.getItem("recentlyViewedProduct"));
   const recentlyViewedHtml = [];
-  productData.forEach(function (item) {
+  productData.map(item => {
     recentlyViewedHtml.unshift(`
-<li>
+    <li>
       <a href="${item.productUrl}"> 
 		<img class="recently-viewed-img" src='${item.productImg}' loading="lazy" alt="${item.productImageAltText}"/>
       </a>
