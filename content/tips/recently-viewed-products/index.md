@@ -7,7 +7,7 @@ backgroundImage: "data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 
 This code will store the last 4 visited product pages in the browsers memory and display them as a section on the Product page. The steps below are for the Dawn theme.  
 
 Create a new section file, in this case called `recent-products.liquid`, and add the following code:  
-```
+```javascript
 <div class="recently-viewed-wrapper">
 <h2>Recently Viewed</h2>
 <ul class="recently-viewed-grid">
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 ```
 
 Update the `product.json` file (in the `Templates` folder), to include the new `recent-products` section details:
-```
+```json
 {
   "sections": {
     "main": {
@@ -216,7 +216,7 @@ Don't forget to add the section name to the `order`.
 Now you should see in the theme customizer for your product page a section called `Recent Products`.
 
 If you are using a different theme (most likely one without a `product.json` template file), you can create a new snippet file (in the `Snippets` folder), add the same code as for the section ***without*** the schema part at the end
-```
+```json
 {% schema %}
   {
     "name": "Recent Products",
@@ -225,9 +225,8 @@ If you are using a different theme (most likely one without a `product.json` tem
 {% endschema %}
 ```
 In you product.liquid file (or the sub-file whch contains the full product page code) include the snippet using:
-```
+```liquid
 {% render 'recent-products' %}
-
 ```
 Place it where you would like the recently viewed products to appear on the product page.
 
