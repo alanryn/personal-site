@@ -7,7 +7,7 @@ backgroundImage: "data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 
 
 Many themes come with a dropdown as the default size selector. Here's how to change this to, for example, a list of buttons, similar to a color swatch. In this example I'm using Shopify's Venture theme, but it should be similar for most other themes.
 
-In the **product-template.liquid** file in the **sections folder** search for the code beginning with:
+In the `product-template.liquid` file, in the `Sections` folder, search for the code beginning with:
 
 ```
  {% unless product.has_only_default_variant %}
@@ -76,9 +76,9 @@ and replaace everything between with this code:
           {% endunless %}
 ```
 
-Add styling to the end of the theme.css file in the assets folder; something like this:
+Add styling to the end of the `theme.css` file in the `Assets` folder; something like this:
 
-```
+```css
                   .size-swatch{
                     display: flex;
 
