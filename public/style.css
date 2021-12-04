@@ -436,7 +436,7 @@ img {
   margin-left: 0;
   margin-right: 0;
   padding: var(--gap);
-  color: var(--primary);
+  color: #4d4d4c;
   background: transparent;
   border-radius: 0;
 }
@@ -568,3 +568,5 @@ img {
 .drop-cap:after {
   margin-bottom: -0.15em;
 }
+
+
