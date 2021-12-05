@@ -22,9 +22,9 @@
   </a>
     {{- end }}
   </ul>
- <h3 ><a class="home-links" href="/tips">{{ with .Site.GetPage "section" "tips" }}{{ .Title }}{{ end }}</a></h3>
+ <h3 ><a class="home-links" href="/shopify-tips">{{ with .Site.GetPage "section" "shopify-tips" }}{{ .Title }}{{ end }}</a></h3>
   <ul class="reusable-grid">
-    {{ range where .Site.RegularPages "Section" "tips" }}
+    {{ range where .Site.RegularPages "Section" "shopify-tips" }}
     <a class="gallery-link" href="{{.Permalink}}">
     <li>
         <div

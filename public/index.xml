@@ -22,10 +22,10 @@
     
     <item>
       <title>Display Recently Viewed Products Without App or jQuery</title>
-      <link>https://alanryan.dev/tips/recently-viewed-products/</link>
+      <link>https://alanryan.dev/shopify-tips/recently-viewed-products/</link>
       <pubDate>Fri, 03 Dec 2021 15:20:00 +0000</pubDate>
       
-      <guid>https://alanryan.dev/tips/recently-viewed-products/</guid>
+      <guid>https://alanryan.dev/shopify-tips/recently-viewed-products/</guid>
       <description>This code will store the last 4 visited product pages in the browsers memory and display them as a section on the Product page. The steps below are for the Dawn theme.
 Create a new section file, in this case called recent-products.liquid, and add the following code:
 &amp;lt;div class=&amp;#34;recently-viewed-wrapper&amp;#34;&amp;gt; &amp;lt;h2&amp;gt;Recently Viewed&amp;lt;/h2&amp;gt; &amp;lt;ul class=&amp;#34;recently-viewed-grid&amp;#34;&amp;gt; &amp;lt;!-- Recently viewed products will appear here --&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;script&amp;gt; function setRecentlyViewedProducts() { const productData = { productTitle: &amp;#34;{{ product.</description>
@@ -33,30 +33,30 @@ Create a new section file, in this case called recent-products.liquid, and add t
     
     <item>
       <title>Adding Metafields to Product Variants - Dawn Theme</title>
-      <link>https://alanryan.dev/tips/product-variant-metafields/</link>
+      <link>https://alanryan.dev/shopify-tips/product-variant-metafields/</link>
       <pubDate>Wed, 10 Nov 2021 16:19:53 +0000</pubDate>
       
-      <guid>https://alanryan.dev/tips/product-variant-metafields/</guid>
+      <guid>https://alanryan.dev/shopify-tips/product-variant-metafields/</guid>
       <description>By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
 Adding custom Metafields is now built into Shopify. It can be accessed via Settings -&amp;gt; Metafields in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon).</description>
     </item>
     
     <item>
       <title>Shopify Resources</title>
-      <link>https://alanryan.dev/tips/resources/</link>
+      <link>https://alanryan.dev/shopify-tips/resources/</link>
       <pubDate>Fri, 04 Jun 2021 09:20:14 +0000</pubDate>
       
-      <guid>https://alanryan.dev/tips/resources/</guid>
+      <guid>https://alanryan.dev/shopify-tips/resources/</guid>
       <description>A list of useful Shopify resources Liquid:  Learning Liquid: A guide to Shopify theme development Shopify Liquid REPL Shopify Liquid code examples  General Shopify Information:  Youtube video tutorials from Coding with Jan Series of streams on Shopify theme development from {{ Kelly | plus: Kelly }} How to Set Up a Local Theme Development Workflow with Theme Kit An example build process for Shopify theme development An upcoming course on Shopify Frontend Development  App Development:  Shopify App CLI The Shopify GraphQL Learning Kit Build a Shopify App with Node and React Build a Shopify App with Node and React Video How to Build a Shopify App: The Complete Guide  Other:  Working with Shopify metafields without an app and a youtube video  Shopify Storefront API Examples Shopify Theme scripts Build a Custom Shopify Storefront using React (Headless CMS) and the github repo Add a Shopify Wishlist  </description>
     </item>
     
     <item>
       <title>A customized subscribe modal popup</title>
-      <link>https://alanryan.dev/tips/customized-subscribe-modal-popup/</link>
+      <link>https://alanryan.dev/shopify-tips/customized-subscribe-modal-popup/</link>
       <pubDate>Fri, 07 May 2021 16:20:05 +0000</pubDate>
       
-      <guid>https://alanryan.dev/tips/customized-subscribe-modal-popup/</guid>
-      <description>Create a new liquid file in your snippets folder called popup.liquid. Add the following code to the file:
+      <guid>https://alanryan.dev/shopify-tips/customized-subscribe-modal-popup/</guid>
+      <description>Create a new liquid file in your Snippets folder called popup.liquid. Add the following code to the file:
 &amp;lt;script&amp;gt; document.addEventListener(&amp;quot;DOMContentLoaded&amp;quot;, function () { let popupdisplayed = sessionStorage.getItem(&amp;quot;popupdisplayed&amp;quot;); const modal = document.querySelector(&amp;quot;#modal-id&amp;quot;); const overlay = document.querySelector(&amp;quot;#overlay-id&amp;quot;); let store = document.querySelectorAll(&amp;quot;.setStorage&amp;quot;); let initialFocus = document.querySelector(&amp;quot;#close&amp;quot;); let fadeIn = {{settings.fadein}} * 1000; if (popupdisplayed == &amp;quot;true&amp;quot;) { modal.classList.remove(&amp;quot;visible&amp;quot;); overlay.classList.remove(&amp;quot;visible&amp;quot;); } else { setTimeout(function () { modal.classList.add(&amp;quot;visible&amp;quot;); overlay.classList.add(&amp;quot;visible&amp;quot;); initialFocus.focus(); }, fadeIn); } store.forEach((stored) =&amp;gt; { stored.</description>
     </item>
     
@@ -102,12 +102,12 @@ View Site</description>
     
     <item>
       <title>Adding a Customized Size Swatch</title>
-      <link>https://alanryan.dev/tips/adding-swatches/</link>
+      <link>https://alanryan.dev/shopify-tips/adding-swatches/</link>
       <pubDate>Wed, 30 Dec 2020 16:20:14 +0000</pubDate>
       
-      <guid>https://alanryan.dev/tips/adding-swatches/</guid>
+      <guid>https://alanryan.dev/shopify-tips/adding-swatches/</guid>
       <description>Many themes come with a dropdown as the default size selector. Here&amp;rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&amp;rsquo;m using Shopify&amp;rsquo;s Venture theme, but it should be similar for most other themes.
-In the product-template.liquid file in the sections folder search for the code beginning with:
+In the product-template.liquid file, in the Sections folder, search for the code beginning with:
  {% unless product.has_only_default_variant %} and ending with :
 {% endunless %} and replaace everything between with this code:</description>
     </item>
@@ -157,7 +157,7 @@ View site</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/template-design/</guid>
-      <description>This is a simple sample site easily customized to suit any small business. It&amp;rsquo;s a modified version (blatant rip-off) of Andy Bell&amp;rsquo;s Learn Eleventy From Scratch tutorial (don&amp;rsquo;t judge me, I paid for the tutorial and I&amp;rsquo;m going to update it), but it&amp;rsquo;s a great example of what can easily be achieved with the 11ty static site generator.
+      <description>This is a simple sample site easily customized to suit any small business. It&amp;rsquo;s a modified version of Andy Bell&amp;rsquo;s Learn Eleventy From Scratch tutorial, but it&amp;rsquo;s a great example of what can easily be achieved with the 11ty static site generator.
 View site</description>
     </item>
     
