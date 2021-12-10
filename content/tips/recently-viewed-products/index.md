@@ -110,6 +110,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 ```
 
 Update the `product.json` file (in the `Templates` folder), to include the new `recent-products` section details:
+
 ```json
 {
   "sections": {
