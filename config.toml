@@ -2,3 +2,5 @@ baseURL = "https://alanryan.dev"
 languageCode = "en-us"
 title = "Alan Ryan"
 theme = "alan-ryan"
+[params]
+     Description = "Shopify developer. Customizations, fixes, complete store development, content creation and more"
