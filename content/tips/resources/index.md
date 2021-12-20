@@ -44,3 +44,4 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 - [Kyle Simpson -- You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
 - [Learn DOM Manipulation In 18 Minutes](https://www.youtube.com/watch?v=y17RuWkWdn8)  
 - [React js in 3.5 hours | Full beginners tutorial](https://www.youtube.com/watch?v=ABQLwlE8MUA)  
+- [React Crash Course for Beginners ](https://www.youtube.com/watch?v=Dorf8i6lCuk)
