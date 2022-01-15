@@ -48,6 +48,7 @@
    <header class="header">
       <nav class="nav">
    	{{- partial "logo.html" . }}
+
         {{- if .Site.Menus.main }}
         <ul style="margin-top: 1rem"class="menu">
           {{- range .Site.Menus.main }}
@@ -59,4 +60,5 @@
         {{- end }}
       </nav>
     </header>
+
     <main class="main">

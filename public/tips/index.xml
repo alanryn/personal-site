@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tips on Alan Ryan</title>
+    <link>https://alanryan.dev/tips/</link>
+    <description>Recent content in Tips on Alan Ryan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Dec 2020 17:13:40 +0000</lastBuildDate><atom:link href="https://alanryan.dev/tips/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding Metafields to Product Variants - Dawn Theme</title>
+      <link>https://alanryan.dev/tips/product-variant-metafields/</link>
+      <pubDate>Fri, 07 Jan 2022 16:19:53 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/product-variant-metafields/</guid>
+      <description>How to add multiple variant metafields that update on selection for a Shopify product page</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions Section</title>
+      <link>https://alanryan.dev/tips/faq-section/</link>
+      <pubDate>Mon, 13 Dec 2021 15:08:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/faq-section/</guid>
+      <description>Adding a frequently asked questions section to a shopify store</description>
+    </item>
+    
+    <item>
+      <title>Display Recently Viewed Products Without App or jQuery</title>
+      <link>https://alanryan.dev/tips/recently-viewed-products/</link>
+      <pubDate>Fri, 03 Dec 2021 15:20:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/recently-viewed-products/</guid>
+      <description>How to add a recently viewed products section to Shopify without using an app or jquery</description>
+    </item>
+    
+    <item>
+      <title>Shopify Resources</title>
+      <link>https://alanryan.dev/tips/resources/</link>
+      <pubDate>Fri, 04 Jun 2021 09:20:14 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/resources/</guid>
+      <description>Recommended resources for shopify development</description>
+    </item>
+    
+    <item>
+      <title>A customized subscribe modal popup</title>
+      <link>https://alanryan.dev/tips/customized-subscribe-modal-popup/</link>
+      <pubDate>Fri, 07 May 2021 16:20:05 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/customized-subscribe-modal-popup/</guid>
+      <description>How to add a customized subscribe modal popup to a shopify store</description>
+    </item>
+    
+    <item>
+      <title>Adding a Customized Size Swatch</title>
+      <link>https://alanryan.dev/tips/adding-swatches/</link>
+      <pubDate>Wed, 30 Dec 2020 16:20:14 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/adding-swatches/</guid>
+      <description>Adding a customized size swatch to a shopify product page</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -9,7 +9,7 @@
     <title>Alan Ryan | Shopify Dev</title>
     <meta name="google-site-verification" content="u5ezVva_l_Qr0dN5ht1p096Rs0pI1qg3oB053QGv9Jc"/>
     
-    <meta name="description" content="">
+    <meta name="description" content="Shopify developer. Customizations, fixes, complete store development, content creation and more">
     <meta name="author" content="">
     
     
@@ -26,7 +26,7 @@
 
  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>">
 
-    <meta name="generator" content="Hugo 0.68.3" />
+    <meta name="generator" content="Hugo 0.80.0" />
     
     <link rel="alternate" type="application/rss+xml" href="https://alanryan.dev/index.xml" title="Alan Ryan" />
     
@@ -51,12 +51,13 @@
 
 
 
+<a class="btn-dark"></a>
         <ul style="margin-top: 1rem"class="menu">
           <li>
             <a href="/projects/">Projects</a>
           </li>
           <li>
-            <a href="/shopify-tips/">Tips</a>
+            <a href="/tips/">Tips</a>
           </li>
           <li>
             <a href="/contact/">Contact</a>
@@ -64,6 +65,24 @@
         </ul>
       </nav>
     </header>
+ <script>
+    let bodyClx = document.body.classList;
+    let btnDark = document.querySelector('.btn-dark');
+    let sysDark = window.matchMedia('(prefers-color-scheme: dark)');
+    let darkVal = localStorage.getItem('dark');
+
+    let setDark = (isDark) => {
+      bodyClx[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark ? 'yes' : 'no');
+    };
+
+    setDark(darkVal ? darkVal === 'yes' : sysDark.matches);
+    requestAnimationFrame(() => bodyClx.remove('not-ready'));
+
+    btnDark.addEventListener('click', () => setDark(!bodyClx.contains('dark')));
+    sysDark.addEventListener('change', (event) => setDark(event.matches));
+  </script>
+
     <main class="main">
 
 
@@ -160,19 +179,10 @@
     </li>
   </a>
   </ul>
- <h3 ><a class="home-links" href="/shopify-tips">Tips</a></h3>
+ <h3 ><a class="home-links" href="/tips">Tips</a></h3>
   <ul class="reusable-grid">
     
-    <a class="gallery-link" href="https://alanryan.dev/shopify-tips/recently-viewed-products/">
-    <li>
-        <div
-          class="card"
-          style="background-image: url('data:image/svg&#43;xml,%3Csvg%20width=%2780%27%20height=%2780%27%20viewBox=%270%200%2080%2080%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%20fill=%27none%27%20fill-rule=%27evenodd%27%3E%3Cg%20fill=%27%2355245a%27%20fill-opacity=%271%27%3E%3Cpath%20d=%27M50%2050c0-5.523%204.477-10%2010-10s10%204.477%2010%2010-4.477%2010-10%2010c0%205.523-4.477%2010-10%2010s-10-4.477-10-10%204.477-10%2010-10zM10%2010c0-5.523%204.477-10%2010-10s10%204.477%2010%2010-4.477%2010-10%2010c0%205.523-4.477%2010-10%2010S0%2025.523%200%2020s4.477-10%2010-10zm10%208c4.418%200%208-3.582%208-8s-3.582-8-8-8-8%203.582-8%208%203.582%208%208%208zm40%2040c4.418%200%208-3.582%208-8s-3.582-8-8-8-8%203.582-8%208%203.582%208%208%208z%27%20/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-color: #e5e0c9"
-        ></div>
-        <h4>Display Recently Viewed Products Without App or jQuery</h4>
-    </li>
-  </a>
-    <a class="gallery-link" href="https://alanryan.dev/shopify-tips/product-variant-metafields/">
+    <a class="gallery-link" href="https://alanryan.dev/tips/product-variant-metafields/">
     <li>
         <div
           class="card"
@@ -181,7 +191,25 @@
         <h4>Adding Metafields to Product Variants - Dawn Theme</h4>
     </li>
   </a>
-    <a class="gallery-link" href="https://alanryan.dev/shopify-tips/resources/">
+    <a class="gallery-link" href="https://alanryan.dev/tips/faq-section/">
+    <li>
+        <div
+          class="card"
+          style="background-image: url('data:image/svg&#43;xml,%3Csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20width=%27100%27%20height=%27199%27%20viewBox=%270%200%20100%20199%27%3E%3Cg%20fill=%27%2355245a%27%20fill-opacity=%271%27%3E%3Cpath%20d=%27M0%20199V0h1v1.99L100%20199h-1.12L1%204.22V199H0zM100%202h-.12l-1-2H100v2z%27%3E%3C/path%3E%3C/g%3E%3C/svg%3E'); background-color: "
+        ></div>
+        <h4>Frequently Asked Questions Section</h4>
+    </li>
+  </a>
+    <a class="gallery-link" href="https://alanryan.dev/tips/recently-viewed-products/">
+    <li>
+        <div
+          class="card"
+          style="background-image: url('data:image/svg&#43;xml,%3Csvg%20width=%2780%27%20height=%2780%27%20viewBox=%270%200%2080%2080%27%20xmlns=%27http://www.w3.org/2000/svg%27%3E%3Cg%20fill=%27none%27%20fill-rule=%27evenodd%27%3E%3Cg%20fill=%27%2355245a%27%20fill-opacity=%271%27%3E%3Cpath%20d=%27M50%2050c0-5.523%204.477-10%2010-10s10%204.477%2010%2010-4.477%2010-10%2010c0%205.523-4.477%2010-10%2010s-10-4.477-10-10%204.477-10%2010-10zM10%2010c0-5.523%204.477-10%2010-10s10%204.477%2010%2010-4.477%2010-10%2010c0%205.523-4.477%2010-10%2010S0%2025.523%200%2020s4.477-10%2010-10zm10%208c4.418%200%208-3.582%208-8s-3.582-8-8-8-8%203.582-8%208%203.582%208%208%208zm40%2040c4.418%200%208-3.582%208-8s-3.582-8-8-8-8%203.582-8%208%203.582%208%208%208z%27%20/%3E%3C/g%3E%3C/g%3E%3C/svg%3E'); background-color: #e5e0c9"
+        ></div>
+        <h4>Display Recently Viewed Products Without App or jQuery</h4>
+    </li>
+  </a>
+    <a class="gallery-link" href="https://alanryan.dev/tips/resources/">
     <li>
         <div
           class="card"
@@ -190,7 +218,7 @@
         <h4>Shopify Resources</h4>
     </li>
   </a>
-    <a class="gallery-link" href="https://alanryan.dev/shopify-tips/customized-subscribe-modal-popup/">
+    <a class="gallery-link" href="https://alanryan.dev/tips/customized-subscribe-modal-popup/">
     <li>
         <div
           class="card"
@@ -199,7 +227,7 @@
         <h4>A customized subscribe modal popup</h4>
     </li>
   </a>
-    <a class="gallery-link" href="https://alanryan.dev/shopify-tips/adding-swatches/">
+    <a class="gallery-link" href="https://alanryan.dev/tips/adding-swatches/">
     <li>
         <div
           class="card"
@@ -212,7 +240,7 @@
 </div></main>
 <footer class="footer" role="contentinfo" aria-labelledby="label-footer">
   <h2 id="label-footer" class="sr-only">Page footer</h2>
-  <span>&copy; 2021 <a href="https://alanryan.dev">Alan Ryan</a></span>
+  <span>&copy; 2022 <a href="https://alanryan.dev">Alan Ryan</a></span>
   <span>&middot;</span>
   <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
   <span>&middot;</span>
