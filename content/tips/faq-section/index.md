@@ -1,5 +1,5 @@
 ---
-title: "Frequently Asked Questions Section"
+title: "Adding FAQ Page to Shopify 2.0 Themes"
 date: 2022-01-16T10:08:00Z
 summary: "Adding a frequently asked questions page to a shopify store"
 backgroundColor: #DFDBE5
