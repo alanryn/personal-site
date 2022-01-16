@@ -1,16 +1,42 @@
 ---
 title: "Frequently Asked Questions Section"
-date: 2021-12-13T15:08:00Z
-summary: "Adding a frequently asked questions section to a shopify store"
+date: 2022-01-16T10:08:00Z
+summary: "Adding a frequently asked questions page to a shopify store"
 backgroundColor: #DFDBE5
 backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='199' viewBox='0 0 100 199'%3E%3Cg fill='%2355245a' fill-opacity='1'%3E%3Cpath d='M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E"
 ---
+
 This code will add a FAQ section to your page. A working demo of what to expect is [here](https://sunny-day-umbrellas.myshopify.com/pages/faq).  
-Create a file called `faq.liquid` in the `Sections` folder. Add the following code. Then add the section to the required page. 
+These instructions apply to Shopify 2.0 themes like Dawn.
+
+Firstly, create a new template file in your `Templates` folder. Call the file `faq.json` and add the following code:
 
 ```
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+      }
+    },
+    "faq": {
+      "type": "faq",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "faq"
+  ]
+}
+```
 
+Create a new Frequently Asked Questions page for your site through your Shopify Admin `Online Store -> Pages`.  
+When creating the new page, make sure to choose the `faq` theme template, not just the `Default page` template.  
+Next, create a file called `faq.liquid` in the `Sections` folder. Add the following code to the file:
 
+```
 <div id="accordionGroup" style="margin: auto" class="Accordion page-width page-width--narrow spaced-section" data-allow-multiple>
      {% for block in section.blocks %}
   <h3>
@@ -30,14 +56,12 @@ Create a file called `faq.liquid` in the `Sections` folder. Add the following co
       </fieldset>
     </div>
   </div>
-     {%endfor%} 
+     {%endfor%}
 </div>
- 
 
- 
 {% schema %}
   {
-    "name": "FAQ-SECTION",
+    "name": "FAQ",
     "settings": [],
     "blocks": [{
         "type": "text",
@@ -45,15 +69,20 @@ Create a file called `faq.liquid` in the `Sections` folder. Add the following co
         "settings": [{
                 "id": "question",
                 "type": "text",
-                "label": "the question"
+                "label": "Add the question text here"
             },
             {
                 "id": "answer",
                 "type": "richtext",
-                "label": "the answer"
+                "label": "Add the answer text here"
             }
         ]
-    }]
+    }],
+  "presets": [
+    {
+      "name": "FAQ"
+    }
+  ]
 }
 {% endschema %}
 
@@ -282,3 +311,8 @@ fieldset {
 </style>
 
 ```
+
+Now, within in your theme customizer, navigate to your new FAQ page (you may need to add it to your site's menu through `Online Store -> Navigation`) and the new FAQ section should be available to add to your page.  
+If you do not see it at first, just click `Add section` and look for FAQ in the list of available sections.
+
+You can now add question/answer pairs to the FAQ section.
