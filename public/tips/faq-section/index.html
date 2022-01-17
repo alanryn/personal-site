@@ -9,7 +9,7 @@
     <title>Alan Ryan | Shopify Dev</title>
     <meta name="google-site-verification" content="u5ezVva_l_Qr0dN5ht1p096Rs0pI1qg3oB053QGv9Jc"/>
     
-    <meta name="description" content="Adding a frequently asked questions section to a shopify store">
+    <meta name="description" content="Adding a frequently asked questions page to a shopify store">
     <meta name="author" content="">
     
     
@@ -50,7 +50,6 @@
 
 
 
-<a class="btn-dark"></a>
         <ul style="margin-top: 1rem"class="menu">
           <li>
             <a href="/projects/">Projects</a>
@@ -64,37 +63,41 @@
         </ul>
       </nav>
     </header>
- <script>
-    let bodyClx = document.body.classList;
-    let btnDark = document.querySelector('.btn-dark');
-    let sysDark = window.matchMedia('(prefers-color-scheme: dark)');
-    let darkVal = localStorage.getItem('dark');
-
-    let setDark = (isDark) => {
-      bodyClx[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark ? 'yes' : 'no');
-    };
-
-    setDark(darkVal ? darkVal === 'yes' : sysDark.matches);
-    requestAnimationFrame(() => bodyClx.remove('not-ready'));
-
-    btnDark.addEventListener('click', () => setDark(!bodyClx.contains('dark')));
-    sysDark.addEventListener('change', (event) => setDark(event.matches));
-  </script>
 
     <main class="main">
 
 
 <article class="post-single">
   <header class="post-header">
-    <h1 class="post-title">Frequently Asked Questions Section</h1>
-    <div class="post-meta">December 13, 2021</div>
+    <h1 class="post-title">Adding FAQ Page to Shopify 2.0 Themes</h1>
+    <div class="post-meta">
+      Updated on January 16, 2022</div>
   </header>
   <div class="post-content"><p>This code will add a FAQ section to your page. A working demo of what to expect is <a href="https://sunny-day-umbrellas.myshopify.com/pages/faq">here</a>.<br>
-Create a file called <code>faq.liquid</code> in the <code>Sections</code> folder. Add the following code. Then add the section to the required page.</p>
-<pre><code>
-
-&lt;div id=&quot;accordionGroup&quot; style=&quot;margin: auto&quot; class=&quot;Accordion page-width page-width--narrow spaced-section&quot; data-allow-multiple&gt;
+These instructions apply to Shopify 2.0 themes like Dawn.</p>
+<p>Firstly, create a new template file in your <code>Templates</code> folder. Call the file <code>faq.json</code> and add the following code:</p>
+<pre><code>{
+  &quot;sections&quot;: {
+    &quot;main&quot;: {
+      &quot;type&quot;: &quot;main-page&quot;,
+      &quot;settings&quot;: {
+      }
+    },
+    &quot;faq&quot;: {
+      &quot;type&quot;: &quot;faq&quot;,
+      &quot;settings&quot;: {
+      }
+    }
+  },
+  &quot;order&quot;: [
+    &quot;main&quot;,
+    &quot;faq&quot;
+  ]
+}
+</code></pre><p>Create a new Frequently Asked Questions page for your site through your Shopify Admin <code>Online Store -&gt; Pages</code>.<br>
+When creating the new page, make sure to choose the <code>faq</code> theme template, not just the <code>Default page</code> template.<br>
+Next, create a file called <code>faq.liquid</code> in the <code>Sections</code> folder. Add the following code to the file:</p>
+<pre><code>&lt;div id=&quot;accordionGroup&quot; style=&quot;margin: auto&quot; class=&quot;Accordion page-width page-width--narrow spaced-section&quot; data-allow-multiple&gt;
      {% for block in section.blocks %}
   &lt;h3&gt;
     &lt;button aria-expanded=&quot;false&quot; class=&quot;Accordion-trigger Accordion-button&quot; aria-controls=&quot;sect{{forloop.index}}&quot; id=&quot;accordion1id&quot;&gt;
@@ -113,14 +116,12 @@ Create a file called <code>faq.liquid</code> in the <code>Sections</code> folder
       &lt;/fieldset&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-     {%endfor%} 
+     {%endfor%}
 &lt;/div&gt;
- 
 
- 
 {% schema %}
   {
-    &quot;name&quot;: &quot;FAQ-SECTION&quot;,
+    &quot;name&quot;: &quot;FAQ&quot;,
     &quot;settings&quot;: [],
     &quot;blocks&quot;: [{
         &quot;type&quot;: &quot;text&quot;,
@@ -128,15 +129,20 @@ Create a file called <code>faq.liquid</code> in the <code>Sections</code> folder
         &quot;settings&quot;: [{
                 &quot;id&quot;: &quot;question&quot;,
                 &quot;type&quot;: &quot;text&quot;,
-                &quot;label&quot;: &quot;the question&quot;
+                &quot;label&quot;: &quot;Add the question text here&quot;
             },
             {
                 &quot;id&quot;: &quot;answer&quot;,
                 &quot;type&quot;: &quot;richtext&quot;,
-                &quot;label&quot;: &quot;the answer&quot;
+                &quot;label&quot;: &quot;Add the answer text here&quot;
             }
         ]
-    }]
+    }],
+  &quot;presets&quot;: [
+    {
+      &quot;name&quot;: &quot;FAQ&quot;
+    }
+  ]
 }
 {% endschema %}
 
@@ -364,7 +370,10 @@ fieldset {
 }
 &lt;/style&gt;
 
-</code></pre></div>
+</code></pre><p>Now, within in your theme customizer, navigate to your new FAQ page (you may need to add it to your site&rsquo;s menu through <code>Online Store -&gt; Navigation</code>) and the new FAQ section should be available to add to your page.<br>
+If you do not see it at first, just click <code>Add section</code> and look for FAQ in the list of available sections.</p>
+<p>You can now add question/answer pairs to the FAQ section.</p>
+</div>
   
 </article></main>
 <footer class="footer" role="contentinfo" aria-labelledby="label-footer">

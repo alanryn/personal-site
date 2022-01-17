@@ -9,7 +9,7 @@
     <title>Alan Ryan | Shopify Dev</title>
     <meta name="google-site-verification" content="u5ezVva_l_Qr0dN5ht1p096Rs0pI1qg3oB053QGv9Jc"/>
     
-    <meta name="description" content="A Shopify site selling Vegan Shoes and Bags. An almost three year collaboration, with a revamp in the offing, stay tuned.
+    <meta name="description" content="A Shopify site selling Vegan Shoes and Bags. An almost three year collaboration, with a reboot in the offing.
 Visit the store here">
     <meta name="author" content="">
     
@@ -51,7 +51,6 @@ Visit the store here">
 
 
 
-<a class="btn-dark"></a>
         <ul style="margin-top: 1rem"class="menu">
           <li>
             <a href="/projects/">Projects</a>
@@ -65,23 +64,6 @@ Visit the store here">
         </ul>
       </nav>
     </header>
- <script>
-    let bodyClx = document.body.classList;
-    let btnDark = document.querySelector('.btn-dark');
-    let sysDark = window.matchMedia('(prefers-color-scheme: dark)');
-    let darkVal = localStorage.getItem('dark');
-
-    let setDark = (isDark) => {
-      bodyClx[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark ? 'yes' : 'no');
-    };
-
-    setDark(darkVal ? darkVal === 'yes' : sysDark.matches);
-    requestAnimationFrame(() => bodyClx.remove('not-ready'));
-
-    btnDark.addEventListener('click', () => setDark(!bodyClx.contains('dark')));
-    sysDark.addEventListener('change', (event) => setDark(event.matches));
-  </script>
 
     <main class="main">
 
@@ -90,7 +72,7 @@ Visit the store here">
   <header class="post-header">
     <h1 class="post-title">Sydney Brown</h1>
   </header>
-  <div class="post-content"><p>A Shopify site selling Vegan Shoes and Bags. An almost three year collaboration, with a revamp in the offing, stay tuned.</p>
+  <div class="post-content"><p>A Shopify site selling Vegan Shoes and Bags. An almost three year collaboration, with a reboot in the offing.</p>
 <p>Visit the store <a href="https://www.sydney-brown.com">here</a></p>
 </div>
 

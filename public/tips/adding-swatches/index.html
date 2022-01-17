@@ -50,7 +50,6 @@
 
 
 
-<a class="btn-dark"></a>
         <ul style="margin-top: 1rem"class="menu">
           <li>
             <a href="/projects/">Projects</a>
@@ -64,23 +63,6 @@
         </ul>
       </nav>
     </header>
- <script>
-    let bodyClx = document.body.classList;
-    let btnDark = document.querySelector('.btn-dark');
-    let sysDark = window.matchMedia('(prefers-color-scheme: dark)');
-    let darkVal = localStorage.getItem('dark');
-
-    let setDark = (isDark) => {
-      bodyClx[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark ? 'yes' : 'no');
-    };
-
-    setDark(darkVal ? darkVal === 'yes' : sysDark.matches);
-    requestAnimationFrame(() => bodyClx.remove('not-ready'));
-
-    btnDark.addEventListener('click', () => setDark(!bodyClx.contains('dark')));
-    sysDark.addEventListener('change', (event) => setDark(event.matches));
-  </script>
 
     <main class="main">
 
@@ -88,7 +70,8 @@
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">Adding a Customized Size Swatch</h1>
-    <div class="post-meta">December 30, 2020</div>
+    <div class="post-meta">
+      Updated on December 30, 2020</div>
   </header>
   <div class="post-content"><p>Many themes come with a dropdown as the default size selector. Here&rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&rsquo;m using Shopify&rsquo;s Venture theme, but it should be similar for most other themes.</p>
 <p>In the <code>product-template.liquid</code> file, in the <code>Sections</code> folder, search for the code beginning with:</p>

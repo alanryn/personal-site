@@ -6,7 +6,7 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jan 2022 16:19:53 +0000</lastBuildDate><atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jan 2022 10:08:00 +0000</lastBuildDate><atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
       <link>https://alanryan.dev/contact/</link>
@@ -17,21 +17,21 @@
     </item>
     
     <item>
+      <title>Adding FAQ Page to Shopify 2.0 Themes</title>
+      <link>https://alanryan.dev/tips/faq-section/</link>
+      <pubDate>Sun, 16 Jan 2022 10:08:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/faq-section/</guid>
+      <description>Adding a frequently asked questions page to a shopify store</description>
+    </item>
+    
+    <item>
       <title>Adding Metafields to Product Variants - Dawn Theme</title>
       <link>https://alanryan.dev/tips/product-variant-metafields/</link>
       <pubDate>Fri, 07 Jan 2022 16:19:53 +0000</pubDate>
       
       <guid>https://alanryan.dev/tips/product-variant-metafields/</guid>
       <description>How to add multiple variant metafields that update on selection for a Shopify product page</description>
-    </item>
-    
-    <item>
-      <title>Frequently Asked Questions Section</title>
-      <link>https://alanryan.dev/tips/faq-section/</link>
-      <pubDate>Mon, 13 Dec 2021 15:08:00 +0000</pubDate>
-      
-      <guid>https://alanryan.dev/tips/faq-section/</guid>
-      <description>Adding a frequently asked questions section to a shopify store</description>
     </item>
     
     <item>
@@ -77,7 +77,7 @@ Visit the site here</description>
       <pubDate>Mon, 01 Feb 2021 17:14:00 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/sydney-brown/</guid>
-      <description>A Shopify site selling Vegan Shoes and Bags. An almost three year collaboration, with a revamp in the offing, stay tuned.
+      <description>A Shopify site selling Vegan Shoes and Bags. An almost three year collaboration, with a reboot in the offing.
 Visit the store here</description>
     </item>
     

@@ -50,7 +50,6 @@
 
 
 
-<a class="btn-dark"></a>
         <ul style="margin-top: 1rem"class="menu">
           <li>
             <a href="/projects/">Projects</a>
@@ -64,23 +63,6 @@
         </ul>
       </nav>
     </header>
- <script>
-    let bodyClx = document.body.classList;
-    let btnDark = document.querySelector('.btn-dark');
-    let sysDark = window.matchMedia('(prefers-color-scheme: dark)');
-    let darkVal = localStorage.getItem('dark');
-
-    let setDark = (isDark) => {
-      bodyClx[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark ? 'yes' : 'no');
-    };
-
-    setDark(darkVal ? darkVal === 'yes' : sysDark.matches);
-    requestAnimationFrame(() => bodyClx.remove('not-ready'));
-
-    btnDark.addEventListener('click', () => setDark(!bodyClx.contains('dark')));
-    sysDark.addEventListener('change', (event) => setDark(event.matches));
-  </script>
 
     <main class="main">
 
@@ -88,7 +70,8 @@
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">Display Recently Viewed Products Without App or jQuery</h1>
-    <div class="post-meta">December 3, 2021</div>
+    <div class="post-meta">
+      Updated on December 3, 2021</div>
   </header>
   <div class="post-content"><p>This code will store the last 4 visited product pages in the browsers memory and display them as a section on the Product page. The steps below are for the Dawn theme.</p>
 <p>Create a new section file, in this case called <code>recent-products.liquid</code>, and add the following code:</p>

@@ -51,7 +51,6 @@
 
 
 
-<a class="btn-dark"></a>
         <ul style="margin-top: 1rem"class="menu">
           <li>
             <a href="/projects/">Projects</a>
@@ -65,28 +64,26 @@
         </ul>
       </nav>
     </header>
- <script>
-    let bodyClx = document.body.classList;
-    let btnDark = document.querySelector('.btn-dark');
-    let sysDark = window.matchMedia('(prefers-color-scheme: dark)');
-    let darkVal = localStorage.getItem('dark');
-
-    let setDark = (isDark) => {
-      bodyClx[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark ? 'yes' : 'no');
-    };
-
-    setDark(darkVal ? darkVal === 'yes' : sysDark.matches);
-    requestAnimationFrame(() => bodyClx.remove('not-ready'));
-
-    btnDark.addEventListener('click', () => setDark(!bodyClx.contains('dark')));
-    sysDark.addEventListener('change', (event) => setDark(event.matches));
-  </script>
 
     <main class="main">
 
 <header class="page-header"><h1>Tips</h1></header>
 
+<a class="entry-link" href="https://alanryan.dev/tips/faq-section/">
+<article class="post-entry gallery-link">
+
+  <header class="entry-header">
+    <h2>Adding FAQ Page to Shopify 2.0 Themes</h2>
+  </header>
+  <section class="entry-content">
+   <p>Adding a frequently asked questions page to a shopify store...</p>
+  </section>
+  <footer class="entry-footer">
+    <time>January 16, 2022</time>
+  </footer>
+
+</article>
+</a>
 <a class="entry-link" href="https://alanryan.dev/tips/product-variant-metafields/">
 <article class="post-entry gallery-link">
 
@@ -98,21 +95,6 @@
   </section>
   <footer class="entry-footer">
     <time>January 7, 2022</time>
-  </footer>
-
-</article>
-</a>
-<a class="entry-link" href="https://alanryan.dev/tips/faq-section/">
-<article class="post-entry gallery-link">
-
-  <header class="entry-header">
-    <h2>Frequently Asked Questions Section</h2>
-  </header>
-  <section class="entry-content">
-   <p>Adding a frequently asked questions section to a shopify store...</p>
-  </section>
-  <footer class="entry-footer">
-    <time>December 13, 2021</time>
   </footer>
 
 </article>

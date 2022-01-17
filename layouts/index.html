@@ -16,7 +16,7 @@
         <div
           class="card"
           style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"
-        ></div>
+        ><span {{ if .Params.shopifyLogo }} class="shopifyLogo" {{ end }}></span></div>
         <h4>{{ .Title }}</h4>  
     </li>
   </a>
@@ -41,6 +41,16 @@
 {{- partial "footer.html" . }}
 <style>
 /* home page grids */
+.shopifyLogo{
+content: url("shopify_glyph.svg");
+margin-right: 0.5rem;
+margin-top: 0.5rem;
+position: absolute;
+right: 0;
+height: 3rem;
+width: 3rem;
+
+}
 .wrapper {
   max-width: 65rem;
   margin: 1em auto;

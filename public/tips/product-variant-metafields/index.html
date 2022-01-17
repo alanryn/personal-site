@@ -50,7 +50,6 @@
 
 
 
-<a class="btn-dark"></a>
         <ul style="margin-top: 1rem"class="menu">
           <li>
             <a href="/projects/">Projects</a>
@@ -64,23 +63,6 @@
         </ul>
       </nav>
     </header>
- <script>
-    let bodyClx = document.body.classList;
-    let btnDark = document.querySelector('.btn-dark');
-    let sysDark = window.matchMedia('(prefers-color-scheme: dark)');
-    let darkVal = localStorage.getItem('dark');
-
-    let setDark = (isDark) => {
-      bodyClx[isDark ? 'add' : 'remove']('dark');
-      localStorage.setItem('dark', isDark ? 'yes' : 'no');
-    };
-
-    setDark(darkVal ? darkVal === 'yes' : sysDark.matches);
-    requestAnimationFrame(() => bodyClx.remove('not-ready'));
-
-    btnDark.addEventListener('click', () => setDark(!bodyClx.contains('dark')));
-    sysDark.addEventListener('change', (event) => setDark(event.matches));
-  </script>
 
     <main class="main">
 
@@ -88,7 +70,8 @@
 <article class="post-single">
   <header class="post-header">
     <h1 class="post-title">Adding Metafields to Product Variants - Dawn Theme</h1>
-    <div class="post-meta">January 7, 2022</div>
+    <div class="post-meta">
+      Updated on January 7, 2022</div>
   </header>
   <div class="post-content"><p>By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.</p>
 <p>Adding custom Metafields is now built into Shopify. It can be accessed via <code>Settings -&gt; Metafields</code> in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon). Previously, the easiest way to add metafields was by using an app, such as Metafields Guru. It is also still possible to add metafields without an app using the bulk editor, <a href="https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app">here&rsquo;s how</a>.</p>
