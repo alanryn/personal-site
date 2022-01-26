@@ -212,6 +212,13 @@ img {
   margin-right: auto;
   padding: var(--size-5);
 }
+@media screen and (max-width: 480px) {
+  .main {
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+  }
+}
 .intro {
   font-size: var(--font-size-fluid-2);
   margin-bottom: var(--size-5);
@@ -226,7 +233,8 @@ img {
   position: relative;
   margin-bottom: var(--size-5);
   padding: var(--size-5);
-  background: var(--surface1);
+  background-color: var(--surface3);
+  border: 1px solid var(--surface2);
   border-radius: var(--radius);
   box-shadow: var(--shadow-3);
   transition-duration: 0.2s;
@@ -580,6 +588,11 @@ img {
   padding: 1rem;
   overflow: hidden;
   background-color: var(--surface1);
+}
+@media screen and (max-width: 1030px) {
+  .wrapper {
+    margin: 0 auto;
+  }
 }
 .wrapper h3 {
   text-align: center;

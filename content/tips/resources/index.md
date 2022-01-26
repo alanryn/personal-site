@@ -39,7 +39,7 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 - [Build a Custom Shopify Storefront using React (Headless CMS)](https://www.udemy.com/course/build-a-custom-shopify-storefront-using-react-headless-cms/) and the [github repo](https://github.com/iskurbanov/shopify-react-headless)  
 - [Add a Shopify Wishlist](https://github.com/dlerm/shopify-wishlist)  
 
-### Javascript
+### Javascript:
 - [Just Javascript](https://justjavascript.com/)  
 - [Kyle Simpson -- You Don't Know JS](https://github.com/getify/You-Dont-Know-JS/blob/2nd-ed/get-started/README.md)  
 - [Learn DOM Manipulation In 18 Minutes](https://www.youtube.com/watch?v=y17RuWkWdn8)  
