@@ -90,7 +90,7 @@ body {
   line-height: 1.8;
   word-break: break-word;
   hyphens: auto;
-  background: var(--surface2);
+  background: var(--surface3);
   transition: var(--transition-delay);
 }
 article,
@@ -216,6 +216,9 @@ img {
   font-size: var(--font-size-fluid-2);
   margin-bottom: var(--size-5);
 }
+.home-section {
+  margin-top: var(--size-5);
+}
 
 /* Post entry
 -------------------------------------------------- */
@@ -261,9 +264,6 @@ img {
   font-size: 0.8125rem;
 }
 
-.entry-link:focus {
-  /* outline: 3px solid rgb(42, 147, 181); */
-}
 /* Post single
 -------------------------------------------------- */
 .post-header {
@@ -332,8 +332,8 @@ img {
 }
 .post-content .highlight,
 .post-content pre {
-  margin-left: calc(var(--size-5) * -1);
-  margin-right: calc(var(--size-5) * -1);
+  margin-left: 1rem;
+  margin-right: 1rem;
   margin-bottom: 2rem;
   background: var(--surface2) !important;
   border-radius: var(--radius);
@@ -531,8 +531,7 @@ img {
   font-size: var(--font-size-fluid-1);
   font-weight: var(--font-weight-7);
 
-  padding-inline: var(--size-6);
-  padding-block: var(--size-3);
+  padding: var(--size-3);
   color: var(--orange-9);
   border: var(--border-size-2) solid var(--orange-5);
   background-color: transparent;
@@ -580,6 +579,7 @@ img {
   margin: 1em auto;
   padding: 1rem;
   overflow: hidden;
+  background-color: var(--surface1);
 }
 .wrapper h3 {
   text-align: center;

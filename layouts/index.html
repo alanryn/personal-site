@@ -1,10 +1,11 @@
+<div class="wrapper">
 {{- partial "header.html" . }}
 <h2 class="intro">
   Shopify developer. Customizations, fixes, complete store development, content
   creation and more.
 </h2>
 <a class="contact-link" href="/contact">Contact</a>
-<div class="wrapper">
+<section class='home-section'>
  <h3>
     <a class="home-links" href="/tips"
       >{{ with .Site.GetPage "section" "tips" }}{{ .Title }}{{ end }}</a
@@ -19,6 +20,8 @@
     </a>
     {{- end }}
   </ul>
+</section>
+<section class='home-section'>
   <h3>
     <a class="home-links" href="/projects"
       >{{ with .Site.GetPage "section" "projects" }}{{ .Title }}{{ end }}</a
@@ -36,6 +39,7 @@
     </a>
     {{- end }}
   </ul>
- 
-</div>
+ </section>
+
 {{- partial "footer.html" . }}
+</div>

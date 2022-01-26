@@ -23,6 +23,7 @@
     {{- end }}
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+
     <link href="{{ "style.css" | absURL }}" rel="stylesheet" /> 
     <link href="{{ "default.min.css" | absURL }}" rel="stylesheet" />
     <link
@@ -41,7 +42,8 @@
     {{- template "_internal/opengraph.html" . }}
     {{- end }}
   </head>
-  <body data-barba="wrapper">
+  <body>
+<div class='wrapper'>
     <header>
       <nav class="nav">
         {{- partial "logo.html" . }}
