@@ -360,7 +360,7 @@ img {
   font-family: Menlo, Monaco, "Courier New", Courier, monospace;
   font-size: var(--font-size-fluid-0);
   line-height: 1.5;
-  background: var(--surface1);
+  background: var(--surface2);
   border-radius: 2px;
 }
 .post-content pre code {
@@ -369,7 +369,7 @@ img {
   margin-right: 0;
   padding: var(--size-5);
   color: var(--text1);
-  background: transparent;
+  background: var(--surface4);
   border-radius: 0;
 }
 .post-content hr {
