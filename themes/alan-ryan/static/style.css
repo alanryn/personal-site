@@ -176,6 +176,12 @@ img {
   text-align: left;
   margin-top: 1rem;
 }
+@media screen and (max-width: 480px) {
+  .name {
+    margin-left: 0;
+    padding-right: 0;
+  }
+}
 .nav {
   display: flex;
   flex-wrap: wrap;
@@ -184,6 +190,7 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+
 .nav a {
   display: block;
 }
@@ -643,11 +650,6 @@ img {
   line-height: 1.75;
 }
 
-:root {
-  --input-focus-h: 27;
-  --input-focus-s: 98%;
-  --input-focus-l: 54%;
-}
 .contact-form {
   display: grid;
   place-content: center;
