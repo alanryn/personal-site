@@ -667,7 +667,7 @@ textarea {
   border-radius: 4px;
   transition: 180ms box-shadow ease-in-out;
   margin-top: 0;
-  min-width: 0;
+  min-width: 290px;
   color: var(--text1);
 }
 .contact-form input:focus,
