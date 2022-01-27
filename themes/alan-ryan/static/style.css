@@ -703,8 +703,9 @@ button.contact-btn {
   font-size: var(--font-size-fluid-1);
   font-weight: var(--font-weight-7);
 
-  padding-inline: var(--size-6);
-  padding-block: var(--size-3);
+  /* padding-inline: var(--size-6);
+  padding-block: var(--size-3); */
+  padding: var(--size-3) var(--size-6);
   color: var(--orange-8);
   border: var(--border-size-2) solid var(--orange-5);
   background-color: transparent;
