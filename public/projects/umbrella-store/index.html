@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="en-us">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -12,41 +12,30 @@
       name="google-site-verification"
       content="u5ezVva_l_Qr0dN5ht1p096Rs0pI1qg3oB053QGv9Jc"
     />
-    <!-- Meta -->
-    {{- if eq .Kind "page" }}
-    <meta name="description" content="{{ .Summary }}" />
-    <meta name="author" content="{{ .Params.Author | default .Site.Author.name }}"
+    
+    <meta name="description" content="A quick and simple Shopify store, for demo purposes only.
+View Site" />
+    <meta name="author" content=""
     />
-    {{- else }}
-    <meta name="description" content="{{ .Site.Params.Description }}" />
-    <meta name="author" content="{{ .Site.Author.name }}" />
-    {{- end }}
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
 
-    <link href="{{ "style.css" | absURL }}" rel="stylesheet" /> 
- <!--   <link href="{{ "default.min.css" | absURL }}" rel="stylesheet" /> -->
+    <link href="https://alanryan.dev/style.css" rel="stylesheet" /> 
+    <link href="https://alanryan.dev/default.min.css" rel="stylesheet" />
     <link
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>"
     />
-    <!-- Generator -->
-    {{- hugo.Generator }}
-    <!-- RSS -->
-    {{ range .AlternativeOutputFormats -}}
-    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
-    <!-- Misc -->
-    {{- if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production") }}
-    {{- template "_internal/google_analytics_async.html" . }}
-    {{- template "_internal/opengraph.html" . }}
-    {{- end }}
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
   </head>
   <body>
 <div class='wrapper'>
     <header>
-      <nav class="nav">
-        {{- partial "logo.html" . }}
+      <nav class="nav"><h1 class="name"><a href="https://alanryan.dev">Alan Ryan</a></h1>
+
+
         <div class="theme-swapper-wrapper">
           <button
             class="theme-toggle"
@@ -71,3 +60,29 @@
     </header>
 
     <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Umbrella Store</h1>
+  </header>
+  <div class="post-content"><p>A quick and simple Shopify store, for demo purposes only.</p>
+<p><a href="https://sunny-day-umbrellas.myshopify.com/">View Site</a></p>
+</div>
+</article></main>
+<footer class="footer" role="contentinfo" aria-labelledby="label-footer">
+  <h2 id="label-footer" class="sr-only">Page footer</h2>
+  <span>&copy; 2022 <a href="https://alanryan.dev">Alan Ryan</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+</footer>
+</div>
+<script src="https://alanryan.dev/theme-toggle.js"></script>
+<script src="https://alanryan.dev/highlight.min.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+</body>
+</html>
+

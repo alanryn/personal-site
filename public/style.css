@@ -8,8 +8,6 @@
   --surface2-light: var(--gray-1);
   --surface3-light: var(--gray-2);
   --surface4-light: var(--gray-3);
-  --code-background1-light: var(--gray-1);
-  --code-background2-light: var(--gray-3);
   --surface-shadow-light: 220 3% 15%;
   --shadow-strength-light: 1%;
 
@@ -20,8 +18,6 @@
   --surface2-dark: var(--gray-8);
   --surface3-dark: var(--gray-7);
   --surface4-dark: var(--gray-6);
-  --code-background1-dark: var(--gray-8);
-  --code-background2-dark: var(--gray-7);
   --surface-shadow-dark: 200 40% 2%;
   --shadow-strength-dark: 25%;
 }
@@ -34,8 +30,6 @@
   --surface2: var(--surface2-light);
   --surface3: var(--surface3-light);
   --surface4: var(--surface4-light);
-  --code-bg1: var(--code-background1-light);
-  --code-bg2: var(--code-background2-light);
   --surface-color: var(--surface-shadow-light);
   --shadow-strength: var(--shadow-strength-light);
 }
@@ -48,8 +42,6 @@
     --surface2: var(--surface2-dark);
     --surface3: var(--surface3-dark);
     --surface4: var(--surface4-dark);
-    --code-bg1: var(--code-background1-dark);
-    --code-bg2: var(--code-background2-dark);
     --surface-color: var(--surface-shadow-dark);
     --shadow-strength: var(--shadow-strength-dark);
   }
@@ -62,8 +54,6 @@
   --surface2: var(--surface2-dark);
   --surface3: var(--surface3-dark);
   --surface4: var(--surface4-dark);
-  --code-bg1: var(--code-background1-dark);
-  --code-bg2: var(--code-background2-dark);
   --surface-color: var(--surface-shadow-dark);
   --shadow-strength: var(--shadow-strength-dark);
 }
@@ -385,18 +375,17 @@ img {
   font-family: Menlo, Monaco, "Courier New", Courier, monospace;
   font-size: var(--font-size-fluid-0);
   line-height: 1.5;
-  /* background: var(--code-bg1); */
-  /* color:hotpink; */
+  background: var(--surface2);
   border-radius: 2px;
 }
 .post-content pre code {
   display: block;
   margin-left: 0;
   margin-right: 0;
+
   padding: var(--size-5);
   color: var(--text1);
-  /* color: greenyellow */
-  /* background: var(--code-bg2); */
+  background: var(--surface4);
   border-radius: 0;
 }
 .post-content hr {

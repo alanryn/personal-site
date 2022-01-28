@@ -65,7 +65,7 @@ Make sure to change the naming to match your metafields. Mine is `variant.metafi
 
 Next, in the case of the Dawn theme, you need to update the `global.js` file in the `Assets` folder. Find the code starting with `onVariantChange()`. Below that, inside the `else` block, add another method call for `updateMeta()`:
 
-```javascript
+```
    onVariantChange() {   
     this.updateOptions();
     this.updateMasterId();
@@ -90,7 +90,7 @@ Next, in the case of the Dawn theme, you need to update the `global.js` file in 
 
 Then add the `updateMeta` code further down with the other update methods:
 
-```javascript
+```
   updateOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
   }
@@ -116,7 +116,7 @@ Now your variant metafield should be appearing and updating as you select differ
 We can also add the code as a block in the `main-product.liquid` file . In this way the variant metafield becomes visible in the theme customizer and gives the option of rearranging the block without changing the code. This involves changes to the `product.json` and the `main-product.liquid` files.  
 Update `product.json` in the `Templates folder` to include a new `block` (in this case, I am adding one new block called `variant_info_1`). Also, add the new block to the `block_order`(you may get an error when saving these changes until you update the `main-product.liquid` in the next step):
 
-```json
+```
 {
   "sections": {
     "main": {
@@ -234,7 +234,7 @@ Next, in the `main-product.json`, place `{% when 'variant_info_1' %}` before the
 ```
 There is a `{% schema %}` section at the end of the `main-product.liquid` file. Add `variant_info_1` to this schema (follow the pattern for the other fields):
 
-```json
+```
     {
       "type": "variant_info_1",
       "name": "Extra Variant Info 1",
@@ -247,7 +247,7 @@ Your new block should now appear in your theme customizer (if it doesn't show in
 
 If you need to add more than one extra metafield for a single variant, you will basically need to duplicate the steps above for as many extra metafiels as required. In the `product.json` add an extra block for each new metafield and add each one to the `block_order`:
 
-```json
+```
  "variant_info_2": {
  "type": "variant_info_2",
  "settings": {
@@ -271,7 +271,7 @@ In `main-product.liquid` add another `{% when %}` block of code, like before, ju
 ```
 Add the new block to the `{% schema %}` at the end of the file.
 
-```json
+```
     {
       "type": "variant_info_2",
       "name": "Extra Variant Info 2",
@@ -281,7 +281,7 @@ Add the new block to the `{% schema %}` at the end of the file.
 
 To deal with multiple metafields for each variant, it's probably best to update your javascript to uses loops to avoid repeating the same code:
 
-```javascript
+```
 <script>                 
 const currentVariantId = {{ product.selected_or_first_available_variant.id }};
 const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
