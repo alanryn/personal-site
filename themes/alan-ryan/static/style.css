@@ -595,6 +595,7 @@ img {
   padding: 1rem;
   overflow: hidden;
   background-color: var(--surface1);
+  border-radius: var(--radius-3);
 }
 @media screen and (max-width: 1030px) {
   .wrapper {
