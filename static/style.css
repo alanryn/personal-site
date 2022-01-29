@@ -243,7 +243,13 @@ img {
 .home-section {
   margin-top: var(--size-5);
 }
-
+.list-icon {
+  display: grid;
+  place-items: center;
+}
+.icon-span {
+  padding-left: var(--size-0);
+}
 /* Post entry
 -------------------------------------------------- */
 .post-entry {
