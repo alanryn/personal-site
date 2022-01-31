@@ -15,7 +15,8 @@
     {{ range where .Site.RegularPages "Section" "tips" }}
     <a class="card" href="{{.Permalink}}" >
       <li style="margin: 0; padding:0;">
-<img src="{{ .Params.image }}" alt="{{ .Params.alt }}"/>
+       <!-- <img src="{{ .Params.image }}" alt="{{ .Params.alt }}"/> -->
+<div class="pattern" style="background-image: url('{{ .Params.backgroundImage | safeURL }}'); background-color: {{.Params.backgroundColor}}"></div>
         <h4>{{ .Title }}</h4>
       </li>
     </a>
@@ -40,8 +41,8 @@
 
       <li style="margin: 0; padding:0;" class="list-icon">
 
-        <img src="{{ .Params.image }}" alt="{{ .Params.alt }}"/>
- 
+      <!--  <img loading="lazy" src="{{ .Params.image }}" alt="{{ .Params.alt }}"/> -->
+ <div class="pattern" style="background-image: url('{{ .Params.backgroundImage | safeURL }}') "></div>
         <h4>
    {{ .Title }}  
 <!--

@@ -541,6 +541,20 @@ img {
     height: auto;
   }
 }
+.card > li > .pattern {
+  /* Fallback for `aspect-ratio` of defining a height */
+  height: max(18vh, 12rem);
+  object-fit: cover;
+  width: 100%;
+  border-radius: var(--radius-3) var(--radius-3) 0 0;
+}
+/* When supported, use `aspect-ratio` */
+@supports (aspect-ratio: 1) {
+  .card > li > .pattern {
+    aspect-ratio: var(--img-ratio);
+    height: auto;
+  }
+}
 .card > :not(img) {
   margin-left: var(--size-0);
   margin-right: var(--size-0);
