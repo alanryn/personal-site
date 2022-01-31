@@ -158,6 +158,10 @@ ul {
   margin: 0;
   padding: 0;
 }
+li {
+  margin: 0;
+  padding: 0;
+}
 a {
   color: var(--text2);
   text-decoration: none;
@@ -216,6 +220,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
   max-width: calc(var(--nav-width) + var(--size-5) * 2);
   margin-left: auto;
   margin-right: auto;
@@ -500,13 +505,17 @@ img {
 }
 /* homepage gallery and list pages
 -------------------------------------------------- */
+
 .card {
+  --img-ratio: 3/2;
+  display: flex;
+  flex-direction: column;
   transition-duration: 0.15s;
   transition-property: box-shadow, transform;
   transition-timing-function: ease-in;
   background-color: var(--surface3);
   border: 1px solid var(--surface2);
-  padding: var(--size-4);
+  /* padding: var(--size-4); */
   border-radius: var(--radius-3);
   box-shadow: var(--shadow-3);
 }
@@ -517,6 +526,38 @@ img {
 }
 .card:focus {
   outline: 3px solid var(--orange-6);
+}
+.card > li > img {
+  /* Fallback for `aspect-ratio` of defining a height */
+  height: max(18vh, 12rem);
+  object-fit: cover;
+  width: 100%;
+  border-radius: var(--radius-3) var(--radius-3) 0 0;
+}
+/* When supported, use `aspect-ratio` */
+@supports (aspect-ratio: 1) {
+  .card > li > img {
+    aspect-ratio: var(--img-ratio);
+    height: auto;
+  }
+}
+.card > :not(img) {
+  margin-left: var(--size-0);
+  margin-right: var(--size-0);
+}
+.card > :not(img):first-child {
+  margin-top: var(--size-0);
+}
+/* Enhanced `:not()` accepts a selector list,
+but as a fallback you can chain `:not()` instead */
+.card > :last-of-type:not(img, h2, h3, h4) {
+  margin-bottom: var(--size-0);
+}
+.card > :not(h2, h3, h4) {
+  font-size: --font-size-fluid-0;
+}
+.card > a {
+  align-self: start;
 }
 
 /* https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html 
@@ -546,7 +587,6 @@ img {
   height: 100%;
   position: absolute;
   width: 100%;
-  padding: 0;
   transition: scale 0.5s linear;
 }
 .swapper-checkbox::before {
@@ -596,7 +636,8 @@ img {
   border-radius: var(--radius-2);
 }
 
-.contact-link:hover {
+.contact-link:hover,
+.contact-link:focus {
   cursor: pointer;
   color: var(--orange-0);
   background-color: var(--orange-5);
@@ -621,7 +662,7 @@ img {
   color: black;
 }
 /* home page grids */
-.shopifylogo:before {
+/* .shopifylogo:before {
   display: block;
   content: "";
   background-image: url("shopify_glyph.svg");
@@ -631,7 +672,7 @@ img {
   right: 0;
   height: 3rem;
   width: 3rem;
-}
+} */
 .wrapper {
   max-width: 65rem;
   margin: 1rem auto;
@@ -662,6 +703,11 @@ img {
   font-size: var(--font-size-fluid-1);
   padding: 0.5rem;
 }
+@media screen and (min-width: 480px) {
+  .wrapper h4 {
+    font-size: var(--font-size-fluid-0);
+  }
+}
 .projects-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -671,7 +717,7 @@ img {
 }
 @media screen and (min-width: 480px) {
   .projects-grid {
-    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(20ch, 1fr));
   }
 }
 .theme-toggle {

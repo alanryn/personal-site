@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Alan Ryan | Shopify Dev</title>
+    <meta
+      name="google-site-verification"
+      content="u5ezVva_l_Qr0dN5ht1p096Rs0pI1qg3oB053QGv9Jc"
+    />
+    
+    <meta name="description" content="Adding a customized size swatch to a shopify product page" />
+    <meta name="author" content=""
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+
+    <link href="https://alanryan.dev/style.css" rel="stylesheet" /> 
+ 
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>"
+    />
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+  </head>
+  <body>
+
+<div class='wrapper'>
+    <header>
+      <nav class="nav"><h1 class="name"><a href="https://alanryan.dev">Alan Ryan</a></h1>
+
+ 
+        <div class="theme-swapper-wrapper">
+            <label>
+                <input id="dark-toggle" class="swapper-checkbox" type="checkbox" aria-label="Switch between Light and Dark mode">
+             </label>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Adding a Customized Size Swatch</h1>
+    <div class="post-meta">
+      Updated on December 30, 2020</div>
+  </header>
+  <div class="post-content"><p>Many themes come with a dropdown as the default size selector. Here&rsquo;s how to change this to, for example, a list of buttons, similar to a color swatch. In this example I&rsquo;m using Shopify&rsquo;s Venture theme, but it should be similar for most other themes.</p>
+<p>In the <code>product-template.liquid</code> file, in the <code>Sections</code> folder, search for the code beginning with:</p>
+<pre><code> {% unless product.has_only_default_variant %}
+</code></pre><p>and ending with :</p>
+<pre><code>{% endunless %}
+</code></pre><p>and replaace everything between with this code:</p>
+<pre><code> {% unless product.has_only_default_variant %}
+            {% for option in product.options_with_values %}
+
+              &lt;div class=&quot;selector-wrapper js product-form__item&quot;&gt;
+
+                {% if option.name == &quot;Size&quot; %}
+                &lt;label&gt;{{ option.name }}&lt;/label&gt;
+
+                {% assign index = forloop.index %}
+
+                &lt;div class=&quot;size-swatch&quot;&gt;
+                {% for value in option.values %}
+
+                    {% assign variant_label_state = true %}
+                      {% if product.options.size == 1 %}
+                      {% unless product.variants[forloop.index0].available  %}
+                      {% assign variant_label_state = false %}
+                      {% endunless %}
+                      {% endif %}
+
+                	&lt;input class=&quot;single-option-selector-{{ section.id }}&quot;
+                           id=&quot;size-{{forloop.index}}&quot;
+                           type=&quot;radio&quot;
+                           name=&quot;size&quot;
+                           value=&quot;{{ value | escape }}&quot;
+                           data-index=&quot;option{{ index }}&quot;
+                           {% if option.selected_value == value %} checked=&quot;checked&quot;{% endif %}
+                           {% unless variant_label_state %} disabled=&quot;disabled&quot;{% endunless %}
+              		/&gt;
+                    &lt;label for=&quot;size-{{forloop.index}}&quot;&gt;{{value}}&lt;/label&gt;
+
+                {% endfor %}
+                &lt;/div&gt;
+
+                {% else %}
+                &lt;!-- default selector start--&gt;
+                &lt;label {% if option.name == 'default' %}class=&quot;label--hidden&quot; {% endif %}for=&quot;SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}&quot;&gt;{{ option.name }}&lt;/label&gt;
+                &lt;select class=&quot;single-option-selector single-option-selector-{{ section.id }} product-form__input&quot;
+                  id=&quot;SingleOptionSelector-{{ forloop.index0 }}&quot;
+                  data-name=&quot;{{ option.name }}&quot;
+                  data-index=&quot;option{{ forloop.index }}&quot;&gt;
+                  {% for value in option.values %}
+                    &lt;option value=&quot;{{ value | escape }}&quot;{% if option.selected_value == value %}
+                            selected=&quot;selected&quot;{% endif %}&gt;{{ value }}&lt;/option&gt;
+                  {% endfor %}
+                &lt;/select&gt;
+                 &lt;!-- default selector end--&gt;
+                {% endif %}
+
+              &lt;/div&gt;
+            {% endfor %}
+          {% endunless %}
+</code></pre><p>Add styling to the end of the <code>theme.css</code> file in the <code>Assets</code> folder; something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css">                  .<span style="color:#a6e22e">size-swatch</span>{
+                    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">flex</span>;
+
+                  }
+                  .<span style="color:#a6e22e">size-swatch</span> <span style="color:#f92672">input</span>{
+                    <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0</span>;
+                    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">0</span>;
+                    <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">0</span>;
+                  }
+                  .<span style="color:#a6e22e">size-swatch</span> <span style="color:#f92672">label</span>{
+                    <span style="color:#66d9ef">padding</span>:<span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+                    <span style="color:#66d9ef">max-height</span>:<span style="color:#ae81ff">44</span><span style="color:#66d9ef">px</span>;
+                    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#66d9ef">lightgray</span>;
+                    <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+
+
+                  }
+                 .<span style="color:#a6e22e">size-swatch</span> <span style="color:#f92672">input</span>:<span style="color:#a6e22e">disabled</span> <span style="color:#f92672">+</span> <span style="color:#f92672">label</span> {
+                   <span style="color:#66d9ef">opacity</span>: <span style="color:#ae81ff">0.35</span>;
+                   <span style="color:#66d9ef">cursor</span>: <span style="color:#66d9ef">default</span>;
+                   <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">line-through</span>;
+                  }
+
+                  .<span style="color:#a6e22e">size-swatch</span> <span style="color:#f92672">input</span>:<span style="color:#a6e22e">focus</span> <span style="color:#f92672">+</span> <span style="color:#f92672">label</span> {
+                    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.05</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">#fff</span>, <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">0.15</span><span style="color:#66d9ef">em</span> <span style="color:#ae81ff">0.1</span><span style="color:#66d9ef">em</span> <span style="color:#66d9ef">green</span>;
+                  }
+
+</code></pre></div></div>
+</article></main>
+<footer class="footer" role="contentinfo" aria-labelledby="label-footer">
+  <h2 id="label-footer" class="sr-only">Page footer</h2>
+  <span>&copy; 2022 <a href="https://alanryan.dev">Alan Ryan</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+</footer>
+</div>
+<script src="https://alanryan.dev/theme-toggle.js"></script>
+
+</body>
+</html>
+
+
