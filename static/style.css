@@ -711,6 +711,7 @@ but as a fallback you can chain `:not()` instead */
 @media screen and (max-width: 1030px) {
   .wrapper {
     margin: 0 auto;
+    border-radius: var(--radius-1);
   }
 }
 .wrapper h3 {
