@@ -24,6 +24,8 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 - [How to Set Up a Local Theme Development Workflow with Theme Kit](https://www.youtube.com/watch?v=SrtOXwjXJ1w)  
 - [An example build process for Shopify theme development](https://github.com/the-taproom/build-process)  
 - [An upcoming course on Shopify Frontend Development](https://shophackers.io/shopify)  
+- [Improving The Performance Of Shopify Themes (Case Study)](https://www.smashingmagazine.com/2021/05/improving-performance-shopify-themes-case-study/)  
+- [How to Meet the New Accessibility Requirements of the Shopify Theme Store](https://www.shopify.com/partners/blog/theme-store-accessibility-requirements)  
 
 ### App Development:  
 

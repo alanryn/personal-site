@@ -14,6 +14,7 @@
       >{{ with .Site.GetPage "section" "tips" }}{{ .Title }}{{ end }}</a
     >
   </h3>
+
   <ul class="projects-grid">
     {{ range where .Site.RegularPages "Section" "tips" }}
     <a class="card" href="{{.Permalink}}" >
