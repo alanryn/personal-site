@@ -520,6 +520,7 @@ img {
   --img-ratio: 3/2;
   display: flex;
   flex-direction: column;
+
   transition-duration: 0.15s;
   transition-property: box-shadow, transform;
   transition-timing-function: ease-in;
@@ -528,6 +529,7 @@ img {
   /* padding: var(--size-4); */
   border-radius: var(--radius-3);
   box-shadow: var(--shadow-3);
+  height:100%;
 }
 .card:hover,
 .card:focus {
@@ -537,7 +539,7 @@ img {
 .card:focus {
   outline: 3px solid var(--orange-6);
 }
-.card > li > img {
+.pattern {
   /* Fallback for `aspect-ratio` of defining a height */
   height: max(18vh, 12rem);
   object-fit: cover;
@@ -546,21 +548,7 @@ img {
 }
 /* When supported, use `aspect-ratio` */
 @supports (aspect-ratio: 1) {
-  .card > li > img {
-    aspect-ratio: var(--img-ratio);
-    height: auto;
-  }
-}
-.card > li > .pattern {
-  /* Fallback for `aspect-ratio` of defining a height */
-  height: max(18vh, 12rem);
-  object-fit: cover;
-  width: 100%;
-  border-radius: var(--radius-3) var(--radius-3) 0 0;
-}
-/* When supported, use `aspect-ratio` */
-@supports (aspect-ratio: 1) {
-  .card > li > .pattern {
+  .pattern {
     aspect-ratio: var(--img-ratio);
     height: auto;
   }
