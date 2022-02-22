@@ -1,22 +1,23 @@
 ---
 title: "Display Recently Viewed Products Without App or jQuery"
-date: 2021-12-03T15:20:00Z
-image: https://doodleipsum.com/700/abstract&n=5
-alt: "Doodle Ipsum"
+date: 2021-02-22T15:20:00Z
 summary: "How to add a recently viewed products section to Shopify without using an app or jquery"
 backgroundColor: "var(--surface1)"
 backgroundImage: "data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffc078' fill-opacity='1'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E"
 ---
+
 This code will store the last 4 visited product pages in the browsers memory and display them as a section on the Product page. The steps below are for the Dawn theme.  
 
 Create a new section file, in this case called `recent-products.liquid`, and add the following code:  
-```javascript
-<div class="recently-viewed-wrapper">
-<h2>Recently Viewed</h2>
-<ul class="recently-viewed-grid">
-<!-- Recently viewed products will appear here -->
-</ul>
+
+```
+<div class="recently-viewed-wrapper page-width">
+    <h2>Recently Viewed</h2>
+    <ul class="recently-viewed-grid">
+    <!-- Recently viewed products will appear here -->
+    </ul>
 </div>
+
 <script>
 function setRecentlyViewedProducts() {
   const productData = {
@@ -28,7 +29,7 @@ function setRecentlyViewedProducts() {
   };
   const productList = [];
   let jsonResp, jsonRespArr, jsonRespArrStr;
-  const numberOfProducts = 4;
+  const numberOfProducts = 8;
   productList.push(productData);
   const currProductPageTitle = productData.productTitle;
   const productDataString = JSON.stringify(productList);
@@ -62,9 +63,9 @@ function getRecentlyViewedProducts() {
   const recentlyViewedHtml = [];
   productData.map(item => {
     recentlyViewedHtml.unshift(`
-    <li>
+    <li class="recently-viewed-grid-item">
       <a href="${item.productUrl}"> 
-		<img class="recently-viewed-img" src='${item.productImg}' loading="lazy" alt="${item.productImageAltText}"/>
+		<img loading="lazy" class="recently-viewed-img" src='${item.productImg}' loading="lazy" alt="${item.productImageAltText}"/>
       </a>
        <h3><a class="recently-viewed-a" href="${item.productUrl}">${item.productTitle}</a></h3>
        <p>${item.productPrice}</p>
@@ -82,9 +83,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 </script>
 
+
 <style>
+
 .recently-viewed-wrapper{
-  margin: 1rem;
+  margin: 1rem auto;
 }
 .recently-viewed-img {
   width: 100%;
@@ -92,11 +95,19 @@ document.addEventListener("DOMContentLoaded", function (event) {
 .recently-viewed-grid {
   display: grid;
   grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
   list-style: none;
   margin:0; 
   padding: 0;
 }    
+.recently-viewed-grid-item {
+  display: flex;
+  flex-direction: column;
+}
+.recently-viewed-grid-item h3, p {
+  align-self: center;
+  margin:0;
+}
 .recently-viewed-a {
   text-decoration: none;
   color: black;
@@ -112,9 +123,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 {% endschema %}
 ```
 
-Update the `product.json` file (in the `Templates` folder), to include the new `recent-products` section details:
+Update the `product.json` file ( in the `Templates` folder ), to include the new `recent-products` section details:
 
-```json
+```
 {
   "sections": {
     "main": {
@@ -219,8 +230,8 @@ Don't forget to add the section name to the `order`.
 
 Now you should see in the theme customizer for your product page a section called `Recent Products`.
 
-If you are using a different theme (most likely one without a `product.json` template file), you can create a new snippet file (in the `Snippets` folder), add the same code as for the section ***without*** the schema part at the end
-```json
+If you are using a different theme (most likely one without a `product.json` template file), you can create a new snippet file (in the `Snippets` folder), add the same code as for the section ***without*** the schema part at the end.
+```
 {% schema %}
   {
     "name": "Recent Products",
@@ -228,8 +239,8 @@ If you are using a different theme (most likely one without a `product.json` tem
   }
 {% endschema %}
 ```
-In you product.liquid file (or the sub-file whch contains the full product page code) include the snippet using:
-```liquid
+In you `product.liquid` file (or the sub-file whch contains the full product page code) include the snippet using:
+```
 {% render 'recent-products' %}
 ```
 Place it where you would like the recently viewed products to appear on the product page.
