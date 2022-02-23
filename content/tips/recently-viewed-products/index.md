@@ -103,9 +103,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
 .recently-viewed-grid-item {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 .recently-viewed-grid-item h3, p {
-  align-self: center;
   margin:0;
 }
 .recently-viewed-a {
