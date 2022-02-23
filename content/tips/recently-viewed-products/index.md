@@ -105,9 +105,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   flex-direction: column;
   text-align: center;
 }
-.recently-viewed-grid-item h3, p {
-  margin:0;
-}
 .recently-viewed-a {
   text-decoration: none;
   color: black;
