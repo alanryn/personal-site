@@ -6,15 +6,24 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 16 Jan 2022 10:08:00 +0000</lastBuildDate><atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Feb 2022 15:20:00 +0000</lastBuildDate><atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
       <link>https://alanryan.dev/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://alanryan.dev/contact/</guid>
-      <description>I am a freelance frontend developer, currently specializing in Shopify. Contact me with any queries about Shopify or anything else. I&#39;m avaialable for jobs big and small or if you just want some free advice.
+      <description>I am a freelance frontend developer, currently specializing in Shopify. Contact me with any queries about Shopify or anything else. I&#39;m available for jobs big and small or if you just want some free advice.
 Name  Email Address  Your Message  Send  Shopify Profile Linkedin  Github Codepen  </description>
+    </item>
+    
+    <item>
+      <title>Display Recently Viewed Products Without App or jQuery</title>
+      <link>https://alanryan.dev/tips/recently-viewed-products/</link>
+      <pubDate>Tue, 22 Feb 2022 15:20:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/recently-viewed-products/</guid>
+      <description>How to add a recently viewed products section to Shopify without using an app or jquery</description>
     </item>
     
     <item>
@@ -33,15 +42,6 @@ Name  Email Address  Your Message  Send  Shopify Profile Linkedin  Github Codepe
       
       <guid>https://alanryan.dev/tips/product-variant-metafields/</guid>
       <description>How to add multiple variant metafields that update on selection for a Shopify product page</description>
-    </item>
-    
-    <item>
-      <title>Display Recently Viewed Products Without App or jQuery</title>
-      <link>https://alanryan.dev/tips/recently-viewed-products/</link>
-      <pubDate>Fri, 03 Dec 2021 15:20:00 +0000</pubDate>
-      
-      <guid>https://alanryan.dev/tips/recently-viewed-products/</guid>
-      <description>How to add a recently viewed products section to Shopify without using an app or jquery</description>
     </item>
     
     <item>
@@ -147,7 +147,17 @@ View site</description>
       <pubDate>Sun, 27 Dec 2020 17:15:03 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/writing-examples/</guid>
-      <description>I also like to write, here&amp;rsquo;s some examples</description>
+      <description>here&amp;rsquo;s some writing samples</description>
+    </item>
+    
+    <item>
+      <title>Wine Data App</title>
+      <link>https://alanryan.dev/projects/wine-data-app/wine-data-app/</link>
+      <pubDate>Mon, 27 Jan 2020 17:14:45 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/projects/wine-data-app/wine-data-app/</guid>
+      <description>A Port Wine Data App created using R
+View the App</description>
     </item>
     
     <item>

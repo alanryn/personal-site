@@ -25,6 +25,7 @@
       rel="icon"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>"
     />
+
     <meta name="generator" content="Hugo 0.80.0" />
     
     
@@ -51,220 +52,228 @@
   <header class="post-header">
     <h1 class="post-title">Display Recently Viewed Products Without App or jQuery</h1>
     <div class="post-meta">
-      Updated on December 3, 2021</div>
+      Updated on February 22, 2022</div>
   </header>
   <div class="post-content"><p>This code will store the last 4 visited product pages in the browsers memory and display them as a section on the Product page. The steps below are for the Dawn theme.</p>
 <p>Create a new section file, in this case called <code>recent-products.liquid</code>, and add the following code:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#f92672">&lt;</span><span style="color:#a6e22e">div</span> <span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;recently-viewed-wrapper&#34;</span><span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">h2</span><span style="color:#f92672">&gt;</span><span style="color:#a6e22e">Recently</span> <span style="color:#a6e22e">Viewed</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/h2&gt;</span>
-<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">ul</span> <span style="color:#66d9ef">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;recently-viewed-grid&#34;</span><span style="color:#f92672">&gt;</span>
-<span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">Recently</span> <span style="color:#a6e22e">viewed</span> <span style="color:#a6e22e">products</span> <span style="color:#a6e22e">will</span> <span style="color:#a6e22e">appear</span> <span style="color:#a6e22e">here</span> <span style="color:#f92672">--&gt;</span>
-<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/ul&gt;</span>
-<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/div&gt;</span>
-<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span><span style="color:#f92672">&gt;</span>
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">setRecentlyViewedProducts</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productData</span> <span style="color:#f92672">=</span> {
-    <span style="color:#a6e22e">productTitle</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;{{ product.title }}&#34;</span>,
-    <span style="color:#a6e22e">productImg</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;{{ product.featured_media | img_url: &#39;300x&#39; }}&#34;</span>,
-    <span style="color:#a6e22e">productPrice</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;{{ product.price | money }}&#34;</span>,
-    <span style="color:#a6e22e">productUrl</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;{{ product.url }}&#34;</span>,
-    <span style="color:#a6e22e">productImageAltText</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;{{product.featured_media.alt | escape }}&#34;</span>
-  };
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productList</span> <span style="color:#f92672">=</span> [];
-  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">jsonResp</span>, <span style="color:#a6e22e">jsonRespArr</span>, <span style="color:#a6e22e">jsonRespArrStr</span>;
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">numberOfProducts</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">4</span>;
-  <span style="color:#a6e22e">productList</span>.<span style="color:#a6e22e">push</span>(<span style="color:#a6e22e">productData</span>);
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">currProductPageTitle</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">productData</span>.<span style="color:#a6e22e">productTitle</span>;
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productDataString</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">productList</span>);
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">localData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;recentlyViewedProduct&#34;</span>);
+<pre><code>&lt;div class=&quot;recently-viewed-wrapper page-width&quot;&gt;
+    &lt;h2&gt;Recently Viewed&lt;/h2&gt;
+    &lt;ul class=&quot;recently-viewed-grid&quot;&gt;
+    &lt;!-- Recently viewed products will appear here --&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
 
-  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">localData</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">null</span>) {
-    <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;recentlyViewedProduct&#34;</span>, <span style="color:#a6e22e">productDataString</span>);
-  } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">localData</span>) {
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">oldProductData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;recentlyViewedProduct&#34;</span>);
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">countProductData</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">oldProductData</span>.<span style="color:#a6e22e">match</span>(<span style="color:#e6db74">/productTitle/g</span>) <span style="color:#f92672">||</span> []).<span style="color:#a6e22e">length</span>;
-    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sameProduct</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">oldProductData</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#a6e22e">currProductPageTitle</span>);
-    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">countProductData</span> <span style="color:#f92672">&lt;</span> <span style="color:#a6e22e">numberOfProducts</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">sameProduct</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span>) {
-      <span style="color:#a6e22e">jsonResp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">oldProductData</span>);
-      <span style="color:#a6e22e">jsonRespArr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonResp</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">productList</span>);
-      <span style="color:#a6e22e">jsonRespArrStr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">jsonRespArr</span>);
-      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;recentlyViewedProduct&#34;</span>, <span style="color:#a6e22e">jsonRespArrStr</span>);
-    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">countProductData</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">numberOfProducts</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">sameProduct</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">false</span>) {
-      <span style="color:#a6e22e">jsonResp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">oldProductData</span>);
-      <span style="color:#a6e22e">jsonResp</span>.<span style="color:#a6e22e">shift</span>();
-      <span style="color:#a6e22e">jsonRespArr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jsonResp</span>.<span style="color:#a6e22e">concat</span>(<span style="color:#a6e22e">productList</span>);
-      <span style="color:#a6e22e">jsonRespArr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">jsonRespArr</span>);
-      <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">setItem</span>(<span style="color:#e6db74">&#34;recentlyViewedProduct&#34;</span>, <span style="color:#a6e22e">jsonRespArr</span>);
+&lt;script&gt;
+function setRecentlyViewedProducts() {
+  const productData = {
+    productTitle: &quot;{{ product.title }}&quot;,
+    productImg: &quot;{{ product.featured_media | img_url: '300x' }}&quot;,
+    productPrice: &quot;{{ product.price | money }}&quot;,
+    productUrl: &quot;{{ product.url }}&quot;,
+    productImageAltText: &quot;{{product.featured_media.alt | escape }}&quot;
+  };
+  const productList = [];
+  let jsonResp, jsonRespArr, jsonRespArrStr;
+  const numberOfProducts = 8;
+  productList.push(productData);
+  const currProductPageTitle = productData.productTitle;
+  const productDataString = JSON.stringify(productList);
+  const localData = localStorage.getItem(&quot;recentlyViewedProduct&quot;);
+
+  if (localData === null) {
+    localStorage.setItem(&quot;recentlyViewedProduct&quot;, productDataString);
+  } else if (localData) {
+    const oldProductData = localStorage.getItem(&quot;recentlyViewedProduct&quot;);
+    const countProductData = (oldProductData.match(/productTitle/g) || []).length;
+    const sameProduct = oldProductData.includes(currProductPageTitle);
+    if (countProductData &lt; numberOfProducts &amp;&amp; sameProduct == false) {
+      jsonResp = JSON.parse(oldProductData);
+      jsonRespArr = jsonResp.concat(productList);
+      jsonRespArrStr = JSON.stringify(jsonRespArr);
+      localStorage.setItem(&quot;recentlyViewedProduct&quot;, jsonRespArrStr);
+    } else if (countProductData &gt;= numberOfProducts &amp;&amp; sameProduct == false) {
+      jsonResp = JSON.parse(oldProductData);
+      jsonResp.shift();
+      jsonRespArr = jsonResp.concat(productList);
+      jsonRespArr = JSON.stringify(jsonRespArr);
+      localStorage.setItem(&quot;recentlyViewedProduct&quot;, jsonRespArr);
     }
   }
 }
 
-<span style="color:#a6e22e">setRecentlyViewedProducts</span>();
-<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">localViewed</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">recentlyViewedProduct</span>;
-<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getRecentlyViewedProducts</span>() {
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">productData</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">localStorage</span>.<span style="color:#a6e22e">getItem</span>(<span style="color:#e6db74">&#34;recentlyViewedProduct&#34;</span>));
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">recentlyViewedHtml</span> <span style="color:#f92672">=</span> [];
-  <span style="color:#a6e22e">productData</span>.<span style="color:#a6e22e">map</span>(<span style="color:#a6e22e">item</span> =&gt; {
-    <span style="color:#a6e22e">recentlyViewedHtml</span>.<span style="color:#a6e22e">unshift</span>(<span style="color:#e6db74">`
-</span><span style="color:#e6db74">    &lt;li&gt;
-</span><span style="color:#e6db74">      &lt;a href=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">productUrl</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;&gt; 
-</span><span style="color:#e6db74">		&lt;img class=&#34;recently-viewed-img&#34; src=&#39;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">productImg</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#39; loading=&#34;lazy&#34; alt=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">productImageAltText</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;/&gt;
-</span><span style="color:#e6db74">      &lt;/a&gt;
-</span><span style="color:#e6db74">       &lt;h3&gt;&lt;a class=&#34;recently-viewed-a&#34; href=&#34;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">productUrl</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">productTitle</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/a&gt;&lt;/h3&gt;
-</span><span style="color:#e6db74">       &lt;p&gt;</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">item</span>.<span style="color:#a6e22e">productPrice</span><span style="color:#e6db74">}</span><span style="color:#e6db74">&lt;/p&gt;
-</span><span style="color:#e6db74">    &lt;/li&gt;
-</span><span style="color:#e6db74">   `</span>);
+setRecentlyViewedProducts();
+const localViewed = localStorage.recentlyViewedProduct;
+function getRecentlyViewedProducts() {
+  const productData = JSON.parse(localStorage.getItem(&quot;recentlyViewedProduct&quot;));
+  const recentlyViewedHtml = [];
+  productData.map(item =&gt; {
+    recentlyViewedHtml.unshift(`
+    &lt;li class=&quot;recently-viewed-grid-item&quot;&gt;
+      &lt;a href=&quot;${item.productUrl}&quot;&gt; 
+		&lt;img loading=&quot;lazy&quot; class=&quot;recently-viewed-img&quot; src='${item.productImg}' loading=&quot;lazy&quot; alt=&quot;${item.productImageAltText}&quot;/&gt;
+      &lt;/a&gt;
+       &lt;h3&gt;&lt;a class=&quot;recently-viewed-a&quot; href=&quot;${item.productUrl}&quot;&gt;${item.productTitle}&lt;/a&gt;&lt;/h3&gt;
+       &lt;p&gt;${item.productPrice}&lt;/p&gt;
+    &lt;/li&gt;
+   `);
   });
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">newProductData</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">recentlyViewedHtml</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#34;&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
-  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fullContent</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;recently-viewed-grid&#34;</span>);
-  <span style="color:#a6e22e">fullContent</span>[<span style="color:#ae81ff">0</span>].<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">newProductData</span>;
+  const newProductData = `${recentlyViewedHtml.join(&quot;&quot;)}`;
+  const fullContent = document.getElementsByClassName(&quot;recently-viewed-grid&quot;);
+  fullContent[0].innerHTML = newProductData;
 }
 
-document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;DOMContentLoaded&#34;</span>, <span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">event</span>) {
-  <span style="color:#a6e22e">getRecentlyViewedProducts</span>();
+document.addEventListener(&quot;DOMContentLoaded&quot;, function (event) {
+  getRecentlyViewedProducts();
 });
 
-<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+&lt;/script&gt;
 
-<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">style</span><span style="color:#f92672">&gt;</span>
-.<span style="color:#a6e22e">recently</span><span style="color:#f92672">-</span><span style="color:#a6e22e">viewed</span><span style="color:#f92672">-</span><span style="color:#a6e22e">wrapper</span>{
-  <span style="color:#a6e22e">margin</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">rem</span>;
+
+&lt;style&gt;
+
+.recently-viewed-wrapper{
+  margin: 1rem auto;
 }
-.<span style="color:#a6e22e">recently</span><span style="color:#f92672">-</span><span style="color:#a6e22e">viewed</span><span style="color:#f92672">-</span><span style="color:#a6e22e">img</span> {
-  <span style="color:#a6e22e">width</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span><span style="color:#f92672">%</span>;
+.recently-viewed-img {
+  width: 100%;
 }
-.<span style="color:#a6e22e">recently</span><span style="color:#f92672">-</span><span style="color:#a6e22e">viewed</span><span style="color:#f92672">-</span><span style="color:#a6e22e">grid</span> {
-  <span style="color:#a6e22e">display</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">grid</span>;
-  <span style="color:#a6e22e">grid</span><span style="color:#f92672">-</span><span style="color:#a6e22e">gap</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span><span style="color:#a6e22e">rem</span>;
-  <span style="color:#a6e22e">grid</span><span style="color:#f92672">-</span><span style="color:#a6e22e">template</span><span style="color:#f92672">-</span><span style="color:#a6e22e">columns</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">repeat</span>(<span style="color:#a6e22e">auto</span><span style="color:#f92672">-</span><span style="color:#a6e22e">fill</span>, <span style="color:#a6e22e">minmax</span>(<span style="color:#a6e22e">min</span>(<span style="color:#ae81ff">100</span><span style="color:#f92672">%</span>, <span style="color:#ae81ff">320</span><span style="color:#a6e22e">px</span>), <span style="color:#ae81ff">1</span><span style="color:#a6e22e">fr</span>));
-  <span style="color:#a6e22e">list</span><span style="color:#f92672">-</span><span style="color:#a6e22e">style</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">none</span>;
-  <span style="color:#a6e22e">margin</span><span style="color:#f92672">:</span><span style="color:#ae81ff">0</span>; 
-  <span style="color:#a6e22e">padding</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">0</span>;
+.recently-viewed-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  list-style: none;
+  margin:0; 
+  padding: 0;
 }    
-.<span style="color:#a6e22e">recently</span><span style="color:#f92672">-</span><span style="color:#a6e22e">viewed</span><span style="color:#f92672">-</span><span style="color:#a6e22e">a</span> {
-  <span style="color:#a6e22e">text</span><span style="color:#f92672">-</span><span style="color:#a6e22e">decoration</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">none</span>;
-  <span style="color:#a6e22e">color</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">black</span>;
+.recently-viewed-grid-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.recently-viewed-a {
+  text-decoration: none;
+  color: black;
 }
     
-<span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">/style&gt;</span>
+&lt;/style&gt;
 
-{<span style="color:#f92672">%</span> <span style="color:#a6e22e">schema</span> <span style="color:#f92672">%</span>}
+{% schema %}
   {
-    <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Recent Products&#34;</span>,
-    <span style="color:#e6db74">&#34;settings&#34;</span><span style="color:#f92672">:</span> []
+    &quot;name&quot;: &quot;Recent Products&quot;,
+    &quot;settings&quot;: []
   }
-{<span style="color:#f92672">%</span> <span style="color:#a6e22e">endschema</span> <span style="color:#f92672">%</span>}
-</code></pre></div><p>Update the <code>product.json</code> file (in the <code>Templates</code> folder), to include the new <code>recent-products</code> section details:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-  <span style="color:#f92672">&#34;sections&#34;</span>: {
-    <span style="color:#f92672">&#34;main&#34;</span>: {
-      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;main-product&#34;</span>,
-      <span style="color:#f92672">&#34;blocks&#34;</span>: {
-        <span style="color:#f92672">&#34;vendor&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;text&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
-            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;{{ product.vendor }}&#34;</span>,
-            <span style="color:#f92672">&#34;text_style&#34;</span>: <span style="color:#e6db74">&#34;uppercase&#34;</span>
+{% endschema %}
+</code></pre><p>Update the <code>product.json</code> file ( in the <code>Templates</code> folder ), to include the new <code>recent-products</code> section details:</p>
+<pre><code>{
+  &quot;sections&quot;: {
+    &quot;main&quot;: {
+      &quot;type&quot;: &quot;main-product&quot;,
+      &quot;blocks&quot;: {
+        &quot;vendor&quot;: {
+          &quot;type&quot;: &quot;text&quot;,
+          &quot;settings&quot;: {
+            &quot;text&quot;: &quot;{{ product.vendor }}&quot;,
+            &quot;text_style&quot;: &quot;uppercase&quot;
           }
         },
-        <span style="color:#f92672">&#34;title&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;title&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
+        &quot;title&quot;: {
+          &quot;type&quot;: &quot;title&quot;,
+          &quot;settings&quot;: {
           }
         },
-        <span style="color:#f92672">&#34;subtitle&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;text&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
-            <span style="color:#f92672">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;{{ product.metafields.descriptors.subtitle.value }}&#34;</span>,
-            <span style="color:#f92672">&#34;text_style&#34;</span>: <span style="color:#e6db74">&#34;subtitle&#34;</span>
+        &quot;subtitle&quot;: {
+          &quot;type&quot;: &quot;text&quot;,
+          &quot;settings&quot;: {
+            &quot;text&quot;: &quot;{{ product.metafields.descriptors.subtitle.value }}&quot;,
+            &quot;text_style&quot;: &quot;subtitle&quot;
           }
         },
-        <span style="color:#f92672">&#34;price&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;price&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
+        &quot;price&quot;: {
+          &quot;type&quot;: &quot;price&quot;,
+          &quot;settings&quot;: {
           }
         },
-        <span style="color:#f92672">&#34;variant_picker&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;variant_picker&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
-            <span style="color:#f92672">&#34;picker_type&#34;</span>: <span style="color:#e6db74">&#34;button&#34;</span>
+        &quot;variant_picker&quot;: {
+          &quot;type&quot;: &quot;variant_picker&quot;,
+          &quot;settings&quot;: {
+            &quot;picker_type&quot;: &quot;button&quot;
           }
         },
-        <span style="color:#f92672">&#34;quantity_selector&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;quantity_selector&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
+        &quot;quantity_selector&quot;: {
+          &quot;type&quot;: &quot;quantity_selector&quot;,
+          &quot;settings&quot;: {
           }
         },
-        <span style="color:#f92672">&#34;buy_buttons&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;buy_buttons&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
-            <span style="color:#f92672">&#34;show_dynamic_checkout&#34;</span>: <span style="color:#66d9ef">true</span>
+        &quot;buy_buttons&quot;: {
+          &quot;type&quot;: &quot;buy_buttons&quot;,
+          &quot;settings&quot;: {
+            &quot;show_dynamic_checkout&quot;: true
           }
         },
-        <span style="color:#f92672">&#34;description&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;description&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
+        &quot;description&quot;: {
+          &quot;type&quot;: &quot;description&quot;,
+          &quot;settings&quot;: {
           }
         },
-        <span style="color:#f92672">&#34;share&#34;</span>: {
-          <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;share&#34;</span>,
-          <span style="color:#f92672">&#34;settings&#34;</span>: {
-            <span style="color:#f92672">&#34;share_label&#34;</span>: <span style="color:#e6db74">&#34;Share&#34;</span>
+        &quot;share&quot;: {
+          &quot;type&quot;: &quot;share&quot;,
+          &quot;settings&quot;: {
+            &quot;share_label&quot;: &quot;Share&quot;
           }
         }
       },
-      <span style="color:#f92672">&#34;block_order&#34;</span>: [
-        <span style="color:#e6db74">&#34;vendor&#34;</span>,
-        <span style="color:#e6db74">&#34;title&#34;</span>,
-        <span style="color:#e6db74">&#34;subtitle&#34;</span>,
-        <span style="color:#e6db74">&#34;price&#34;</span>,
-        <span style="color:#e6db74">&#34;variant_picker&#34;</span>,
-        <span style="color:#e6db74">&#34;quantity_selector&#34;</span>,
-        <span style="color:#e6db74">&#34;buy_buttons&#34;</span>,
-        <span style="color:#e6db74">&#34;description&#34;</span>,
-        <span style="color:#e6db74">&#34;share&#34;</span>
+      &quot;block_order&quot;: [
+        &quot;vendor&quot;,
+        &quot;title&quot;,
+        &quot;subtitle&quot;,
+        &quot;price&quot;,
+        &quot;variant_picker&quot;,
+        &quot;quantity_selector&quot;,
+        &quot;buy_buttons&quot;,
+        &quot;description&quot;,
+        &quot;share&quot;
       ],
-      <span style="color:#f92672">&#34;settings&#34;</span>: {
-        <span style="color:#f92672">&#34;enable_sticky_info&#34;</span>: <span style="color:#66d9ef">true</span>,
-        <span style="color:#f92672">&#34;hide_variants&#34;</span>: <span style="color:#66d9ef">false</span>,
-        <span style="color:#f92672">&#34;enable_video_looping&#34;</span>: <span style="color:#66d9ef">false</span>
+      &quot;settings&quot;: {
+        &quot;enable_sticky_info&quot;: true,
+        &quot;hide_variants&quot;: false,
+        &quot;enable_video_looping&quot;: false
       }
     },
-    <span style="color:#f92672">&#34;product-recommendations&#34;</span>: {
-      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;product-recommendations&#34;</span>,
-      <span style="color:#f92672">&#34;settings&#34;</span>: {
-        <span style="color:#f92672">&#34;heading&#34;</span>: <span style="color:#e6db74">&#34;You may also like&#34;</span>,
-        <span style="color:#f92672">&#34;image_ratio&#34;</span>: <span style="color:#e6db74">&#34;adapt&#34;</span>,
-        <span style="color:#f92672">&#34;show_secondary_image&#34;</span>: <span style="color:#66d9ef">false</span>,
-        <span style="color:#f92672">&#34;add_image_padding&#34;</span>: <span style="color:#66d9ef">false</span>,
-        <span style="color:#f92672">&#34;show_image_outline&#34;</span>: <span style="color:#66d9ef">true</span>,
-        <span style="color:#f92672">&#34;show_vendor&#34;</span>: <span style="color:#66d9ef">false</span>,
-        <span style="color:#f92672">&#34;show_rating&#34;</span>: <span style="color:#66d9ef">false</span>
+    &quot;product-recommendations&quot;: {
+      &quot;type&quot;: &quot;product-recommendations&quot;,
+      &quot;settings&quot;: {
+        &quot;heading&quot;: &quot;You may also like&quot;,
+        &quot;image_ratio&quot;: &quot;adapt&quot;,
+        &quot;show_secondary_image&quot;: false,
+        &quot;add_image_padding&quot;: false,
+        &quot;show_image_outline&quot;: true,
+        &quot;show_vendor&quot;: false,
+        &quot;show_rating&quot;: false
       }
     },
-    <span style="color:#f92672">&#34;recent-products&#34;</span>: {
-      <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;recent-products&#34;</span>,
-      <span style="color:#f92672">&#34;settings&#34;</span>: {
+    &quot;recent-products&quot;: {
+      &quot;type&quot;: &quot;recent-products&quot;,
+      &quot;settings&quot;: {
       }
     }
   },
-  <span style="color:#f92672">&#34;order&#34;</span>: [
-    <span style="color:#e6db74">&#34;main&#34;</span>,
-    <span style="color:#e6db74">&#34;product-recommendations&#34;</span>,
-    <span style="color:#e6db74">&#34;recent-products&#34;</span>
+  &quot;order&quot;: [
+    &quot;main&quot;,
+    &quot;product-recommendations&quot;,
+    &quot;recent-products&quot;
   ]
 }
-</code></pre></div><p>Don&rsquo;t forget to add the section name to the <code>order</code>.</p>
+</code></pre><p>Don&rsquo;t forget to add the section name to the <code>order</code>.</p>
 <p>Now you should see in the theme customizer for your product page a section called <code>Recent Products</code>.</p>
-<p>If you are using a different theme (most likely one without a <code>product.json</code> template file), you can create a new snippet file (in the <code>Snippets</code> folder), add the same code as for the section <em><strong>without</strong></em> the schema part at the end</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{<span style="color:#960050;background-color:#1e0010">%</span> <span style="color:#960050;background-color:#1e0010">schema</span> <span style="color:#960050;background-color:#1e0010">%</span>}
+<p>If you are using a different theme (most likely one without a <code>product.json</code> template file), you can create a new snippet file (in the <code>Snippets</code> folder), add the same code as for the section <em><strong>without</strong></em> the schema part at the end.</p>
+<pre><code>{% schema %}
   {
-    <span style="color:#f92672">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;Recent Products&#34;</span>,
-    <span style="color:#f92672">&#34;settings&#34;</span>: []
+    &quot;name&quot;: &quot;Recent Products&quot;,
+    &quot;settings&quot;: []
   }
-{<span style="color:#960050;background-color:#1e0010">%</span> <span style="color:#960050;background-color:#1e0010">endschema</span> <span style="color:#960050;background-color:#1e0010">%</span>}
-</code></pre></div><p>In you product.liquid file (or the sub-file whch contains the full product page code) include the snippet using:</p>
-<pre><code class="language-liquid" data-lang="liquid">{% render 'recent-products' %}
+{% endschema %}
+</code></pre><p>In you <code>product.liquid</code> file (or the sub-file whch contains the full product page code) include the snippet using:</p>
+<pre><code>{% render 'recent-products' %}
 </code></pre><p>Place it where you would like the recently viewed products to appear on the product page.</p>
 </div>
 </article></main>
@@ -273,6 +282,8 @@ document.<span style="color:#a6e22e">addEventListener</span>(<span style="color:
   <span>&copy; 2022 <a href="https://alanryan.dev">Alan Ryan</a></span>
   <span>&middot;</span>
   <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Patterns by <a href="https://heropatterns.com/" rel="noopener" target="_blank">Hero️️ Patterns</a>️</span>
 </footer>
 </div>
 <script src="https://alanryan.dev/theme-toggle.js"></script>

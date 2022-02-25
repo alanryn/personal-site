@@ -83,7 +83,17 @@ View site</description>
       <pubDate>Sun, 27 Dec 2020 17:15:03 +0000</pubDate>
       
       <guid>https://alanryan.dev/projects/writing-examples/</guid>
-      <description>I also like to write, here&amp;rsquo;s some examples</description>
+      <description>here&amp;rsquo;s some writing samples</description>
+    </item>
+    
+    <item>
+      <title>Wine Data App</title>
+      <link>https://alanryan.dev/projects/wine-data-app/wine-data-app/</link>
+      <pubDate>Mon, 27 Jan 2020 17:14:45 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/projects/wine-data-app/wine-data-app/</guid>
+      <description>A Port Wine Data App created using R
+View the App</description>
     </item>
     
     <item>
