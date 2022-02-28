@@ -65,7 +65,7 @@ function getRecentlyViewedProducts() {
     recentlyViewedHtml.unshift(`
     <li class="recently-viewed-grid-item">
       <a href="${item.productUrl}"> 
-		<img loading="lazy" class="recently-viewed-img" src='${item.productImg}' loading="lazy" alt="${item.productImageAltText}"/>
+		<img class="recently-viewed-img" src='${item.productImg}' loading="lazy" alt="${item.productImageAltText}"/>
       </a>
        <h3><a class="recently-viewed-a" href="${item.productUrl}">${item.productTitle}</a></h3>
        <p>${item.productPrice}</p>
