@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Alan Ryan | Shopify Dev</title>
+    <meta
+      name="google-site-verification"
+      content="u5ezVva_l_Qr0dN5ht1p096Rs0pI1qg3oB053QGv9Jc"
+    />
+    
+    <meta name="description" content="Adding a video background to Shopify Dawn theme" />
+    <meta name="author" content=""
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+
+    <link href="https://alanryan.dev/style.css" rel="stylesheet" /> 
+ 
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>"
+    />
+
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+  </head>
+  <body>
+
+<div class='wrapper'>
+    <header>
+      <nav class="nav"><h1 class="name"><a href="https://alanryan.dev">Alan Ryan</a></h1>
+
+ 
+        <div class="theme-swapper-wrapper">
+            <label>
+                <input id="dark-toggle" class="swapper-checkbox" type="checkbox" aria-label="Switch between Light and Dark mode">
+             </label>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Adding a Video Background to Dawn Theme</h1>
+    <div class="post-meta">
+      Updated on February 25, 2022</div>
+  </header>
+  <div class="post-content"><p>Here is how to add a fullscreen background video to the Dawn theme.</p>
+<p>Crreate a new section file in the <code>Sections</code> folder. Call it something like <code>video-background.liquid</code>.</p>
+<p>Add the following code:</p>
+<pre><code>&lt;div class=&quot;hero&quot;&gt;
+  &lt;h1&gt;{{ section.settings.heading }}&lt;/h1&gt;
+  &lt;video class=&quot;video-bg&quot; autoplay muted loop&gt;
+  	&lt;source src={{ section.settings.video_url }} type='video/mp4'&gt;
+  &lt;/video&gt;
+&lt;/div&gt;
+
+{% schema %}
+  {
+    &quot;name&quot;: &quot;Video Background Banner&quot;,
+    &quot;settings&quot;: [
+      {
+      &quot;type&quot;: &quot;text&quot;,
+      &quot;id&quot;: &quot;heading&quot;,
+      &quot;label&quot;: &quot;Overlay text&quot;
+    },
+      {
+      &quot;type&quot;: &quot;url&quot;,
+      &quot;id&quot;: &quot;video_url&quot;,
+      &quot;label&quot;: &quot;Enter the video url here&quot;
+    },
+    {
+      &quot;type&quot;: &quot;range&quot;,
+      &quot;id&quot;: &quot;blur&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: 10,
+      &quot;step&quot;: 0.1,
+      &quot;unit&quot;: &quot;px&quot;,
+      &quot;label&quot;: &quot;For low quality video add blur&quot;,
+      &quot;default&quot;: 0
+    },
+    {
+      &quot;type&quot;: &quot;range&quot;,
+      &quot;id&quot;: &quot;opacity&quot;,
+      &quot;min&quot;: 0,
+      &quot;max&quot;: 1,
+      &quot;step&quot;: 0.1,
+      &quot;label&quot;: &quot;Change video opacity&quot;,
+      &quot;default&quot;: 1
+    }
+],
+  &quot;presets&quot;: [
+    {
+      &quot;name&quot;: &quot;Video Background Banner&quot;
+    }
+  ]
+  }
+{% endschema %}
+
+&lt;style&gt;
+.video-bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    filter: blur({{section.settings.blur}}px) opacity({{section.settings.opacity}});
+}
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 100px;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+.hero h1{
+    padding: 1.5em;
+    background: hsl(0 100% 100% / 25%);
+    backdrop-filter: blur(10px);
+  }
+
+&lt;/style&gt;
+</code></pre><p>The section should now be available in the theme customizer (look for the section called <code>Video Background Banner</code>)</p>
+<p>Upload a video in the <code>Settings -&gt; Files</code> area of the Admin and add the video url to the section; include some text to overelay the video if required.</p>
+<p>Try to keep the video to a smaller file size to improve performance - a short video played on a loop with as low a quality as is acceptable. The code above has customizable options to add blur and vary the opacity, which can help to disguise poor video quality.</p>
+</div>
+</article></main>
+<footer class="footer" role="contentinfo" aria-labelledby="label-footer">
+  <h2 id="label-footer" class="sr-only">Page footer</h2>
+  <span>&copy; 2022 <a href="https://alanryan.dev">Alan Ryan</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Patterns by <a href="https://heropatterns.com/" rel="noopener" target="_blank">Hero️️ Patterns</a>️</span>
+</footer>
+</div>
+<script src="https://alanryan.dev/theme-toggle.js"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>Alan Ryan | Shopify Dev</title>
+    <meta
+      name="google-site-verification"
+      content="u5ezVva_l_Qr0dN5ht1p096Rs0pI1qg3oB053QGv9Jc"
+    />
+    
+    <meta name="description" content="Adding a customized menu for logged-in users Dawn theme" />
+    <meta name="author" content=""
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"/>
+
+    <link href="https://alanryan.dev/style.css" rel="stylesheet" /> 
+ 
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛒</text></svg>"
+    />
+
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+  </head>
+  <body>
+
+<div class='wrapper'>
+    <header>
+      <nav class="nav"><h1 class="name"><a href="https://alanryan.dev">Alan Ryan</a></h1>
+
+ 
+        <div class="theme-swapper-wrapper">
+            <label>
+                <input id="dark-toggle" class="swapper-checkbox" type="checkbox" aria-label="Switch between Light and Dark mode">
+             </label>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+
+
+<article class="post-single">
+  <header class="post-header">
+    <h1 class="post-title">Customized Menu for Logged-in Users Dawn Theme</h1>
+    <div class="post-meta">
+      Updated on March 1, 2022</div>
+  </header>
+  <div class="post-content"><p>These instructions could be used to add customized content for particular customers, once they are logged-in and and a tag has been applied to their account.</p>
+<ul>
+<li>
+<p>Create a new template called <code>page.member.json</code> in the templates folder. This will be the template for the Member page.</p>
+</li>
+<li>
+<p>In the Shopify Admin, create a new page called <code>Member</code>. Make sure the page uses the <code>page.member.liquid</code> template (if you don’t see the template, try publishing the theme, it may only be available in the dropdown list after the theme has been made live)</p>
+</li>
+<li>
+<p>While in the Shopify Admin, add a new menu in <code>Navigation</code>, called <code>Member Menu</code>. Add the new Member page to the new menu. This menu will replace the regular menu when a customer is logged-in and tagged as “member”.</p>
+</li>
+<li>
+<p>Optional: Add a message in case a user gets to the member page without being logged-in and tagged as “member”:</p>
+<ul>
+<li>In the <code>Layout/theme.liquid</code> file, add a test to determine if the user is logged-in and tagged as a “member” (add the code between the <code>&lt;main&gt;</code> tags in <code>theme.liquid</code>):</li>
+</ul>
+</li>
+</ul>
+<pre><code>{% if template contains 'member' %}
+    {% if customer %}
+        {% if customer.tags contains 'member' %}
+            {{ content_for_layout }}
+        {% else %}
+            {% render 'non-member-message' %}
+        {% endif %}
+    {% else %}
+            {% render 'non-member-message' %}
+    {% endif %}
+{% else %}
+    {{ content_for_layout }}
+{% endif %}
+
+</code></pre><ul>
+<li>In the <code>Snippets</code> folder, add a file called <code>non-member-message.liquid</code>. This file will contain a message to explain why the page is restricted:</li>
+</ul>
+<pre><code>
+&lt;p&gt;This is the members area.&lt;/p&gt;
+{% unless customer %}
+&lt;a href=&quot;/account/login&quot;&gt;Log-in&lt;/a&gt; to your account to see if you are a member.
+{% endunless %}
+To find out more &lt;a href=&quot;/pages/contact&quot;&gt;Contact Us&lt;/a&gt;
+
+</code></pre><ul>
+<li>
+<p>For testing:</p>
+<ul>
+<li>
+<p>Create a customer account.</p>
+</li>
+<li>
+<p>Add a tag to the customer with a value of <code>member</code>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Change the navigation in the <code>Sections/header.liquid</code> file to check if the customer is logged-in and tagged as a member. You will need to change the code in two places, for the mobile menu and the desktop menu.</p>
+</li>
+<li>
+<p>Find the code surrounded by the <code>&lt;nav&gt;</code> tags and update it to this:</p>
+</li>
+</ul>
+<pre><code> &lt;nav class=&quot;menu-drawer__navigation&quot;&gt;
+     &lt;ul class=&quot;menu-drawer__menu list-menu&quot; role=&quot;list&quot;&gt;
+        {% comment %} check if member to display different nav menu mobile {% endcomment %}
+            {% assign menu-name = &quot;main-menu&quot; %}
+       		  {% if customer %}
+            	  {% if customer.tags contains 'member' %}
+            		 {% assign menu-name = &quot;member-menu&quot; %}
+                  {% endif %}
+         	  {% endif %}
+              {% for link in linklists[menu-name].links %}
+                      &lt;li&gt; ...
+
+</code></pre><p>The second <code>&lt;nav&gt;</code> tag for the other menu should be further down in the code, update it just like above.</p>
+<p>Now, when a customer is logged in and tagged as <code>member</code>, the menu changes to display the Member navigation menu.</p>
+<ul>
+<li>Obviously, you would want to create some member content to display on the Member page. You could add a new member content section and include it in the <code>page.member.json</code> file.</li>
+</ul>
+</div>
+</article></main>
+<footer class="footer" role="contentinfo" aria-labelledby="label-footer">
+  <h2 id="label-footer" class="sr-only">Page footer</h2>
+  <span>&copy; 2022 <a href="https://alanryan.dev">Alan Ryan</a></span>
+  <span>&middot;</span>
+  <span>Powered by <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo️️</a>️</span>
+  <span>&middot;</span>
+  <span>Patterns by <a href="https://heropatterns.com/" rel="noopener" target="_blank">Hero️️ Patterns</a>️</span>
+</footer>
+</div>
+<script src="https://alanryan.dev/theme-toggle.js"></script>
+
+</body>
+</html>
+
+

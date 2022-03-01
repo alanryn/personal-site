@@ -1,5 +1,5 @@
 ---
-title: "Adding a video background to Dawn theme"
+title: "Adding a Video Background to Dawn Theme"
 date: 2022-02-25T09:08:00Z
 summary: "Adding a video background to Shopify Dawn theme"
 backgroundColor: "var(--surface1)"

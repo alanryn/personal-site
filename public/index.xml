@@ -6,7 +6,7 @@
     <description>Recent content on Alan Ryan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Feb 2022 15:20:00 +0000</lastBuildDate><atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Mar 2022 09:08:00 +0000</lastBuildDate><atom:link href="https://alanryan.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Contact</title>
       <link>https://alanryan.dev/contact/</link>
@@ -15,6 +15,24 @@
       <guid>https://alanryan.dev/contact/</guid>
       <description>I am a freelance frontend developer, currently specializing in Shopify. Contact me with any queries about Shopify or anything else. I&#39;m available for jobs big and small or if you just want some free advice.
 Name  Email Address  Your Message  Send  Shopify Profile Linkedin  Github Codepen  </description>
+    </item>
+    
+    <item>
+      <title>Customized Menu for Logged-in Users Dawn Theme</title>
+      <link>https://alanryan.dev/tips/members-page/</link>
+      <pubDate>Tue, 01 Mar 2022 09:08:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/members-page/</guid>
+      <description>Adding a customized menu for logged-in users Dawn theme</description>
+    </item>
+    
+    <item>
+      <title>Adding a Video Background to Dawn Theme</title>
+      <link>https://alanryan.dev/tips/video-background-dawn-theme/</link>
+      <pubDate>Fri, 25 Feb 2022 09:08:00 +0000</pubDate>
+      
+      <guid>https://alanryan.dev/tips/video-background-dawn-theme/</guid>
+      <description>Adding a video background to Shopify Dawn theme</description>
     </item>
     
     <item>

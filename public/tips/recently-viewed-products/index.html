@@ -110,7 +110,7 @@ function getRecentlyViewedProducts() {
     recentlyViewedHtml.unshift(`
     &lt;li class=&quot;recently-viewed-grid-item&quot;&gt;
       &lt;a href=&quot;${item.productUrl}&quot;&gt; 
-		&lt;img loading=&quot;lazy&quot; class=&quot;recently-viewed-img&quot; src='${item.productImg}' loading=&quot;lazy&quot; alt=&quot;${item.productImageAltText}&quot;/&gt;
+		&lt;img class=&quot;recently-viewed-img&quot; src='${item.productImg}' loading=&quot;lazy&quot; alt=&quot;${item.productImageAltText}&quot;/&gt;
       &lt;/a&gt;
        &lt;h3&gt;&lt;a class=&quot;recently-viewed-a&quot; href=&quot;${item.productUrl}&quot;&gt;${item.productTitle}&lt;/a&gt;&lt;/h3&gt;
        &lt;p&gt;${item.productPrice}&lt;/p&gt;
