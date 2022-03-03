@@ -87,7 +87,7 @@ ready(() => {
 
 - Open the `main-product.liquid` section file.
 
-- Add `{% render 'waiting-list.liquid' %}` to the code. I added it after the "Share" button, like this:
+- Add `{% render 'waiting-list' %}` to the code. I added it after the "Share" button, like this:
 
 ```
 </share-button>
