@@ -24,7 +24,7 @@ To choose your own recommended products for a particular product.
 
 <div class="custom-products-wrapper page-width">
    <h3>Recommendations</h3>
-    <ul class="custom-products-grid page-width">
+    <ul class="custom-products-grid">
        {%- for handle in handles -%}
  	    {% assign relatedProduct = handle | handle %}
     	<li class="custom-products-grid-item">
