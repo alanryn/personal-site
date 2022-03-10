@@ -77,7 +77,7 @@ To choose your own recommended products for a particular product.
 
 ```
 
-- Update the `product.json` template file to include the new `custom-recommendations` section. You can just add it to the end of the file and include it in the `order`; something like this:
+- Update the `product.json` template file (for Shopify 2.0 themes) to include the new `custom-recommendations` section. You can just add it to the end of the file and include it in the `order`; something like this:
 
 ```
     "product-recommendations": {
