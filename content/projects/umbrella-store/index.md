@@ -7,6 +7,6 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' v
 shopifyLogo: true
 ---
 
-A quick and simple Shopify store, for demo purposes only. It implements most of the tutorials outlined on my site.
+A quick and simple Shopify store, for demo purposes only. It implements most of the [tutorials](https://alanryan.dev/tips/) from my site.
 
 [View Site](https://sunny-day-umbrellas.myshopify.com/)
