@@ -23,7 +23,9 @@ To choose your own recommended products for a particular product.
 {%- assign handles = product.metafields.my_fields.recommended_products | split:"," -%}
 
 <div class="custom-products-wrapper page-width">
-   <h3>Recommendations</h3>
+    {% if handles != blank %}
+    <h3>Custom Recommendations</h3>
+    {% endif %}
     <ul class="custom-products-grid">
        {%- for handle in handles -%}
  	    {% assign relatedProduct = handle | handle %}
