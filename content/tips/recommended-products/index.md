@@ -110,4 +110,6 @@ To choose your own recommended products for a particular product.
 
 ```
 
-Now you should see your custom product recommendations for any products where the `recommended _products` metafield has been populated.
+Now you should see your custom product recommendations for any products where the `recommended _products` metafield has been populated.  
+
+Here's how it looks on a test store using the Dawn theme: https://sunny-day-umbrellas.myshopify.com/products/beach-umbrella
