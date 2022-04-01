@@ -15,7 +15,7 @@ Add the following code:
 ```
 <div class="hero">
   <h1>{{ section.settings.heading }}</h1>
-  <video class="video-bg" autoplay muted loop>
+  <video class="video-bg" autoplay muted loop playsinline>
   	<source src={{ section.settings.video_url }} type='video/mp4'>
   </video>
 </div>
