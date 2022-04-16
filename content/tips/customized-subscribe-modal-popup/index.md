@@ -241,7 +241,7 @@ Now you need to edit the code in the `settings_schema.json` file. It's located i
 
 Adding this code will make the popup content customizable through the theme editor:
 
-```json
+```
  {
     "name": {
       "en": "Subscribe Popup"
