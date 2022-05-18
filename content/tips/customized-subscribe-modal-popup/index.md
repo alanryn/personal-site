@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.classList.add("visible");
     body.style.overflow = "hidden"
     overlay.style.display = "block";
+    overlay.style.pointerEvents = "all";
     initialFocus.focus();
   }, fadeIn);
   }
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <div class="subscribe-overlay setStorage" id="overlay-id"></div>
 <div class="subscribe-modal" id="modal-id">
-   <button type="button" id="close" class="closeBtn setStorage" data-dismiss="subscribe-modal" aria-label="Close"><span aria-hidden="true">X</span></button>
+   <button type="button" id="close" class="closeBtn setStorage" data-dismiss="subscribe-modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     {%- if section.settings.popup_image -%}
     <img src="{{section.settings.popup_image | img_url: '400x'}}" alt="test">
    {% else %}
@@ -111,6 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
   height: 100vh;
   z-index: 50;
   background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
 }
 .subscribe-modal {
   --img-ratio: 3/2;
