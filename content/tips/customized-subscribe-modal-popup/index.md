@@ -1,6 +1,6 @@
 ---
 title: "A customized subscribe modal popup"
-date: 2022-05-17T16:20:05Z
+date: 2022-05-25T16:20:05Z
 image: https://doodleipsum.com/700/abstract&n=2
 summary: "How to add a customized subscribe modal popup to a shopify store"
 backgroundColor: "var(--surface1)"
