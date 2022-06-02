@@ -1,6 +1,6 @@
 ---
 title: "Adding a Video Background to Dawn Theme"
-date: 2022-02-25T09:08:00Z
+date: 2022-06-02T09:08:00Z
 summary: "Adding a video background to Shopify Dawn theme"
 backgroundColor: "var(--surface1)"
 backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23ffc078' fill-opacity='1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"
@@ -14,7 +14,10 @@ Add the following code:
 
 ```
 <div class="hero">
+  <div>
   <h1>{{ section.settings.heading }}</h1>
+  <a class='button' href='{{ section.settings.link_url }}'>{{ section.settings.link_text }}</a>
+  </div>
   <video class="video-bg" autoplay muted loop playsinline>
   	<source src={{ section.settings.video_url }} type='video/mp4'>
   </video>
@@ -33,6 +36,16 @@ Add the following code:
       "type": "url",
       "id": "video_url",
       "label": "Enter the video url here"
+    },
+      {
+      "type": "text",
+      "id": "link_text",
+      "label": "Enter CTA button text (if required)"
+    },
+      {
+      "type": "url",
+      "id": "link_url",
+      "label": "CTA button link page"
     },
     {
       "type": "range",
@@ -84,13 +97,16 @@ Add the following code:
     position: relative;
     overflow: hidden;
   }
-.hero h1{
+.hero div {
     padding: 1.5em;
     background: hsl(0 100% 100% / 25%);
     backdrop-filter: blur(10px);
   }
 
 </style>
+
+
+
 ```
 
 The section should now be available in the theme customizer (look for the section called `Video Background Banner`)
