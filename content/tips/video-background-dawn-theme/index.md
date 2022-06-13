@@ -8,7 +8,7 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 
 Here is how to add a fullscreen background video to the Dawn theme. [Here's a demo](https://sunny-day-umbrellas.myshopify.com/) of the end result.
 
-Crreate a new section file in the `Sections` folder. Call it something like `video-background.liquid`.
+Create a new section file in the `Sections` folder. Call it something like `video-background.liquid`.
 
 Add the following code:
 
