@@ -11,6 +11,7 @@ backgroundImage: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' w
 
 ### Liquid:  
 
+- [Bi-weekly insights from active Shopify developers](https://ionlyspeakliquid.beehiiv.com/)  
 - [Learning Liquid: A guide to Shopify theme development](https://www.shopify.com/partners/guides/learning-liquid)  
 - [Shopify Liquid REPL](https://shopify-liquid-repl.tomblanchard.co.uk/)  
 - [Shopify Liquid code examples](https://shopify.github.io/liquid-code-examples)  
