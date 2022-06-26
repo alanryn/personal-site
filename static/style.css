@@ -209,6 +209,8 @@ img {
   margin-left: var(--size-5);
   text-align: left;
   margin-top: 1rem;
+  text-shadow: 3px 3px 3px var(--orange-3);
+  color: rgb(0 0 0 / 70%);
 }
 @media screen and (max-width: 480px) {
   .name {
