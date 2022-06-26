@@ -209,7 +209,8 @@ img {
   margin-left: var(--size-5);
   text-align: left;
   margin-top: 1rem;
-  text-shadow: 3px 3px 3px var(--orange-3);
+  text-shadow: 1px 1px 0px var(--orange-1),
+    2px 2px 0px var(--orange-9);
   color: rgb(0 0 0 / 70%);
 }
 @media screen and (max-width: 480px) {
