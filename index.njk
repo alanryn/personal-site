@@ -1,0 +1,41 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
+<div class="flow" style="margin-top:3rem;">
+  <section class="flow ">
+    <h1 class="fs-700 ff-sans uppercase letter-spacing-3">
+      <p>Alan Ryan</p>
+      <p>Shopify Developer</p>
+    </h1>
+    <p class="fs-500">Customizations, fixes, complete store development, theme updating, content creation and more. 
+</p>
+    <div class="button-list">
+        <a class="contact-link" href="/contact">CONTACT / HIRE ME</a>
+    </div>
+  </section>
+
+</div>
+
+
+      <!-- Delete this message -->
+      {# <p class="infobox">
+Shopify developer. Customizations, fixes, complete store development, theme updating, content creation and more. 
+      </p> #}
+      <!-- Stop deleting -->
+      <section style="margin-top: 3rem">
+      {% set maxPosts = collections.posts.length | min(5) %}
+<h1>Latest Posts</h1>
+
+{% set postslist = collections.posts | head(-5) %}
+{% set postslistCounter = collections.posts | length %}
+{% include "postslist.njk" %}
+
+<p>All the Shopify tutorials can be found <a href="{{ '/tips/' | url }}">here</a>.</p>
+      </section>
+
+
+

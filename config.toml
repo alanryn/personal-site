@@ -1,6 +1,0 @@
-baseURL = "https://alanryan.dev"
-languageCode = "en-us"
-title = "Alan Ryan"
-
-[params]
-     Description = "Shopify developer. Customizations, fixes, complete store development, content creation and more"

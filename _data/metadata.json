@@ -1,0 +1,21 @@
+{
+  "title": "Alan Ryan",
+  "url": "https://alanryan.dev/",
+  "language": "en",
+  "description": "Shopify developer portfolio site",
+  "feed": {
+    "subtitle": "Shopify development tips and info",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://alanryan.dev/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://alanryan.dev/feed/feed.json"
+  },
+  "author": {
+    "name": "Alan Ryan",
+    "email": "al.limerick@gmail.com",
+    "url": "https://alanryan.dev"
+  }
+}
