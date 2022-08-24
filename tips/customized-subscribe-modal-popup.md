@@ -2,7 +2,7 @@
 title: A customized subscribe modal popup.
 myurl: one
 description: Add a customizable pop-up dialog.
-date: 2022-05-25
+date: 2021-05-25
 layout: layouts/post.njk
 ---
 
