@@ -149,13 +149,9 @@ body {
   background-color: var(--surface2);
   line-height: 1.5;
   min-height: 100vh;
-  /* display: grid;
-  grid-template-rows: auto 1fr auto; */
-  /* 
-  display: grid;
-  grid-template-rows: min-content 1fr; */
-
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 /* make images easier to work with */
@@ -226,6 +222,7 @@ code {
 }
 main {
   margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 a {
   color: var(--text1);
@@ -728,7 +725,7 @@ button.contact-btn:hover {
 /* ---------- */
 
 .footer {
-  margin-top: 10rem;
+  margin-top: auto;
   padding: 3rem;
   text-align: center;
 }
