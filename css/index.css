@@ -410,8 +410,13 @@ button.primary:hover {
   padding: 0;
   margin: 0;
   background-color: hsl(var(--gray-9-hsl) / 30%);
-  backdrop-filter: blur(1.5rem);
   font-weight: 700;
+}
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+  .primary-navigation {
+    -webkit-backdrop-filter: blur(1.5rem);
+    backdrop-filter: blur(1.5rem);
+  }
 }
 
 .primary-navigation a {
