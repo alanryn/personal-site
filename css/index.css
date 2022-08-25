@@ -283,7 +283,12 @@ a {
 .skip-to-content:focus {
   transform: translateY(0);
 }
-
+p a:focus,
+p a:hover {
+  text-decoration-thickness: 2px;
+  color: var(--text1);
+  transition: text-decoration-thickness 150ms ease-out;
+}
 /* colors */
 
 .surface1 {
@@ -544,11 +549,11 @@ button.primary:hover {
   text-underline-offset: 0;
   text-decoration-thickness: 1px;
 }
-.postlist-item-active .postlist-link {
-  font-weight: 700;
-}
-.tmpl-home .postlist-link {
-  font-weight: 700;
+.postlist-link:focus,
+.postlist-link:hover {
+  text-decoration-thickness: 2px;
+  color: var(--text1);
+  transition: text-decoration-thickness 150ms ease-out;
 }
 
 /* Tags */
