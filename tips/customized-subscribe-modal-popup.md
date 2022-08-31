@@ -668,6 +668,6 @@ Finally add the following code to your `theme.liquid` file. Place the code befor
 {% endraw %}
 
 The popup should now appear in your customizable theme settings:
-![shopify theme settings](images/settings.png)
+![shopify theme settings](/img/settings.png)
 
-![shopify theme settings](images/customize-popup.png)
+![shopify theme settings](/img/customize-popup.png)

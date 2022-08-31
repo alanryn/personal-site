@@ -16,7 +16,7 @@ To choose your own recommended products for a particular product.
 
 - Now, go to a product in the Shopify Admin and add a value for the new metafield. The value needs to be a comma seperated list of your chosen recommended product handles. The handle should be the product title, all lower case letters with hyphens instead of spaces, as it appears in the product page url, e.g. `dark-denim-top, floral-white-top, white-cotton-shirt, zipped-jacket`.
 
-![recommended product metafield](images/recommended-product-metafield.png)
+![recommended product metafield](/img/recommended-product-metafield.png)
 
 - Next, create a new section file called `custom-recommendations` and add the following code:
   {% raw %}
