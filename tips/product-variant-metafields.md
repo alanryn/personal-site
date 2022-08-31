@@ -9,22 +9,32 @@ tags:
 layout: layouts/post.njk
 ---
 
-By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.
+By using metafields we can store extra information on products, collections, customers, orders, blogs, pages and your shop. Then, you can use the metafield object to display the information on you website pages using simple Liquid code.  
 
-Adding custom Metafields is now built into Shopify. It can be accessed via `Settings -> Metafields` in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon). Previously, the easiest way to add metafields was by using an app, such as Metafields Guru. It is also still possible to add metafields without an app using the bulk editor, [here's how](https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app).
 
-A metafield consists of a namespace, a key, a value, and an optional description. The namespace is used to logically group different metafields.
+Adding custom Metafields is now built into Shopify. It can be accessed via `Settings -> Metafields` in your Dashboard (currently, you can only add metafields to Products and Variants with this method; Collections, Customers and Orders will be added soon). Previously, the easiest way to add metafields was by using an app, such as Metafields Guru. It is also still possible to add metafields without an app using the bulk editor, [here's how](https://www.sunbowlsystems.com/blogs/how-to/metafields-in-shopify-without-using-an-app).  
 
-You can also add metafields to the product variants, but it is a little more complicated to access the variant metafield information on your page. Variant metafields can display different information depending on the selected variant. To achieve this it's necessary to update the information depending on a change to the selected variant. This involves updating the javascript code connected to the selector.
 
-Here is an explanation on how to achieve this with the Dawn theme, it will differ slightly depending the theme you are using.
-These instructions assume that you have already added 2 metafields for a variant (in this case called `variant_info_1` and `variant_info_2`) and that you have added these two metafields to at least one of your product variants.
+A metafield consists of a namespace, a key, a value, and an optional description. The namespace is used to logically group different metafields.  
 
-![shopify theme settings](images/metafield-definitions.png)
 
-First, here's how to display one extra information field depending on a selected product variant:
+You can also add metafields to the product variants, but it is a little more complicated to access the variant metafield information on your page. Variant metafields can display different information depending on the selected variant. To achieve this it's necessary to update the information depending on a change to the selected variant. This involves updating the javascript code connected to the selector.  
 
-- Add some html to the `main-product.liquid` file in the `Sections` folder (position it where you would like to display the shipping information), for example:
+
+Here is an explanation on how to achieve this with the Dawn theme, it will differ slightly depending the theme you are using.  
+
+
+These instructions assume that you have already added 2 metafields for a variant (in this case called `variant_info_1` and `variant_info_2`) and that you have added these two metafields to at least one of your product variants.  
+
+
+![shopify theme settings](/img/metafield-definitions.png)  
+
+
+First, here's how to display one extra information field depending on a selected product variant:  
+
+
+- Add some html to the `main-product.liquid` file in the `Sections` folder (position it where you would like to display the shipping information), for example:  
+
 
 ```
 <div class="hideAll">
@@ -70,10 +80,11 @@ First, here's how to display one extra information field depending on a selected
 </script>
 ```
 
-{% raw %}
-Make sure to change the naming to match your metafields. Mine is `variant.metafields.my_fields.variant_info_1`.
+Make sure to change the naming to match your metafields. Mine is `variant.metafields.my_fields.variant_info_1`.  
 
-Next, in the case of the Dawn theme, you need to update the `global.js` file in the `Assets` folder. Find the code starting with `onVariantChange()`. Below that, inside the `else` block, add another method call for `updateMeta()`:
+
+Next, in the case of the Dawn theme, you need to update the `global.js` file in the `Assets` folder. Find the code starting with `onVariantChange()`. Below that, inside the `else` block, add another method call for `updateMeta()`:  
+
 
 ```
    onVariantChange() {
@@ -98,7 +109,8 @@ Next, in the case of the Dawn theme, you need to update the `global.js` file in 
 
 ```
 
-Then add the `updateMeta` code further down with the other update methods:
+Then add the `updateMeta` code further down with the other update methods: 
+
 
 ```
   updateOptions() {
@@ -121,10 +133,13 @@ Then add the `updateMeta` code further down with the other update methods:
 
 ```
 
-Now your variant metafield should be appearing and updating as you select different variant options.
+Now your variant metafield should be appearing and updating as you select different variant options.  
+
 
 We can also add the code as a block in the `main-product.liquid` file . In this way the variant metafield becomes visible in the theme customizer and gives the option of rearranging the block without changing the code. This involves changes to the `product.json` and the `main-product.liquid` files.  
-Update `product.json` in the `Templates folder` to include a new `block` (in this case, I am adding one new block called `variant_info_1`). Also, add the new block to the `block_order`(you may get an error when saving these changes until you update the `main-product.liquid` in the next step):
+
+Update `product.json` in the `Templates folder` to include a new `block` (in this case, I am adding one new block called `variant_info_1`). Also, add the new block to the `block_order`(you may get an error when saving these changes until you update the `main-product.liquid` in the next step):  
+
 
 ```
 {
@@ -229,7 +244,8 @@ Update `product.json` in the `Templates folder` to include a new `block` (in thi
 
 ```
 
-Next, in the `main-product.json`, place `{% when 'variant_info_1' %}` before the previous code:
+Next, in the `main-product.json`, place `{% when 'variant_info_1' %}` before the previous code:  
+
 {% raw %}
 
 ```
@@ -246,7 +262,8 @@ Next, in the `main-product.json`, place `{% when 'variant_info_1' %}` before the
 ```
 
 {% endraw %}
-There is a `{% schema %}` section at the end of the `main-product.liquid` file. Add `variant_info_1` to this schema (follow the pattern for the other fields):
+There is a `{% schema %}` section at the end of the `main-product.liquid` file. Add `variant_info_1` to this schema (follow the pattern for the other fields):  
+
 
 ```
     {
@@ -256,13 +273,14 @@ There is a `{% schema %}` section at the end of the `main-product.liquid` file. 
     },
 ```
 
-Your new block should now appear in your theme customizer (if it doesn't show initially, click on `Add Block` and select `Extra Variant Info 1` from the list). Now you can drag the block up and down the list of blocks in the Product information section to change its position on the page. You may need to save your customizer changes (green "Save" button on top right of screen) for the variant description block to show on the product page.
+Your new block should now appear in your theme customizer (if it doesn't show initially, click on `Add Block` and select `Extra Variant Info 1` from the list). Now you can drag the block up and down the list of blocks in the Product information section to change its position on the page. You may need to save your customizer changes (green "Save" button on top right of screen) for the variant description block to show on the product page.  
 
-![shopify theme settings](images/customizer-meta.png)
 
-If you need to add more than one extra metafield for a single variant, you will basically need to duplicate the steps above for as many extra metafiels as required. In the `product.json` add an extra block for each new metafield and add each one to the `block_order`:
+![shopify theme settings](/img/customizer-meta.png)  
 
-{% raw %}
+
+If you need to add more than one extra metafield for a single variant, you will basically need to duplicate the steps above for as many extra metafiels as required. In the `product.json` add an extra block for each new metafield and add each one to the `block_order`:  
+
 
 ```
  "variant_info_2": {
@@ -272,9 +290,8 @@ If you need to add more than one extra metafield for a single variant, you will 
 }
 ```
 
-{% endraw %}
+In `main-product.liquid` add another `{% when %}` block of code, like before, just update with new names:  
 
-In `main-product.liquid` add another `{% when %}` block of code, like before, just update with new names:
 
 {% raw %}
 
@@ -293,7 +310,8 @@ In `main-product.liquid` add another `{% when %}` block of code, like before, ju
 
 {% endraw %}
 
-Add the new block to the `{% schema %}` at the end of the file.
+Add the new block to the `{% schema %}` at the end of the file.  
+
 
 ```
     {
@@ -303,7 +321,8 @@ Add the new block to the `{% schema %}` at the end of the file.
     },
 ```
 
-To deal with multiple metafields for each variant, it's probably best to update your javascript to uses loops to avoid repeating the same code:
+To deal with multiple metafields for each variant, it's probably best to update your javascript to uses loops to avoid repeating the same code:  
+
 {% raw %}
 
 ```
@@ -327,11 +346,19 @@ extraVariantInfo(currentVariantId);
 
 {% endraw %}
 
-The `global.js` remains unchanged from before.
+The `global.js` remains unchanged from before.  
 
-Now you should have 2 different variant metafield blocks in your customizer.
+
+Now you should have 2 different variant metafield blocks in your customizer.  
+
 
 The full code for the product.json is [here](https://gist.github.com/alanryn/bd6693619ff4beab129224ec188f3a4a).  
+
+
 The full code for the main-product.liquid is [here](https://gist.github.com/alanryn/0a656825b92ccbb19f73369c3afdb190).  
+
+
 This code adds 2 metafields to a product variant.  
-This solution is based on answers provided [here](https://community.shopify.com/c/technical-q-a/display-product-variants-metafields/td-p/555439). Credit where credit is due.
+
+This solution is based on answers provided [here](https://community.shopify.com/c/technical-q-a/display-product-variants-metafields/td-p/555439). Credit where credit is due.  
+

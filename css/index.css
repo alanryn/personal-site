@@ -1,5 +1,4 @@
 @import "https://unpkg.com/open-props";
-/* @import "https://unpkg.com/open-props/buttons.min.css"; */
 
 /* Defaults */
 
@@ -156,12 +155,14 @@ body {
 
 /* make images easier to work with */
 img,
-picutre,
+picture,
 svg {
   max-width: 100%;
   display: block;
 }
-
+p img {
+  margin: 2rem auto;
+}
 /* make form elements easier to work with */
 input,
 button,
@@ -188,7 +189,9 @@ pre,
 code {
   font-family: var(--ff-code);
   line-height: 1.5;
+  /* background-color: yellow; */
 }
+
 pre {
   font-size: 14px;
   line-height: 1.375;
