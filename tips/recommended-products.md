@@ -8,6 +8,8 @@ tags:
 layout: layouts/post.njk
 ---
 
+How to set your own recommended products for a particular product.
+
 - Create a new Product metafield of type `List of products` (Settings -> Metafields) .
 
 - Give the metafield a name like `recommended products`; a content type of `Product`, and choose `List of products`. Then the metafield can be referenced in your liquid code as `product.metafields.custom.recommended_products`
