@@ -10,8 +10,9 @@ templateClass: tmpl-post
 {%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
 <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
 {%- endfor %}
-
+<div class="flow" style="margin-top: 1.5rem;">
 {{ content | safe }}
+</div>
 
 {%- if collections.posts %}
 {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
