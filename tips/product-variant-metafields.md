@@ -71,6 +71,7 @@ First, here's how to display one extra information field depending on a selected
 </script>
 ```
 
+{% endraw %}
 Make sure to change the naming to match your metafields. Mine is `variant.metafields.custom.variant_info_1`.
 
 Next, in the case of the Dawn theme, you need to update the `global.js` file in the `Assets` folder. Find the code starting with `onVariantChange()`. Below that, inside the `else` block, add another method call for `updateMeta()`:
@@ -221,7 +222,8 @@ Update `product.json` in the `Templates folder` to include a new `block` (in thi
 }
 ```
 
-Next, in the `main-product.json`, place `{% when 'variant_info_1' %}` before the previous code:
+Next, in the `main-product.json`, place "when 'variant_info_1'" before the previous code:
+{% raw %}
 
 ```html
 {% when 'variant_info_1' %}
@@ -233,6 +235,7 @@ Next, in the `main-product.json`, place `{% when 'variant_info_1' %}` before the
 forloop.last %},{% endunless %} {% endfor %} {% endcapture %}
 ```
 
+{% endraw %}
 There is a `"schema"` section at the end of the `main-product.liquid` file. Add `variant_info_1` to this schema (follow the pattern for the other fields):
 
 ```json
@@ -258,7 +261,7 @@ If you need to add more than one extra metafield for a single variant, you will 
 
 ```
 
-In `main-product.liquid` add another `{% when %}` block of code, like before, just update with new names:
+In `main-product.liquid` add another "when" block of code, like before, just update with new names:
 
 {% raw %}
 
@@ -285,10 +288,10 @@ Add the new block to the `"schema"` at the end of the file.
 ```
 
 To deal with multiple metafields for each variant, it's probably best to update your javascript to uses loops to avoid repeating the same code:
-
 {% raw %}
 
-```javascript
+```
+
 <script>
   const currentVariantId = {{ product.selected_or_first_available_variant.id }};
   const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
@@ -305,10 +308,10 @@ To deal with multiple metafields for each variant, it's probably best to update 
   }
 extraVariantInfo(currentVariantId);
 </script>
+
 ```
 
 {% endraw %}
-
 The `global.js` remains unchanged from before.
 
 Now you should have 2 different variant metafield blocks in your customizer.
