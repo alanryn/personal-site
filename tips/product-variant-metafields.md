@@ -286,11 +286,13 @@ Add the new block to the `"schema"` at the end of the file.
 
 To deal with multiple metafields for each variant, it's probably best to update your javascript to uses loops to avoid repeating the same code:
 
+{% raw %}
+
 ```javascript
 <script>
-const currentVariantId = {{ product.selected_or_first_available_variant.id }};
-const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
-const extraVariantInfo = (id) => {
+  const currentVariantId = {{ product.selected_or_first_available_variant.id }};
+  const metaData = [{ {{ meta_data_1 }} }, { {{ meta_data_2 }} }];
+  const extraVariantInfo = (id) => {
   const selector = document.querySelectorAll('.variant_info_1, .variant_info_2');
   const hide = document.querySelectorAll('.hideAll');
     for(let x = 0; x < metaData.length; x++) {
@@ -304,6 +306,8 @@ const extraVariantInfo = (id) => {
 extraVariantInfo(currentVariantId);
 </script>
 ```
+
+{% endraw %}
 
 The `global.js` remains unchanged from before.
 
