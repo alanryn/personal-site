@@ -223,17 +223,17 @@ Update `product.json` in the `Templates folder` to include a new `block` (in thi
 
 Next, in the `main-product.json`, place `{% when 'variant_info_1' %}` before the previous code:
 
-```
+```html
 {% when 'variant_info_1' %}
 <div class="hideAll">
   <p><span>Extra Info 1: </span><span class="variant_info_1"></span></p>
 </div>
 {% capture 'meta_data_1' %} {% for variant in product.variants %}
-{{variant.id}}:{{ variant.metafields.custom.variant_info_1 | json }} {%
-unless forloop.last %},{% endunless %} {% endfor %} {% endcapture %}
+{{variant.id}}:{{ variant.metafields.custom.variant_info_1 | json }} {% unless
+forloop.last %},{% endunless %} {% endfor %} {% endcapture %}
 ```
 
-There is a `{% schema %}` section at the end of the `main-product.liquid` file. Add `variant_info_1` to this schema (follow the pattern for the other fields):
+There is a `"schema"` section at the end of the `main-product.liquid` file. Add `variant_info_1` to this schema (follow the pattern for the other fields):
 
 ```json
     {
@@ -255,9 +255,12 @@ If you need to add more than one extra metafield for a single variant, you will 
  "settings": {
   }
 }
+
 ```
 
 In `main-product.liquid` add another `{% when %}` block of code, like before, just update with new names:
+
+{% raw %}
 
 ```html
 {% when 'variant_info_2' %}
@@ -269,7 +272,9 @@ In `main-product.liquid` add another `{% when %}` block of code, like before, ju
 forloop.last %},{% endunless %} {% endfor %} {% endcapture %}
 ```
 
-Add the new block to the {% raw %}`{% schema %}`{% endraw %} at the end of the file.
+{% endraw %}
+
+Add the new block to the `"schema"` at the end of the file.
 
 ```json
     {
