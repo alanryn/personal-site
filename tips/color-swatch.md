@@ -38,7 +38,7 @@ Save the changes. Repeat this for all of the products.
 Next, modify the code for the product page to include a block for the new color swatch.
 
 - Open the `product.json` file located in the `Templates` folder.
-- Add some json code to define the color swatch block (somewhere near the top of the code, after `"blocks"`:):
+- Add some json code to define the color swatch block (somewhere near the top of the code, after `"blocks"`:
 
 ```json
         "color_swatch": {
