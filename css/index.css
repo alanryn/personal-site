@@ -232,7 +232,7 @@ a {
 }
 .flex {
   display: flex;
-  gap: var(--gap, 1rem);
+  gap: 2rem;
 }
 
 .grid {
@@ -409,8 +409,6 @@ button.primary:hover {
 }
 
 .primary-navigation {
-  --gap: clamp(1.5rem, 5vw, 3.5rem);
-  --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
