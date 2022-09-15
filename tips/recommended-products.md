@@ -14,7 +14,7 @@ How to set your own recommended products for a particular product.
 
 - Give the metafield a name like `recommended products`; a content type of `Product`, and choose `List of products`. Then the metafield can be referenced in your liquid code as `product.metafields.custom.recommended_products`
 
-![recommended product metafield](/img/product-list-metafield.png)
+![recommended product metafield](/img/recommended-products.png)
 
 - Now, go to a product in the Shopify Admin and add a list of recommended products to the new `recommended products` metafield.
 
