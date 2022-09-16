@@ -2,7 +2,7 @@
 title: Display Recently Viewed Products Without App or jQuery.
 myurl: six
 description: Show your recently viewed products without using an app or jquery.
-date: "2022-02-22"
+date: "2022-09-16"
 tags:
   - Recently Viewed Products
 layout: layouts/post.njk
@@ -14,9 +14,9 @@ Create a new section file, in this case called `recent-products.liquid`, and add
 {% raw %}
 
 ```
-<div class="recently-viewed-wrapper page-width">
-    <h2>Recently Viewed</h2>
-    <ul class="recently-viewed-grid">
+<div class="page-width">
+    <h2 class="product-recommendations__heading h2">{{ section.settings.heading | escape }}</h2>
+    <ul class="recently-viewed grid product-grid grid--4-col-desktop grid--2-col-tablet-down" role="list"">
     <!-- Recently viewed products will appear here -->
     </ul>
 </div>
@@ -25,14 +25,16 @@ Create a new section file, in this case called `recent-products.liquid`, and add
 function setRecentlyViewedProducts() {
   const productData = {
     productTitle: "{{ product.title }}",
-    productImg: "{{ product.featured_media | img_url: '300x' }}",
-    productPrice: "{{ product.price | money }}",
+    productImg: "{{ product.featured_media | image_url: width: 533 }}",
+    imgWidth:"{{ product.featured_media.width }}",
+    imgHeight:"{{ product.featured_media.height }}",
+    productPrice: "{{ product.price | money_with_currency }}",
     productUrl: "{{ product.url }}",
     productImageAltText: "{{product.featured_media.alt | escape }}"
   };
   const productList = [];
   let jsonResp, jsonRespArr, jsonRespArrStr;
-  const numberOfProducts = 8;
+  const numberOfProducts = 4;
   productList.push(productData);
   const currProductPageTitle = productData.productTitle;
   const productDataString = JSON.stringify(productList);
@@ -66,17 +68,38 @@ function getRecentlyViewedProducts() {
   const recentlyViewedHtml = [];
   productData.map(item => {
     recentlyViewedHtml.unshift(`
-    <li class="recently-viewed-grid-item">
-      <a href="${item.productUrl}">
-		<img class="recently-viewed-img" src='${item.productImg}' loading="lazy" alt="${item.productImageAltText}"/>
-      </a>
-       <h3><a class="recently-viewed-a" href="${item.productUrl}">${item.productTitle}</a></h3>
-       <p>${item.productPrice}</p>
+    <li class="grid__item">
+     <div class="card-wrapper underline-links-hover">
+      <div class="card card--standard card--media " style="--ratio-percent: 100%;">
+        <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 100%;">
+         <div class="card__media">
+         <div class="media media--transparent media--hover-effect">
+    		  <img class="motion-reduce" src="${item.productImg}" width="${item.imgWidth}" height="${item.imgHeight}"  loading="lazy" alt="${item.productImageAltText}"/>
+         </div>
+         </div>
+       </div>
+       <div class="card__content">
+       <div class="card__information">
+       <h3 class="card__heading h5">
+       <a class="full-unstyled-link" href="${item.productUrl}">${item.productTitle}</a></h3>
+         <div class="card-information">
+           <div class="price ">
+             <div class="price__container">
+               <div class="price-item price-item--regular">
+                   ${item.productPrice}
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       </div>
+       </div>
+       </div>
     </li>
    `);
   });
   const newProductData = `${recentlyViewedHtml.join("")}`;
-  const fullContent = document.getElementsByClassName("recently-viewed-grid");
+  const fullContent = document.getElementsByClassName("recently-viewed");
   fullContent[0].innerHTML = newProductData;
 }
 
@@ -87,38 +110,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 
 
-<style>
-
-.recently-viewed-wrapper{
-  margin: 1rem auto;
-}
-.recently-viewed-img {
-  width: 100%;
-}
-.recently-viewed-grid {
-  display: grid;
-  grid-gap: 1rem;
-  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
-  list-style: none;
-  margin:0;
-  padding: 0;
-}
-.recently-viewed-grid-item {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-}
-.recently-viewed-a {
-  text-decoration: none;
-  color: black;
-}
-
-</style>
-
 {% schema %}
   {
     "name": "Recent Products",
-    "settings": []
+    "settings": [
+      {
+      "type": "text",
+      "id": "heading",
+      "default": "Recently Viewed",
+      "label": "Title"
+    }
+    ]
   }
 {% endschema %}
 ```
@@ -234,14 +236,23 @@ Don't forget to add the section name to the `order`.
 
 Now you should see in the theme customizer for your product page a section called `Recent Products`.
 
-If you are using a different theme (most likely one without a `product.json` template file), you can create a new snippet file (in the `Snippets` folder), add the same code as for the section **_without_** the schema part at the end.
+You can change the displayed title of the section using the customizer (by defaullt it's set to "Recently Viewed")
+
+If you are using a different theme (most likely one without a `product.json` template file), you can create a new snippet file (in the `Snippets` folder), add the same code as for the section **_without_** the schema part at the end. The styling for the code uses the Dawn theme's CSS, so you will need to add your own.
 {% raw %}
 
 ```
 {% schema %}
   {
     "name": "Recent Products",
-    "settings": []
+    "settings": [
+      {
+      "type": "text",
+      "id": "heading",
+      "default": "Recently Viewed",
+      "label": "Title"
+    }
+    ]
   }
 {% endschema %}
 ```
