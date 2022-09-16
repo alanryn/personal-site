@@ -2,13 +2,13 @@
 title: Custom Recommended Products Section
 myurl: four
 description: Setting your own recommended products for a particular product.
-date: 2022-08-29
+date: 2022-09-16
 tags:
   - recommended products
 layout: layouts/post.njk
 ---
 
-How to set your own recommended products for a particular product.
+How to set your own recommended products for a particular product (using Dawn theme version 6.0.2).
 
 - Create a new Product metafield of type `List of products` (Settings -> Metafields) .
 
@@ -23,49 +23,67 @@ How to set your own recommended products for a particular product.
 {% raw %}
 
 ```html
-<div class="custom-products-wrapper page-width">
+<div class="page-width">
   {% if product.metafields.custom.recommended_products != blank %}
-  <h3>Custom Recommendations</h3>
+  <h2 class="product-recommendations__heading h2">Custom Recommendations</h2>
   {% endif %}
-  <ul class="custom-products-grid">
+  <ul
+    class="grid product-grid grid--4-col-desktop grid--2-col-tablet-down"
+    role="list"
+  >
     {% for p in product.metafields.custom.recommended_products.value %}
-    <li class="custom-products-grid-item">
-      <a href="{{ p.url }}">
-        <img class="custom-products-img" src='{{p.featured_image | img_url:
-        '600x600' }}' loading="lazy" alt="{{p.featured_image.alt}}"/>
-      </a>
-      <h3><a class="custom-products-a" href="{{p.url}}">{{p.title}}</a></h3>
-      <p>{{p.price | money }}</p>
+    <li class="grid__item">
+      <div class="card-wrapper underline-links-hover">
+        <div
+          class="card card--standard card--media "
+          style="--ratio-percent: 100%;"
+        >
+          <div
+            class="card__inner color-background-2 gradient ratio"
+            style="--ratio-percent: 100%;"
+          >
+            <div class="card__media">
+              <div class="media media--transparent media--hover-effect">
+                <img
+                  class="custom-products-img"
+                  srcset="{%- if p.featured_media.width >= 165 -%}{{ p.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                              {%- if p.featured_media.width >= 360 -%}{{ p.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                              {%- if p.featured_media.width >= 533 -%}{{ p.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                              {%- if p.featured_media.width >= 720 -%}{{ p.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                              {%- if p.featured_media.width >= 940 -%}{{ p.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                              {%- if p.featured_media.width >= 1066 -%}{{ p.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                              {{ p.featured_media | image_url }} {{ p.featured_media.width }}w"
+                  src="{{p.featured_media | img_url: width: 533 }}"
+                  width="{{ p.featured_media.width }}"
+                  height="{{ p.featured_media.height }}"
+                  loading="lazy"
+                  alt="{{ p.featured_media.alt }}"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="card__content">
+            <div class="card__information">
+              <h3 class="card__heading h5">
+                <a class="full-unstyled-link" href="{{p.url}}">{{p.title}}</a>
+              </h3>
+              <div class="card-information">
+                <div class="price ">
+                  <div class="price__container">
+                    <div class="price-item price-item--regular">
+                      {{p.price | money }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
     {% endfor %}
   </ul>
 </div>
-
-<style>
-  .custom-products-wrapper {
-    margin: 1rem auto;
-  }
-  .custom-products-img {
-    width: 100%;
-  }
-  .custom-products-grid {
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .custom-products-grid-item {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-  }
-  .custom-products-a {
-    text-decoration: none;
-    color: black;
-  }
-</style>
 ```
 
 {% endraw %}
