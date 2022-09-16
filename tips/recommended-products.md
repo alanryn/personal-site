@@ -125,5 +125,3 @@ How to set your own recommended products for a particular product (using Dawn th
 {% endraw %}
 
 Now you should see your custom product recommendations for any products where the `recommended products` metafield has been populated.
-
-Here's how it looks on a test store using the Dawn theme: https://sunny-day-umbrellas.myshopify.com/products/beach-umbrella
