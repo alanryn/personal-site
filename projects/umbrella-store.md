@@ -1,6 +1,6 @@
 ---
 title: Umbrella Store
-date: 2021-02-01
+date: 2021-12-31
 layout: layouts/project.njk
 tags:
   - shopify

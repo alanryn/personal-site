@@ -1,6 +1,6 @@
 ---
 title: Abstract Art Store
-date: 2021-01-28
+date: 2021-12-01
 layout: layouts/project.njk
 tags:
   - shopify

@@ -1,6 +1,6 @@
 ---
 title: Studio NousNous
-date: 2021-02-01
+date: 2022-01-01
 layout: layouts/project.njk
 tags:
   - shopify
