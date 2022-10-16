@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 To display all the color variants of a single product on your collection page, without creating individual products for each color.
 
-These instructions apply to Dawn theme version 5.0.0.
+These instructions apply to Dawn theme version 7.0.0.
 
 In the Dawn theme code, open the `main-collection-product-grid.liquid` file, it's in the `Sections` folder.
 
