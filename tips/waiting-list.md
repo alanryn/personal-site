@@ -14,7 +14,7 @@ See the result [here](https://sunny-day-umbrellas.myshopify.com/products/bright-
 
 Here are two methods: one using snippets and the other using a custom block, both are very similar.
 
-Method 1:
+Method #1:
 
 - Create a new snippet called `waiting-list.liquid` in the `Snippets` folder.
 
@@ -108,7 +108,7 @@ ready(() => {
 {% endraw %}
 Now, when a product has an unavailable variant, an `Item out of stock?` link should appear on the product page just below the share button.
 
-Method 2:
+Method #2:
 
 - In the theme Customizer, navigate to a product page.
 
