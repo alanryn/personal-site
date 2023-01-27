@@ -24,9 +24,9 @@ Here's how using the Dawn theme:
 
 ![shopify theme settings](/img/color-metafield.png)
 
-Now these metafields are availble to each of your products through the Admin area of your store.
+Now these metafields are available to each of your products through the Admin area of your store.
 
-Go to each product that you want to connect by color. Scrool down to the metafields area.
+Go to each product that you want to connect by color. Scroll down to the metafields area.
 
 For the product color list metafield select all the different colored products including the current one.  
 For the color metafield add the required color.
