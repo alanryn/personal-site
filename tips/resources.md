@@ -17,9 +17,8 @@ layout: layouts/post.njk
 
 ### General Shopify Information:
 
-- Youtube video tutorials from [Coding with Jan](https://www.youtube.com/channel/UCwqNzzV8FmCyGWLfJW8MMSg)
-- Youtube video tutorials from [Chris the freelancer](https://www.youtube.com/c/CodewithChristheFreelancer)
-- Youtube again from [ShopifyDevs](https://www.youtube.com/c/shopifydevs)
+- Youtube video tutorials from [Coding with Jan](https://www.youtube.com/@CodingWithJan), [Chris the freelancer](https://www.youtube.com/@CodewithChristheFreelancer), [Ed Codes - Shopify Tutorials](https://www.youtube.com/@EdCodes)
+- Youtube again from [ShopifyDevs](https://www.youtube.com/@shopifydevs)
 - Series of streams on Shopify theme development from [ Kelly | plus: Kelly ](https://www.youtube.com/watch?v=wR8L-0QnKZo)
 - [How to Set Up a Local Theme Development Workflow with Theme Kit](https://www.youtube.com/watch?v=SrtOXwjXJ1w)
 - [An example build process for Shopify theme development](https://github.com/the-taproom/build-process)
