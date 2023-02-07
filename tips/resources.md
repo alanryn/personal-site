@@ -8,7 +8,7 @@ layout: layouts/post.njk
 
 ## A list of useful Shopify resources
 
-## Liquid:
+###Liquid
 
 - [Bi-weekly insights from active Shopify developers](https://ionlyspeakliquid.beehiiv.com/).
 - [Learning Liquid: A guide to Shopify theme development](https://www.shopify.com/partners/guides/learning-liquid).

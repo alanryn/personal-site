@@ -72,7 +72,7 @@ function getRecentlyViewedProducts() {
      <div class="card-wrapper underline-links-hover">
       <div class="card card--standard card--media " style="--ratio-percent: 100%;">
         <div class="card__inner color-background-2 gradient ratio" style="--ratio-percent: 100%;">
-         <div class="card__media">
+         <div style="position:static" class="card__media">
          <div class="media media--transparent media--hover-effect">
     		  <img class="motion-reduce" src="${item.productImg}" width="${item.imgWidth}" height="${item.imgHeight}"  loading="lazy" alt="${item.productImageAltText}"/>
          </div>
