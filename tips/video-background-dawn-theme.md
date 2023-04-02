@@ -21,7 +21,7 @@ Add the following code:
   <h1>{{ section.settings.heading }}</h1>
   <a class='button' href='{{ section.settings.link_url }}'>{{ section.settings.link_text }}</a>
   </div>
-  <video class="video-bg" autoplay muted loop playsinline>
+  <video class="video-bg" autoplay muted loop playsinline poster={{ section.settings.poster }}>
   	<source src={{ section.settings.video_url }} type='video/mp4'>
   </video>
 </div>
@@ -40,7 +40,12 @@ Add the following code:
       "id": "video_url",
       "label": "Enter the video url here"
     },
-      {
+    {
+      "type": "image_picker",
+      "id": "poster",
+      "label": "Add fallback background image in case video doesn't load"
+    },
+    {
       "type": "text",
       "id": "link_text",
       "label": "Enter CTA button text (if required)"
