@@ -704,7 +704,7 @@ button.contact-btn:hover {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 0 2rem;
-  padding: 0;
+  padding: 5rem 0 0 0;
 }
 
 .footer li + li {
@@ -754,3 +754,23 @@ button.contact-btn:hover {
   position: relative;
   inset-block-start: 2px;
 }
+
+.wave {
+    /* mask created with 
+    https://css-generators.com/wavy-shapes/ */
+    /* background: 
+      linear-gradient(
+        to right, 
+        #00f260, 
+        #0575e6); */
+
+      --mask:
+        radial-gradient(128.20px at 50% 175.50px,#000 99%,#0000 101%) calc(50% - 130px) 0/260px 100%,
+        radial-gradient(128.20px at 50% -110.5px,#0000 99%,#000 101%) 50% 65px/260px 100% repeat-x;
+      -webkit-mask: var(--mask);
+              mask: var(--mask);
+    
+      -webkit-mask: var(--mask);
+      mask: var(--mask);
+  
+  }
