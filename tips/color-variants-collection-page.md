@@ -1,7 +1,7 @@
 ---
 title: Show All Product Color Variants on a Collection Page
 description: Display all the color variants for a single product on a collection page.
-date: 2022-10-16
+date: 2023-06-16
 tags:
   - color variants
   - collections
@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 To display all the color variants of a single product on your collection page, without creating individual products for each color.
 
-These instructions apply to Dawn theme version 7.0.0.
+These instructions apply to Dawn theme version 10.0.0.
 
 In the Dawn theme code, open the `main-collection-product-grid.liquid` file, it's in the `Sections` folder.
 
@@ -30,10 +30,17 @@ Update the code between the `<ul> ... </ul>` tags to this:
               {%- assign lazy_load = true -%}
             {%- endif -%}
 
-
-          {% for option in product.options %}
+      {% capture available %}
+           {% for variant in product.variants %}   
+           {% if variant.available == true %}
+              {{ variant.title }}   
+             {% endif %}
+           {% endfor %}
+      {% endcapture %}
+            
+         {% for option in product.options %}
           {% if product.options_by_name['Color'].values == null %}
-                <li class="grid__item">
+              <li class="grid__item">
                 {% render 'card-product',
                 card_product: product,
                 product_title: product.title,
@@ -60,7 +67,9 @@ Update the code between the `<ul> ... </ul>` tags to this:
               {% render 'card-product-variant',
                 card_product: variant,
                 title: product.title,
+                product_options: product.options,
                 color: color,
+                available: available,
                 media_aspect_ratio: section.settings.image_ratio,
                 show_secondary_image: section.settings.show_secondary_image,
                 show_vendor: section.settings.show_vendor,
@@ -68,7 +77,6 @@ Update the code between the `<ul> ... </ul>` tags to this:
                 lazy_load: lazy_load,
                 show_quick_add: section.settings.enable_quick_add,
                 section_id: section.id
-
               %}
             </li>
     {% capture tempList %}
@@ -94,8 +102,9 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
   Renders a product variant card
 
   Accepts:
-  - card_product: {Object} Product Liquid object (optional)
+  - card_product: {Object} Product Variant Liquid object (optional)
   - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
+  - image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
   - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
   - show_vendor: {Boolean} Show the product vendor. Default: false
   - show_rating: {Boolean} Show the product rating. Default: false
@@ -103,8 +112,10 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
   - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
   - show_quick_add: {Boolean} Show the quick add button.
   - section_id: {String} The ID of the section that contains this card.
-  - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false
-  - title: product.title
+  - horizontal_class: {Boolean} Add a card--horizontal class if set to true. Default: false (optional)
+  - horizontal_quick_add: {Boolean} Changes the quick add button styles when set to true. Default: false (optional)
+  - placeholder_image: {String} The placeholder image to use when no product exists. Default: 'product-apparel-2' (optional)
+
   Usage:
   {% render 'card-product-variant', show_vendor: section.settings.show_vendor %}
 {% endcomment %}
@@ -119,7 +130,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
     elsif card_product.featured_media and media_aspect_ratio == 'adapt'
       assign ratio = card_product.featured_media.aspect_ratio
     endif
-    if ratio == 0 or ratio == nil
+    if ratio == 0 or ratio == null
       assign ratio = 1
     endif
   -%}
@@ -130,6 +141,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
         card--{{ settings.card_style }}
         {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
+        {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
         {% if extend_height %} card--extend-height{% endif %}
         {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
@@ -141,7 +153,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
         {%- if card_product.featured_media -%}
-          <div class="card__media">
+          <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
@@ -166,7 +178,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
-              {%- if card_product.media[1] != nil and show_secondary_image -%}
+              {%- if card_product.media[1] != null and show_secondary_image -%}
                 <img
                   srcset="
                     {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
@@ -193,7 +205,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
           <div class="card__information">
             <h3
               class="card__heading"
-              {% if card_product.featured_media == nil and settings.card_style == 'standard' %}
+              {% if card_product.featured_media == null and settings.card_style == 'standard' %}
                 id="title-{{ section_id }}-{{ card_product.id }}"
               {% endif %}
             >
@@ -203,12 +215,20 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
                 class="full-unstyled-link"
                 aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
               >
-                    {{ title | escape }} - {{color}}
+                {{ title | escape }} - {{color}}
               </a>
             </h3>
           </div>
           <div class="card__badge {{ settings.badge_position }}">
-            {%- if card_product.available == false -%}
+
+    {% for opt in product_options %}
+      {% assign colorindex = forloop.index0 %}
+      {% if opt == "Color" %}
+            {% assign cindex = colorindex %}
+      {% endif %}
+    {% endfor %}
+
+     {% unless available contains card_product.options[cindex] %} 
               <span
                 id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
                 class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
@@ -222,7 +242,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
               >
                 {{- 'products.product.on_sale' | t -}}
               </span>
-            {%- endif -%}
+            {%- endunless -%}
           </div>
         </div>
       </div>
@@ -240,7 +260,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
             >
-                {{ title | escape }} - {{color}}
+              {{ title | escape }} - {{color}}
             </a>
           </h3>
           <div class="card-information">
@@ -268,7 +288,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
               >
                 <span
                   aria-hidden="true"
-                  class="rating-star color-icon-{{ settings.accent_icons }}"
+                  class="rating-star"
                   style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
                 ></span>
               </div>
@@ -282,7 +302,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
                 <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
                 <span class="visually-hidden">
                   {{- card_product.metafields.reviews.rating_count }}
-                  {{ "accessibility.total_reviews" | t -}}
+                  {{ 'accessibility.total_reviews' | t -}}
                 </span>
               </p>
             {%- endif -%}
@@ -292,71 +312,32 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
         </div>
         {%- if show_quick_add -%}
           <div class="quick-add no-js-hidden">
-            {%- assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id -%}
-            {%- if card_product.variants.size == 1 -%}
-              <product-form>
-                {%- form 'product', card_product, id: product_form_id, class: 'form', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
-                  <input
-                    type="hidden"
-                    name="id"
-                    value="{{ card_product.selected_or_first_available_variant.id }}"
-                    disabled
-                  >
-                  <button
-                    id="{{ product_form_id }}-submit"
-                    type="submit"
-                    name="add"
-                    class="quick-add__submit button button--full-width button--secondary"
-                    aria-haspopup="dialog"
-                    aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                    aria-live="polite"
-                    data-sold-out-message="true"
-                    {% if card_product.selected_or_first_available_variant.available == false %}
-                      disabled
-                    {% endif %}
-                  >
-                    <span>
-                      {%- if card_product.selected_or_first_available_variant.available -%}
-                        {{ 'products.product.add_to_cart' | t }}
-                      {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
-                      {%- endif -%}
-                    </span>
-                    <span class="sold-out-message hidden">
-                      {{ 'products.product.sold_out' | t }}
-                    </span>
-                    <div class="loading-overlay__spinner hidden">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        role="presentation"
-                        class="spinner"
-                        viewBox="0 0 66 66"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </button>
-                {%- endform -%}
-              </product-form>
-            {%- else -%}
+            {%- liquid
+              assign product_form_id = 'quick-add-' | append: section_id | append: card_product.id
+              assign qty_rules = false
+              if card_product.selected_or_first_available_variant.quantity_rule.min > 1 or card_product.selected_or_first_available_variant.quantity_rule.max != null or card_product.selected_or_first_available_variant.quantity_rule.increment > 1
+                assign qty_rules = true
+              endif
+            -%}
+            {%- if card_product.variants.size > 1 or qty_rules -%}
               <modal-opener data-modal="#QuickAdd-{{ card_product.id }}">
                 <button
                   id="{{ product_form_id }}-submit"
                   type="submit"
                   name="add"
-                  class="quick-add__submit button button--full-width button--secondary"
+                  class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
                   data-product-url="{{ card_product.url }}"
                 >
                   {{ 'products.product.choose_options' | t }}
+                  {%- if horizontal_quick_add -%}
+                    <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                  {%- endif -%}
                   <div class="loading-overlay__spinner hidden">
                     <svg
                       aria-hidden="true"
                       focusable="false"
-                      role="presentation"
                       class="spinner"
                       viewBox="0 0 66 66"
                       xmlns="http://www.w3.org/2000/svg"
@@ -385,6 +366,61 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
                   <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
                 </div>
               </quick-add-modal>
+            {%- else -%}
+              <product-form>
+                {%- form 'product',
+                  card_product,
+                  id: product_form_id,
+                  class: 'form',
+                  novalidate: 'novalidate',
+                  data-type: 'add-to-cart-form'
+                -%}
+                  <input
+                    type="hidden"
+                    name="id"
+                    value="{{ card_product.selected_or_first_available_variant.id }}"
+                    disabled
+                  >
+                  <button
+                    id="{{ product_form_id }}-submit"
+                    type="submit"
+                    name="add"
+                    class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add{% endif %}"
+                    aria-haspopup="dialog"
+                    aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
+                    aria-live="polite"
+                    data-sold-out-message="true"
+                    {% if card_product.selected_or_first_available_variant.available == false %}
+                      disabled
+                    {% endif %}
+                  >
+                    <span>
+                      {%- if card_product.selected_or_first_available_variant.available -%}
+                        {{ 'products.product.add_to_cart' | t }}
+                      {%- else -%}
+                        {{ 'products.product.sold_out' | t }}
+                      {%- endif -%}
+                    </span>
+                    <span class="sold-out-message hidden">
+                      {{ 'products.product.sold_out' | t }}
+                    </span>
+                    {%- if horizontal_quick_add -%}
+                      <span class="icon-wrap">{% render 'icon-plus' %}</span>
+                    {%- endif -%}
+                    <div class="loading-overlay__spinner hidden">
+                      <svg
+                        aria-hidden="true"
+                        focusable="false"
+                        class="spinner"
+                        viewBox="0 0 66 66"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
+                      </svg>
+                    </div>
+                  </button>
+                {%- endform -%}
+              </product-form>
             {%- endif -%}
           </div>
         {%- endif -%}
@@ -409,7 +445,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
     </div>
   </div>
 {%- else -%}
-  <div class="product-card-wrapper card-wrapper underline-links-hover">
+  <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
         card
@@ -426,19 +462,17 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
         class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: 100%;"
       >
-        <div class="card__content">
-          <div class="card__information">
-            <h3 class="card__heading">
-              <a role="link" aria-disabled="true" class="full-unstyled-link">
-                {{ 'onboarding.product_title' | t }}
-              </a>
-            </h3>
-          </div>
+        <div class="card__media">
+          {%- if placeholder_image -%}
+            {{ placeholder_image | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- else -%}
+            {{ 'product-apparel-2' | placeholder_svg_tag: 'placeholder-svg' }}
+          {%- endif -%}
         </div>
       </div>
       <div class="card__content">
         <div class="card__information">
-          <h3 class="card__heading{% if settings.card_style == 'standard' %} h5{% endif %}">
+          <h3 class="card__heading card__heading--placeholder{% if settings.card_style == 'standard' %} h5{% endif %}">
             <a role="link" aria-disabled="true" class="full-unstyled-link">
               {{ 'onboarding.product_title' | t }}
             </a>
