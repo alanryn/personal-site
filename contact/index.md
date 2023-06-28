@@ -7,7 +7,10 @@ eleventyNavigation:
 ---
 
 <h1>{{ title }}</h1>
-<p class="infobox">I am a freelance frontend developer, currently specializing in Shopify. Contact me with any queries about Shopify or anything else. I'm available for hire or if you just want some free advice.</p> <br />
+<p class="infobox">A freelance frontend developer, specializing in Shopify. 
+I am currently working on <a href="https://www.thelocals.cc/">the-locals</a>, a cycling e-commerce start-up.<br/> 
+Does you Shopify site need some fixing?
+I'm available for hire or if you just want some free advice.</p> <br />
 <form id="my-form" class="contact-form" name="contact" method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
   <label for="inputName">Name</label>
