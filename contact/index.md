@@ -3,15 +3,20 @@ layout: layouts/base.njk
 title: Contact
 eleventyNavigation:
   key: Contact
-  order: 4
+  order: 2
 ---
 
-<h1>{{ title }}</h1>
-<p class="bio">A freelance frontend developer, specializing in Shopify. 
-I am currently working on <a href="https://www.thelocals.cc/">the-locals</a>, a cycling e-commerce start-up.</p>
-<p>Does you Shopify site need some fixing?</p>
-<p>I'm available for hire or if you just want some free advice.</p> <br />
-<form id="my-form" class="contact-form" name="contact" method="POST" data-netlify="true">
+<div class="contact">
+  <div class="postlist-item">
+      <h1>{{ title }}</h1>
+      <p class="bio">A freelance frontend developer, specializing in Shopify. 
+      I am currently working on <a href="https://www.thelocals.cc/">the-locals</a>, a cycling e-commerce start-up.</p>
+      <p style="margin-top: 1rem;">Does you Shopify site need some fixing?</p>
+      <p>I'm available for hire, on a retainer, for a one off project, or if you just want some free advice.</p> <br />
+  </div>
+
+<div class="postlist-item">
+  <form id="my-form" class="contact-form" name="contact" method="POST" data-netlify="true">
   <input type="hidden" name="form-name" value="contact" />
   <label for="inputName">Name</label>
   <input type="text"   
@@ -35,6 +40,11 @@ I am currently working on <a href="https://www.thelocals.cc/">the-locals</a>, a 
   <button class="contact-btn" type="submit">Send</button>
 <p id="my-form-status"></p>
 </form>
+</div>
+
+</div>
+
+
 
 <script>
     var form = document.getElementById("my-form");

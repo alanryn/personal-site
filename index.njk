@@ -1,35 +1,28 @@
 ---
 layout: layouts/home.njk
-eleventyNavigation:
-  key: Home
-  order: 1
+
 ---
 
 <div class="flow" style="margin-top:3rem;">
-  <section class="flow">
-    <h1 class="fs-700 ff-sans uppercase">
-      <p>Alan Ryan</p>
-      <p>Shopify Developer</p>
+  <section class="flow tagline">
+    <h1 class="fs-500 ff-sans uppercase">
+      <p>Shopify Solutions</p>
     </h1>
-    <p class="fs-500">Customizations, fixes, complete store development, theme updating, content creation and more. 
-</p>
-    <div class="button-list">
-        <a class="contact-link" href="/contact">CONTACT / HIRE ME</a>
-    </div>
+    <p class="fs-500">Customizations, fixes, complete store development, theme updating, consultation, content creation and more. 
+    </p>
   </section>
-
 </div>
 
-      <section style="margin-top: 3rem">
-      {% set maxPosts = collections.posts.length | min(5) %}
-<h1>Latest Posts</h1>
+<section style="margin-top: 3rem;">
+    {% set maxPosts = collections.posts.length | min(5) %}
+    {% set postslist = collections.posts | head(-5) %}
+    {% set postslistCounter = collections.posts | length %}
+    {% include "postslist.njk" %}
 
-{% set postslist = collections.posts | head(-5) %}
-{% set postslistCounter = collections.posts | length %}
-{% include "postslist.njk" %}
-
-<p>All the Shopify tutorials can be found <a class="postlist-link" href="{{ '/tips/' | url }}">here</a>.</p>
-      </section>
+    <div style="margin-top:1rem;" class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <a class="postlist-link" href="{{ '/tips/' | url }}">All the Shopify tutorials are here</a>
+    </div>
+</section>
 
 
 

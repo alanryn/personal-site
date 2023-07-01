@@ -20,28 +20,22 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=PT+Serif:wght@400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
-    {# <link rel="stylesheet" href="{{ '/css/prism-base16-monokai.dark.css' | url }}">
-    <link rel="stylesheet" href="{{ '/css/prism-diff.css' | url }}"> #}
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="display:grid">
        <a class="skip-to-content" href="#main">Skip to content</a>
-       <header class="primary-header flex">
-       <div class="logo">
-       <a href="/">{% include "partials/logo.svg"%}</a>
-       </div>
-      <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
-      <nav>
-        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-          {%- for entry in collections.all | eleventyNavigation %}
-            <li class="{% if entry.url == page.url %}active{% endif %}"><a class="ff-sans uppercase letter-spacing-3" href="{{ entry.url | url }}">{{ entry.title }}</a></li>
-          {%- endfor %}
-        </ul>
-      </nav>
-    </header>
-  </div>
+       <header class="primary-header">
+          <div class="logo">
+            <a href="/">Alan Ryan</a>
+          </div>
+          <div class="primary-navigation"></div>  
+          <div class="logo">
+            <a href="/contact">Contact</a>
+          </div>
+       </header>
+     </div>
 
   <main id="main" class="flow">
       <div class="container">
@@ -53,13 +47,12 @@
 <div class="container">
   <h2 id="label-footer" class="sr-only">Page footer</h2>
   <ul class="social-list" role="list">
-<li><a href="https://github.com/alanryn">Github</a></li>
-<li><a href="https://community.shopify.com/c/user/viewprofilepage/user-id/340403">Shopify</a></li>
-<li><a href="https://www.linkedin.com/in/alanryandev/">Linkedin</a></li>
-<li><a href="https://codepen.io/al1973">Codepen</a></li>
+    <li><a href="https://github.com/alanryn">Github</a></li>
+    <li><a href="https://community.shopify.com/c/user/viewprofilepage/user-id/340403">Shopify</a></li>
+    <li><a href="https://www.linkedin.com/in/alanryandev/">Linkedin</a></li>
   </ul>
   <p>
-    <span>&copy; 2022 <a href="{{ '/' | url }}">Alan Ryan</a></span>
+    <span>&copy; 2023 <a href="{{ '/' | url }}">Alan Ryan</a></span>
   <span>&middot;</span>
   <span>Created with <a href="https://11ty.dev" rel="noopener" target="_blank">11ty</a>️</span>
 </p>
@@ -67,21 +60,3 @@
 </footer>
   </body>
 </html>
-
-<script>
-
-const nav = document.querySelector(".primary-navigation");
-const navToggle = document.querySelector(".mobile-nav-toggle");
-
-navToggle.addEventListener("click", () => {
-    
-    const visiblity = nav.getAttribute("data-visible");
-    if (visiblity === "false") {
-        nav.setAttribute("data-visible", true);
-        navToggle.setAttribute("aria-expanded", true);
-    } else {
-        nav.setAttribute("data-visible", false);
-        navToggle.setAttribute("aria-expanded", false);
-    }
-})
-</script>
