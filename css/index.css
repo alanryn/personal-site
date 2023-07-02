@@ -378,28 +378,31 @@ p a:hover {
 /* -------------- */
 .logo {
   display: flex;
-justify-content: center;
-align-items: center;
-border-right: 1px solid var(--brand4);
-border-left: 1px solid var(--brand4);
-padding-inline: 1rem;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid var(--brand4);
+  border-left: 1px solid var(--brand4);
+  padding-inline: 1rem;
 }
 .logo a {
   font-size: var(--fs-400);
   text-decoration: none;
 }
-
+.logo a:focus,
+.logo a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  color: var(--brand4);
+  transition: text-decoration 150ms ease-out;
+}
 .primary-header {
   display:flex;
   flex-wrap:wrap;
   justify-content: space-around;
   min-height: 60px;
   border-bottom: 1px solid var(--brand4);
-
- 
   background-color: var(--surface3);
 }
-
 .primary-navigation {
   flex: 1;
   display: flex;
@@ -409,31 +412,12 @@ padding-inline: 1rem;
 .primary-navigation > a {
   text-decoration: none;
 }
-
 .primary-navigation li a {
   color: var(--brand4);
 }
 .primary-navigation .active {
   background: var(--surface3);
 }
-
-@media (min-width: 45em) {
-  .primary-navigation {
-    margin-block: 2rem;
-  }
-}
-.underline-indicators > * {
-  cursor: pointer;
-  box-shadow: 0px 2px 0 0px var(--orange-3);
-}
-
-.underline-indicators > *:hover,
-.underline-indicators > *:focus {
-  box-shadow: 0px 2px 0 0px var(--orange-1), 0 4px 0 0 var(--surface2),
-    0 6px 0 0 var(--orange-2), 0 8px 0 0 var(--surface2),
-    0 10px 0 0 var(--orange-3);
-}
-
 /* Posts list */
 .postlist {
   list-style: none;
@@ -446,7 +430,7 @@ padding-inline: 1rem;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: baseline;
-  line-height: 1.8;
+  line-height: 1.6;
   border: 1px solid var(--brand3) ;
   padding: 2rem;
   background-color: var(--surface3);
@@ -484,19 +468,14 @@ padding-inline: 1rem;
 /*  -------------  */
 /* contact page*/
 /* --------------  */
-.contact-intro {
-  font-size: var(--font-size-fluid-1);
-  line-height: 1.5;
-}
-
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: var(--size-2);
-  background-color: transparent;
-  padding-bottom: 2rem;
-  max-width: 20em;
-  margin:auto
+  margin:auto;
+  padding: 1rem;
+  border: 1px solid var(--brand3);
+  background-color: var(--surface3);
 }
 .contact-form input,
 textarea {
@@ -508,7 +487,7 @@ textarea {
   border-radius: 4px;
   transition: 180ms box-shadow ease-in-out;
   margin-top: 0;
-  min-width: 290px;
+  /* min-width: 290px; */
   color: var(--text1);
 }
 .contact-form input:focus,
@@ -536,7 +515,7 @@ input {
   color: var(--text1);
 }
 .contact-form input + label {
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 button.contact-btn {
   white-space: nowrap;

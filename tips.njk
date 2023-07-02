@@ -6,7 +6,8 @@ eleventyNavigation:
   order: 1
 ---
 
-<h1>Shopify Tutorials</h1>
-
+  <div style="margin-bottom:1rem;" class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <h1 class="fs-400">Shopify Tutorials</h1>
+    </div>
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}

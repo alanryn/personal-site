@@ -17,6 +17,9 @@ layout: layouts/home.njk
     {% set maxPosts = collections.posts.length | min(5) %}
     {% set postslist = collections.posts | head(-5) %}
     {% set postslistCounter = collections.posts | length %}
+      <div style="margin-bottom:1rem;" class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+    <h1 class="fs-400">Latest Shopify Tutorials</h1>
+    </div>
     {% include "postslist.njk" %}
 
     <div style="margin-top:1rem;" class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
