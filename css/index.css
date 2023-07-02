@@ -400,7 +400,9 @@ p a:hover {
   flex-wrap:wrap;
   justify-content: space-around;
   min-height: 60px;
+  margin-top: 2rem;
   border-bottom: 1px solid var(--brand4);
+  border-top:1px solid var(--brand4);
   background-color: var(--surface3);
 }
 .primary-navigation {

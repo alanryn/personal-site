@@ -3,7 +3,7 @@ layout: layouts/home.njk
 
 ---
 
-<div class="flow" style="margin-top:3rem;">
+<div class="flow">
   <section class="flow tagline">
     <h1 class="fs-500 ff-sans uppercase">
       <p>Shopify Solutions</p>
@@ -13,7 +13,7 @@ layout: layouts/home.njk
   </section>
 </div>
 
-<section style="margin-top: 3rem;">
+<section style="margin-top: 2rem;">
     {% set maxPosts = collections.posts.length | min(5) %}
     {% set postslist = collections.posts | head(-5) %}
     {% set postslistCounter = collections.posts | length %}
