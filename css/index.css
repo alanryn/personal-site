@@ -253,7 +253,7 @@ a {
 }
 
 .container {
-  --max-width: 60rem;
+  --max-width: 65ch;
   --container-padding: 1rem;
 
   width: min(var(--max-width), 100% - (var(--container-padding) * 2));
@@ -379,20 +379,15 @@ p a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid var(--brand4);
-  border-left: 1px solid var(--brand4);
   padding-inline: 1rem;
-  /* box-shadow: 0px 0px 20px 5px var(--surface4);  */
-  border-radius: 1.25rem;
+  font-size: var(--fs-500);
+  font-weight: var(--font-weight-5);
 }
 .logo a {
-  font-size: var(--fs-400);
   text-decoration: none;
 }
 .logo a:focus,
 .logo a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
   color: var(--brand4);
   transition: text-decoration 150ms ease-out;
 }
@@ -400,13 +395,8 @@ p a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  min-height: 60px;
-  margin-top: 2rem;
-  border-bottom: 1px solid var(--brand4);
-  border-top: 1px solid var(--brand4);
-  background-color: var(--surface3);
-  box-shadow: 0px 0px 20px 5px var(--surface4);
-  border-radius: 1.25rem;
+  width: 100%;
+  min-height: 100px;
 }
 .primary-navigation {
   flex: 1;
@@ -436,11 +426,7 @@ p a:hover {
   flex-wrap: wrap;
   align-items: baseline;
   line-height: 1.6;
-  border: 1px solid var(--brand3);
   padding: 2rem;
-  background-color: var(--surface3);
-  box-shadow: 0px 0px 20px 5px var(--surface4);
-  border-radius: 1.25rem;
 }
 .postlist-date,
 .postlist-item:before {
@@ -544,7 +530,22 @@ button.contact-btn:hover {
   color: var(--violet-0);
   background-color: var(--violet-5);
 }
+a.contact-btn {
+  white-space: nowrap;
 
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-7);
+  padding: var(--size-1) var(--size-4);
+  color: var(--violet-8);
+  border: var(--border-size-2) solid var(--violet-5);
+  background-color: transparent;
+  border-radius: var(--radius-2);
+}
+a.contact-btn:hover {
+  cursor: pointer;
+  color: var(--violet-0);
+  background-color: var(--violet-5);
+}
 /* contact page links*/
 .contacts-ul {
   display: grid;
@@ -643,25 +644,7 @@ button.contact-btn:hover {
   color: var(--clr-primary-400);
   text-decoration: none;
 }
-.wave {
-  /* mask created with 
-  https://css-generators.com/wavy-shapes/ */
-  /* background: 
-    linear-gradient(
-      to right, 
-      #00f260, 
-      #0575e6); */
 
-  --mask: radial-gradient(128.2px at 50% 175.5px, #000 99%, #0000 101%)
-      calc(50% - 130px) 0/260px 100%,
-    radial-gradient(128.2px at 50% -110.5px, #0000 99%, #000 101%) 50% 65px/260px
-      100% repeat-x;
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-
-  -webkit-mask: var(--mask);
-  mask: var(--mask);
-}
 /* contact link  */
 .contact-link {
   white-space: nowrap;
@@ -700,12 +683,7 @@ button.contact-btn:hover {
   grid-column: 1/-1;
   display: grid;
   place-content: center;
-  text-align: center;
-  border: 1px solid var(--brand4);
-  background-color: var(--surface3);
   padding: 1rem;
-  box-shadow: 0px 0px 20px 5px var(--surface4);
-  border-radius: 1.25rem;
 }
 
 .contact {

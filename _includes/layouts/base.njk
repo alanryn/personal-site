@@ -24,26 +24,27 @@
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
   </head>
   <body style="background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);">
-    <div class="container" style="display:grid">
+
+    <div class="container" style="display:grid;" >
        <a class="skip-to-content" href="#main">Skip to content</a>
-       <header class="primary-header">
+       <header class="primary-header" style="max-width: 65ch; ">
           <div class="logo">
             <a href="/">Alan Ryan</a>
           </div>
           <div class="primary-navigation"></div>  
           <div class="logo">
-            <a href="/contact">Contact</a>
+            <a href="/contact" class="contact-btn" >Contact</a>
           </div>
        </header>
      </div>
 
-  <main id="main" class="flow">
+  <main id="main" class="flow surface1">
       <div class="container">
         {{ content | safe }}
       </div>
   </main>
 
-<footer class="footer surface1 fs-300 wave" role="contentinfo" aria-labelledby="label-footer">
+<footer class="footer fs-300" role="contentinfo" aria-labelledby="label-footer">
 <div class="container">
   <h2 id="label-footer" class="sr-only">Page footer</h2>
   <ul class="social-list" role="list">
