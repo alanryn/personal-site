@@ -372,7 +372,6 @@ p a:hover {
   line-height: 1.1;
 }
 
-
 /* --------------- */
 /* primary-header */
 /* -------------- */
@@ -398,15 +397,15 @@ p a:hover {
   transition: text-decoration 150ms ease-out;
 }
 .primary-header {
-  display:flex;
-  flex-wrap:wrap;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   min-height: 60px;
   margin-top: 2rem;
   border-bottom: 1px solid var(--brand4);
-  border-top:1px solid var(--brand4);
+  border-top: 1px solid var(--brand4);
   background-color: var(--surface3);
-  box-shadow: 0px 0px 20px 5px var(--surface4); 
+  box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
 }
 .primary-navigation {
@@ -437,10 +436,10 @@ p a:hover {
   flex-wrap: wrap;
   align-items: baseline;
   line-height: 1.6;
-  border: 1px solid var(--brand3) ;
+  border: 1px solid var(--brand3);
   padding: 2rem;
   background-color: var(--surface3);
-  box-shadow: 0px 0px 20px 5px var(--surface4); 
+  box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
 }
 .postlist-date,
@@ -480,11 +479,11 @@ p a:hover {
   display: flex;
   flex-direction: column;
   gap: var(--size-2);
-  margin:auto;
+  margin: auto;
   padding: 1rem;
   border: 1px solid var(--brand3);
   background-color: var(--surface3);
-  box-shadow: 0px 0px 20px 5px var(--surface4); 
+  box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
 }
 .contact-form input,
@@ -653,14 +652,15 @@ button.contact-btn:hover {
       #00f260, 
       #0575e6); */
 
-    --mask:
-      radial-gradient(128.20px at 50% 175.50px,#000 99%,#0000 101%) calc(50% - 130px) 0/260px 100%,
-      radial-gradient(128.20px at 50% -110.5px,#0000 99%,#000 101%) 50% 65px/260px 100% repeat-x;
-    -webkit-mask: var(--mask);
-            mask: var(--mask);
-  
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
+  --mask: radial-gradient(128.2px at 50% 175.5px, #000 99%, #0000 101%)
+      calc(50% - 130px) 0/260px 100%,
+    radial-gradient(128.2px at 50% -110.5px, #0000 99%, #000 101%) 50% 65px/260px
+      100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
 }
 /* contact link  */
 .contact-link {
@@ -696,7 +696,7 @@ button.contact-btn:hover {
   inset-block-start: 2px;
 }
 
-.tagline{
+.tagline {
   grid-column: 1/-1;
   display: grid;
   place-content: center;
@@ -704,15 +704,129 @@ button.contact-btn:hover {
   border: 1px solid var(--brand4);
   background-color: var(--surface3);
   padding: 1rem;
-  box-shadow: 0px 0px 20px 5px var(--surface4); 
+  box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
-  }
-
-.contact{
---min: 20rem;
---gap: 1rem;
-display: grid;
-grid-gap: var(--gap);
-grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 }
 
+.contact {
+  --min: 20rem;
+  --gap: 1rem;
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
+}
+
+.posts {
+  --min: 20rem;
+  --gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr)); */
+}
+.posts .postlist-item {
+  flex: 1 1 var(--min);
+}
+
+/* testimonial page */
+
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four"
+    "five";
+  padding-block: 2rem;
+}
+
+.testimonial {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--brand3);
+  padding: 2rem;
+  background-color: var(--surface3);
+  box-shadow: 0px 0px 1.25rem 0.25rem var(--surface4);
+  border-radius: 1.25rem;
+  line-height: 1.6;
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media screen and (min-width: 33em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two three"
+      "five five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 38em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one"
+      "two five"
+      "three five"
+      "four four";
+  }
+}
+
+@media screen and (min-width: 48em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two"
+      "five five five"
+      "three four four";
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .testimonial-grid {
+    grid-template-areas:
+      "one one two five"
+      "three four four five";
+  }
+}
+
+.testimonial.quote {
+  background-image: url("./images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.testimonial img {
+  width: 1.75rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.testimonial .name {
+}
+
+.testimonial .position {
+}
+
+.testimonial > p:first-of-type {
+}
+
+.testimonial > p:last-of-type {
+}
