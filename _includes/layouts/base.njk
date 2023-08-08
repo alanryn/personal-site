@@ -22,28 +22,34 @@
     <link rel="stylesheet" href="{{ '/css/index.css' | url }}">
     <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="{{ metadata.title }}">
     <link rel="alternate" href="{{ metadata.jsonfeed.path | url }}" type="application/json" title="{{ metadata.title }}">
-  </head>
-  <body style="background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);">
 
-    <div class="container" style="display:grid;" >
+  </head>
+  <body>
+    <div class="container"  >
        <a class="skip-to-content" href="#main">Skip to content</a>
-       <header class="primary-header" style="max-width: 65ch; ">
+       <header class="primary-header">
           <div class="logo">
             <a href="/">Alan Ryan</a>
           </div>
           <div class="primary-navigation"></div>  
           <div class="logo">
-            <a href="/contact" class="contact-btn" >Contact</a>
+            <a href="/contact" class="button-kp glow-effect" >Contact 👋
+              <svg class="glow-container">
+                <rect pathLength="100" stroke-linecap="round" class="glow-blur"></rect>
+                <rect pathLength="100" stroke-linecap="round" class="glow-line"></rect>
+              </svg>
+            </a>
           </div>
        </header>
      </div>
+
 
   <main id="main" class="flow surface1">
       <div class="container">
         {{ content | safe }}
       </div>
-  </main>
 
+  </main>
 <footer class="footer fs-300" role="contentinfo" aria-labelledby="label-footer">
 <div class="container">
   <h2 id="label-footer" class="sr-only">Page footer</h2>
