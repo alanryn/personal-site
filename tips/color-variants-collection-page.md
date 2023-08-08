@@ -31,13 +31,13 @@ Update the code between the `<ul> ... </ul>` tags to this:
             {%- endif -%}
 
       {% capture available %}
-           {% for variant in product.variants %}   
+           {% for variant in product.variants %}
            {% if variant.available == true %}
-              {{ variant.title }}   
+              {{ variant.title }}
              {% endif %}
            {% endfor %}
       {% endcapture %}
-            
+
          {% for option in product.options %}
           {% if product.options_by_name['Color'].values == null %}
               <li class="grid__item">
@@ -65,7 +65,8 @@ Update the code between the `<ul> ... </ul>` tags to this:
           {% unless colorlist contains color %}
             <li class="grid__item">
               {% render 'card-product-variant',
-                card_product: variant,
+                card_product: product,
+                card_variant: variant,
                 title: product.title,
                 product_options: product.options,
                 color: color,
@@ -89,10 +90,11 @@ Update the code between the `<ul> ... </ul>` tags to this:
 {% endfor %}
 {%- endfor -%}
 </ul>
+
 ```
 
 {% endraw %}
-To correctly display the variant, create another version of the `card-product` snippet file.
+To correctly display the color variant, create another version of the `card-product` snippet file.
 
 In the `Snippets` folder create a new file called `card-product-variant` and add this code:
 {% raw %}
@@ -102,7 +104,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
   Renders a product variant card
 
   Accepts:
-  - card_product: {Object} Product Variant Liquid object (optional)
+  - card_variant: {Object} Product Variant Liquid object (optional)
   - media_aspect_ratio: {String} Size of the product image card. Values are "square" and "portrait". Default is "square" (optional)
   - image_shape: {String} Image mask to apply to the product image card. Values are "arch", "blob", "chevronleft", "chevronright", "diamond", "parallelogram", and "round". (optional)
   - show_secondary_image: {Boolean} Show the secondary image on hover. Default: false (optional)
@@ -122,13 +124,13 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
 
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 
-{%- if card_product and card_product != empty -%}
+{%- if card_variant and card_variant != empty -%}
   {%- liquid
     assign ratio = 1
-    if card_product.featured_media and media_aspect_ratio == 'portrait'
+    if card_variant.featured_media and media_aspect_ratio == 'portrait'
       assign ratio = 0.8
-    elsif card_product.featured_media and media_aspect_ratio == 'adapt'
-      assign ratio = card_product.featured_media.aspect_ratio
+    elsif card_variant.featured_media and media_aspect_ratio == 'adapt'
+      assign ratio = card_variant.featured_media.aspect_ratio
     endif
     if ratio == 0 or ratio == null
       assign ratio = 1
@@ -139,63 +141,63 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
       class="
         card
         card--{{ settings.card_style }}
-        {% if card_product.featured_media %} card--media{% else %} card--text{% endif %}
+        {% if card_variant.featured_media %} card--media{% else %} card--text{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
         {% if image_shape and image_shape != 'default' %} card--shape{% endif %}
         {% if extend_height %} card--extend-height{% endif %}
-        {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
+        {% if card_variant.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {% if horizontal_class %} card--horizontal{% endif %}
       "
       style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
     >
       <div
-        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_product.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
+        class="card__inner {% if settings.card_style == 'standard' %}color-{{ settings.card_color_scheme }} gradient{% endif %}{% if card_variant.featured_media or settings.card_style == 'standard' %} ratio{% endif %}"
         style="--ratio-percent: {{ 1 | divided_by: ratio | times: 100 }}%;"
       >
-        {%- if card_product.featured_media -%}
+        {%- if card_variant.featured_media -%}
           <div class="card__media{% if image_shape and image_shape != 'default' %} shape--{{ image_shape }} color-{{ settings.card_color_scheme }} gradient{% endif %}">
             <div class="media media--transparent media--hover-effect">
               {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
               <img
                 srcset="
-                  {%- if card_product.featured_media.width >= 165 -%}{{ card_product.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 360 -%}{{ card_product.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 533 -%}{{ card_product.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 720 -%}{{ card_product.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 940 -%}{{ card_product.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
-                  {%- if card_product.featured_media.width >= 1066 -%}{{ card_product.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
-                  {{ card_product.featured_media | image_url }} {{ card_product.featured_media.width }}w
+                  {%- if card_variant.featured_media.width >= 165 -%}{{ card_variant.featured_media | image_url: width: 165 }} 165w,{%- endif -%}
+                  {%- if card_variant.featured_media.width >= 360 -%}{{ card_variant.featured_media | image_url: width: 360 }} 360w,{%- endif -%}
+                  {%- if card_variant.featured_media.width >= 533 -%}{{ card_variant.featured_media | image_url: width: 533 }} 533w,{%- endif -%}
+                  {%- if card_variant.featured_media.width >= 720 -%}{{ card_variant.featured_media | image_url: width: 720 }} 720w,{%- endif -%}
+                  {%- if card_variant.featured_media.width >= 940 -%}{{ card_variant.featured_media | image_url: width: 940 }} 940w,{%- endif -%}
+                  {%- if card_variant.featured_media.width >= 1066 -%}{{ card_variant.featured_media | image_url: width: 1066 }} 1066w,{%- endif -%}
+                  {{ card_variant.featured_media | image_url }} {{ card_variant.featured_media.width }}w
                 "
-                src="{{ card_product.featured_media | image_url: width: 533 }}"
+                src="{{ card_variant.featured_media | image_url: width: 533 }}"
                 sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
-                alt="{{ card_product.featured_media.alt | escape }}"
+                alt="{{ card_variant.featured_media.alt | escape }}"
                 class="motion-reduce"
                 {% unless lazy_load == false %}
                   loading="lazy"
                 {% endunless %}
-                width="{{ card_product.featured_media.width }}"
-                height="{{ card_product.featured_media.height }}"
+                width="{{ card_variant.featured_media.width }}"
+                height="{{ card_variant.featured_media.height }}"
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
 
-              {%- if card_product.media[1] != null and show_secondary_image -%}
+              {%- if card_variant.media[1] != null and show_secondary_image -%}
                 <img
                   srcset="
-                    {%- if card_product.media[1].width >= 165 -%}{{ card_product.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 360 -%}{{ card_product.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 533 -%}{{ card_product.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 720 -%}{{ card_product.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 940 -%}{{ card_product.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
-                    {%- if card_product.media[1].width >= 1066 -%}{{ card_product.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
-                    {{ card_product.media[1] | image_url }} {{ card_product.media[1].width }}w
+                    {%- if card_variant.media[1].width >= 165 -%}{{ card_variant.media[1] | image_url: width: 165 }} 165w,{%- endif -%}
+                    {%- if card_variant.media[1].width >= 360 -%}{{ card_variant.media[1] | image_url: width: 360 }} 360w,{%- endif -%}
+                    {%- if card_variant.media[1].width >= 533 -%}{{ card_variant.media[1] | image_url: width: 533 }} 533w,{%- endif -%}
+                    {%- if card_variant.media[1].width >= 720 -%}{{ card_variant.media[1] | image_url: width: 720 }} 720w,{%- endif -%}
+                    {%- if card_variant.media[1].width >= 940 -%}{{ card_variant.media[1] | image_url: width: 940 }} 940w,{%- endif -%}
+                    {%- if card_variant.media[1].width >= 1066 -%}{{ card_variant.media[1] | image_url: width: 1066 }} 1066w,{%- endif -%}
+                    {{ card_variant.media[1] | image_url }} {{ card_variant.media[1].width }}w
                   "
-                  src="{{ card_product.media[1] | image_url: width: 533 }}"
+                  src="{{ card_variant.media[1] | image_url: width: 533 }}"
                   sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 130 | divided_by: 4 }}px, (min-width: 990px) calc((100vw - 130px) / 4), (min-width: 750px) calc((100vw - 120px) / 3), calc((100vw - 35px) / 2)"
                   alt=""
                   class="motion-reduce"
                   loading="lazy"
-                  width="{{ card_product.media[1].width }}"
-                  height="{{ card_product.media[1].height }}"
+                  width="{{ card_variant.media[1].width }}"
+                  height="{{ card_variant.media[1].height }}"
                 >
               {%- endif -%}
             </div>
@@ -205,15 +207,15 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
           <div class="card__information">
             <h3
               class="card__heading"
-              {% if card_product.featured_media == null and settings.card_style == 'standard' %}
-                id="title-{{ section_id }}-{{ card_product.id }}"
+              {% if card_variant.featured_media == null and settings.card_style == 'standard' %}
+                id="title-{{ section_id }}-{{ card_variant.id }}"
               {% endif %}
             >
               <a
-                href="{{ card_product.url }}"
-                id="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }}"
+                href="{{ card_variant.url }}"
+                id="StandardCardNoMediaLink-{{ section_id }}-{{ card_variant.id }}"
                 class="full-unstyled-link"
-                aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_product.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                aria-labelledby="StandardCardNoMediaLink-{{ section_id }}-{{ card_variant.id }} NoMediaStandardBadge-{{ section_id }}-{{ card_variant.id }}"
               >
                 {{ title | escape }} - {{color}}
               </a>
@@ -228,16 +230,16 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
       {% endif %}
     {% endfor %}
 
-     {% unless available contains card_product.options[cindex] %} 
+     {% unless available contains card_variant.options[cindex] %}
               <span
-                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_variant.id }}"
                 class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
               >
                 {{- 'products.product.sold_out' | t -}}
               </span>
-            {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+            {%- elsif card_variant.compare_at_price > card_variant.price and card_variant.available -%}
               <span
-                id="NoMediaStandardBadge-{{ section_id }}-{{ card_product.id }}"
+                id="NoMediaStandardBadge-{{ section_id }}-{{ card_variant.id }}"
                 class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
               >
                 {{- 'products.product.on_sale' | t -}}
@@ -249,16 +251,16 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
       <div class="card__content">
         <div class="card__information">
           <h3
-            class="card__heading{% if card_product.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
-            {% if card_product.featured_media or settings.card_style == 'card' %}
-              id="title-{{ section_id }}-{{ card_product.id }}"
+            class="card__heading{% if card_variant.featured_media or settings.card_style == 'standard' %} h5{% endif %}"
+            {% if card_variant.featured_media or settings.card_style == 'card' %}
+              id="title-{{ section_id }}-{{ card_variant.id }}"
             {% endif %}
           >
             <a
-              href="{{ card_product.url }}"
-              id="CardLink-{{ section_id }}-{{ card_product.id }}"
+              href="{{ card_variant.url }}"
+              id="CardLink-{{ section_id }}-{{ card_variant.id }}"
               class="full-unstyled-link"
-              aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
+              aria-labelledby="CardLink-{{ section_id }}-{{ card_variant.id }} Badge-{{ section_id }}-{{ card_variant.id }}"
             >
               {{ title | escape }} - {{color}}
             </a>
@@ -266,15 +268,15 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
           <div class="card-information">
             {%- if show_vendor -%}
               <span class="visually-hidden">{{ 'accessibility.vendor' | t }}</span>
-              <div class="caption-with-letter-spacing light">{{ card_product.vendor }}</div>
+              <div class="caption-with-letter-spacing light">{{ card_variant.vendor }}</div>
             {%- endif -%}
 
             <span class="caption-large light">{{ block.settings.description | escape }}</span>
 
-            {%- if show_rating and card_product.metafields.reviews.rating.value != blank -%}
+            {%- if show_rating and card_variant.metafields.reviews.rating.value != blank -%}
               {% liquid
                 assign rating_decimal = 0
-                assign decimal = card_product.metafields.reviews.rating.value.rating | modulo: 1
+                assign decimal = card_variant.metafields.reviews.rating.value.rating | modulo: 1
                 if decimal >= 0.3 and decimal <= 0.7
                   assign rating_decimal = 0.5
                 elsif decimal > 0.7
@@ -284,30 +286,30 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
               <div
                 class="rating"
                 role="img"
-                aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_product.metafields.reviews.rating.value, rating_max: card_product.metafields.reviews.rating.value.scale_max }}"
+                aria-label="{{ 'accessibility.star_reviews_info' | t: rating_value: card_variant.metafields.reviews.rating.value, rating_max: card_variant.metafields.reviews.rating.value.scale_max }}"
               >
                 <span
                   aria-hidden="true"
                   class="rating-star"
-                  style="--rating: {{ card_product.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_product.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
+                  style="--rating: {{ card_variant.metafields.reviews.rating.value.rating | floor }}; --rating-max: {{ card_variant.metafields.reviews.rating.value.scale_max }}; --rating-decimal: {{ rating_decimal }};"
                 ></span>
               </div>
               <p class="rating-text caption">
                 <span aria-hidden="true">
-                  {{- card_product.metafields.reviews.rating.value }} /
-                  {{ card_product.metafields.reviews.rating.value.scale_max -}}
+                  {{- card_variant.metafields.reviews.rating.value }} /
+                  {{ card_variant.metafields.reviews.rating.value.scale_max -}}
                 </span>
               </p>
               <p class="rating-count caption">
-                <span aria-hidden="true">({{ card_product.metafields.reviews.rating_count }})</span>
+                <span aria-hidden="true">({{ card_variant.metafields.reviews.rating_count }})</span>
                 <span class="visually-hidden">
-                  {{- card_product.metafields.reviews.rating_count }}
+                  {{- card_variant.metafields.reviews.rating_count }}
                   {{ 'accessibility.total_reviews' | t -}}
                 </span>
               </p>
             {%- endif -%}
 
-            {% render 'price', product: card_product, price_class: '' %}
+            {% render 'price', product: card_variant, price_class: '' %}
           </div>
         </div>
         {%- if show_quick_add -%}
@@ -328,7 +330,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
                   class="quick-add__submit button button--full-width button--secondary{% if horizontal_quick_add %} card--horizontal__quick-add animate-arrow{% endif %}"
                   aria-haspopup="dialog"
                   aria-labelledby="{{ product_form_id }}-submit title-{{ section_id }}-{{ card_product.id }}"
-                  data-product-url="{{ card_product.url }}"
+                  data-product-url="{{ card_variant.url }}"
                 >
                   {{ 'products.product.choose_options' | t }}
                   {%- if horizontal_quick_add -%}
@@ -350,20 +352,20 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
               <quick-add-modal id="QuickAdd-{{ card_product.id }}" class="quick-add-modal">
                 <div
                   role="dialog"
-                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_product.title | escape }}"
+                  aria-label="{{ 'products.product.choose_product_options' | t: product_name: card_variant.title | escape }}"
                   aria-modal="true"
                   class="quick-add-modal__content global-settings-popup"
                   tabindex="-1"
                 >
                   <button
-                    id="ModalClose-{{ card_product.id }}"
+                    id="ModalClose-{{ card_variant.id }}"
                     type="button"
                     class="quick-add-modal__toggle"
                     aria-label="{{ 'accessibility.close' | t }}"
                   >
                     {% render 'icon-close' %}
                   </button>
-                  <div id="QuickAddInfo-{{ card_product.id }}" class="quick-add-modal__content-info"></div>
+                  <div id="QuickAddInfo-{{ card_variant.id }}" class="quick-add-modal__content-info"></div>
                 </div>
               </quick-add-modal>
             {%- else -%}
@@ -378,7 +380,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
                   <input
                     type="hidden"
                     name="id"
-                    value="{{ card_product.selected_or_first_available_variant.id }}"
+                    value="{{ card_variant.selected_or_first_available_variant.id }}"
                     disabled
                   >
                   <button
@@ -425,16 +427,16 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
           </div>
         {%- endif -%}
         <div class="card__badge {{ settings.badge_position }}">
-          {%- if card_product.available == false -%}
+          {%- if card_variant.available == false -%}
             <span
-              id="Badge-{{ section_id }}-{{ card_product.id }}"
+              id="Badge-{{ section_id }}-{{ card_variant.id }}"
               class="badge badge--bottom-left color-{{ settings.sold_out_badge_color_scheme }}"
             >
               {{- 'products.product.sold_out' | t -}}
             </span>
-          {%- elsif card_product.compare_at_price > card_product.price and card_product.available -%}
+          {%- elsif card_variant.compare_at_price > card_variant.price and card_variant.available -%}
             <span
-              id="Badge-{{ section_id }}-{{ card_product.id }}"
+              id="Badge-{{ section_id }}-{{ card_variant.id }}"
               class="badge badge--bottom-left color-{{ settings.sale_badge_color_scheme }}"
             >
               {{- 'products.product.on_sale' | t -}}
@@ -453,7 +455,7 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
         card--text
         {% if extend_height %} card--extend-height{% endif %}
         {% if settings.card_style == 'card' %} color-{{ settings.card_color_scheme }} gradient{% endif %}
-        {% if card_product.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
+        {% if card_variant.featured_media == nil and settings.card_style == 'card' %} ratio{% endif %}
         {{ horizontal_class }}
       "
       style="--ratio-percent: 100%;"
@@ -489,7 +491,6 @@ In the `Snippets` folder create a new file called `card-product-variant` and add
     </div>
   </div>
 {%- endif -%}
-
 
 ```
 
