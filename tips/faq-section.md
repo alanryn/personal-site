@@ -317,7 +317,6 @@ fieldset {
 
 ```
 
-{% raw %}
 Now, within in your theme customizer, navigate to your new FAQ page (you may need to add it to your site's menu through `Online Store -> Navigation`) and the new FAQ section should be available to add to your page.  
 If you do not see it at first, just click `Add section` and look for FAQ in the list of available sections.
 
