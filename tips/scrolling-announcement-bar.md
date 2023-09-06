@@ -2,18 +2,22 @@
 title: Scrolling Announcement Bar Dawn Theme.
 description: Adding a scrolling announcement bar to header.
 date: "2023-04-03"
-tags: 
+tags:
   - announcement bar
   - dawn theme
   - scrolling marquee
 layout: layouts/post.njk
 ---
-Instructions to add a scrolling announcement bar to your header.  
+
+The Dawn theme now comes with a built-in option, available through the theme customizer, to display alternating announcement bars. This tutorial is still useful for older themes, and here's [another option](https://ionlyspeakliquid.beehiiv.com/p/speak-liquid-26-css-marquees).
+
+Instructions to add a scrolling announcement bar to your header.
 
 - Open the `announcement-bar.liquid` file in your `Sections` folder.
-- Update the code to this:  
+- Update the code to this:
 
 {% raw %}
+
 ```
 {%- for block in section.blocks -%}
   {%- case block.type -%}
@@ -53,8 +57,8 @@ Instructions to add a scrolling announcement bar to your header.
                     {% render 'icon-arrow' %}
                   {%- endif -%}
                 </li>
-        </ul>               
-               
+        </ul>
+
               </div>
           {%- if block.settings.link != blank -%}
             </a>
@@ -219,6 +223,7 @@ Instructions to add a scrolling announcement bar to your header.
 
 </style>
 ```
+
 {% endraw %}
 
 - Add your announcemnt messages in the theme customizer.

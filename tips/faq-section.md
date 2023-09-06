@@ -63,7 +63,7 @@ Next, create a file called `faq.liquid` in the `Sections` folder. Add the follow
   </div>
      {%endfor%}
 </div>
-
+{% raw %}
 {% schema %}
   {
     "name": "FAQ",
@@ -90,6 +90,7 @@ Next, create a file called `faq.liquid` in the `Sections` folder. Add the follow
   ]
 }
 {% endschema %}
+{% endraw %}
 
 <script>
 
