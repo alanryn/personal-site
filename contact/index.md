@@ -11,7 +11,7 @@ eleventyNavigation:
       <h1 class="fs-400">{{ title }}</h1>
       <p>A freelance frontend developer, specializing in Shopify. 
       I am currently working on <a href="https://www.thelocals.cc/">the-locals</a>, a cycling e-commerce start-up.</p>
-      <p>Does you Shopify site need some fixing?</p>
+      <p>Does your Shopify site need some fixing?</p>
       <p>I'm available for hire, on a retainer, for a one off project, or if you just want some free advice.</p>
   </div>
 
@@ -43,8 +43,6 @@ eleventyNavigation:
 </div>
 
 </div>
-
-
 
 <script>
     var form = document.getElementById("my-form");
