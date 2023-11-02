@@ -2,6 +2,8 @@
 title: Show All Product Color Variants on a Collection Page
 description: Display all the color variants for a single product on a collection page.
 date: 2023-06-16
+image: "/img/algae/algae10.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
 tags:
   - color variants
   - collections

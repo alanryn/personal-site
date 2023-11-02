@@ -1,6 +1,8 @@
 ---
 title: Adding a Customized Size Swatch
 date: 2020-12-30
+image: "/img/algae/algae11.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
 tags:
   - size selector
 layout: layouts/post.njk

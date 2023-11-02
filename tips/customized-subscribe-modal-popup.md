@@ -1,6 +1,8 @@
 ---
 title: A customized subscribe modal popup.
 myurl: one
+image: "/img/algae/algae1.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
 description: Add a customizable pop-up dialog.
 date: 2021-05-25
 layout: layouts/post.njk

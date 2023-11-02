@@ -6,8 +6,34 @@ eleventyNavigation:
   order: 1
 ---
 
-  <div style="margin-bottom:1rem;" class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <h1 class="fs-400">Shopify Tutorials</h1>
+  <div style="font-weight: var(--font-weight-9);margin-bottom:1rem;padding:2rem; text-align: center; line-height: 1.6;border: 1px solid var(--brand3);
+  background-color: var(--surface3);
+  box-shadow: 0px 0px 20px 5px var(--surface4);
+  border-radius: 1.25rem;">
+    <h1 class="fs-500">Shopify Tutorials</h1>
     </div>
 {% set postslist = collections.posts %}
 {% include "postslist.njk" %}
+<script>
+  const imgTargets = document.querySelectorAll('img[data-src]');
+  console.log(imgTargets)
+  const loadImg = function (entries, observer) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.src = entry.target.dataset.src;
+        entry.target.addEventListener("load", function () {
+          entry.target.classList.remove("lazy-img");
+          observer.unobserve(entry.target)
+        });
+      });
+      
+    };
+  const imgObserver = new IntersectionObserver(loadImg, 
+  {
+  root:null,
+  threshold: 0,
+  rootMargin: '200px',
+  }
+);
+imgTargets.forEach(img => imgObserver.observe(img));
+</script>

@@ -2,6 +2,8 @@
 title: Scrolling Announcement Bar Dawn Theme.
 description: Adding a scrolling announcement bar to header.
 date: "2023-04-03"
+image: "/img/algae/algae13.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
 tags:
   - announcement bar
   - dawn theme

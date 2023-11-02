@@ -3,6 +3,8 @@ title: Adding FAQ Page to Shopify 2.0 Themes.
 myurl: three
 description: How to add an accessible faq section to a Shopify 2.0 theme.
 date: "2022-01-16"
+image: "/img/algae/algae14.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
 tags:
   - faq
 layout: layouts/post.njk

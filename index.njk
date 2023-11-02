@@ -4,7 +4,7 @@ layout: layouts/home.njk
 ---
 
 <div class="flow">
-  <section class="flow tagline">
+  <section style="min-height:75vh; background-image:url('/img/moon2.jpg'); color:var(--stone-1);" class="flow tagline">
     <h1 class="fs-500 ff-sans uppercase">
       <p>Shopify Solutions</p>
     </h1>
@@ -14,18 +14,35 @@ layout: layouts/home.njk
 </div>
 
 <section style="margin-top: 2rem;">
-    {% set maxPosts = collections.posts.length | min(5) %}
-    {% set postslist = collections.posts | head(-5) %}
+    {% set maxPosts = collections.posts.length %}
+    {% set postslist = collections.posts %}
     {% set postslistCounter = collections.posts | length %}
-      <div style="margin-bottom:1rem;" class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <h1 class="fs-400">Latest Shopify Tutorials</h1>
+      <div style="font-weight: var(--font-weight-9);margin-bottom:1rem;padding:2rem; text-align: center; line-height: 1.6; background-color: var(--surface3);
+  box-shadow: 0px 0px 20px 5px var(--surface4);
+  border-radius: 1.25rem;">
+    <h1 class="fs-500">Latest Shopify Tutorials</h1>
     </div>
     {% include "postslist.njk" %}
-
-    <div style="margin-top:1rem;" class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
-    <a class="postlist-link" href="{{ '/tips/' | url }}">All the Shopify tutorials are here</a>
-    </div>
 </section>
 
-
+<script>
+  const imgTargets = document.querySelectorAll('img[data-src]');
+  console.log(imgTargets)
+  const loadImg = function (entries, observer) {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.src = entry.target.dataset.src;
+        entry.target.addEventListener("load", function () {
+          entry.target.classList.remove("lazy-img");
+        });
+      });
+    };
+  const imgObserver = new IntersectionObserver(loadImg, 
+  {
+  root:null,
+  threshold: 0,
+  }
+);
+imgTargets.forEach(img => imgObserver.observe(img));
+</script>
 

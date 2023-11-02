@@ -2,13 +2,15 @@
 title: Waiting List for Sold Out Products Dawn Theme.
 description: Adding a waiting list button to a product page.
 date: "2022-03-04"
-tags: 
+image: "/img/algae/algae18.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
+tags:
   - waiting list
   - dawn theme
 layout: layouts/post.njk
 ---
 
-How to include a waiting list option for your sold out items. 
+How to include a waiting list option for your sold out items.
 
 See the result [here](https://sunny-day-umbrellas.myshopify.com/products/bright-umbrella)
 
@@ -19,7 +21,8 @@ Method #1:
 - Create a new snippet called `waiting-list.liquid` in the `Snippets` folder.
 
 - Add the following code:
-{% raw %}
+  {% raw %}
+
 ```
 {% assign out_of_stock = false %}
 {% for variant in product.variants %}
@@ -92,12 +95,14 @@ ready(() => {
 </style>
 
 ```
+
 {% endraw %}
 
 - Open the `main-product.liquid` section file.
 
-- Add {% raw %}```{% render 'waiting-list' %}```{% endraw %} to the code. I added it after the "Share" button, like this:
-{% raw %}
+- Add {% raw %}`{% render 'waiting-list' %}`{% endraw %} to the code. I added it after the "Share" button, like this:
+  {% raw %}
+
 ```
 </share-button>
 <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
@@ -105,6 +110,7 @@ ready(() => {
 {% render 'waiting-list' %}
 
 ```
+
 {% endraw %}
 Now, when a product has an unavailable variant, an `Item out of stock?` link should appear on the product page just below the share button.
 

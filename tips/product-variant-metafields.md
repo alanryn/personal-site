@@ -3,6 +3,8 @@ title: Adding Metafields to Product Variants for Dawn Theme.
 myurl: product variant metafields
 description: Add variant metafields that update as you select different variant options.
 date: "2022-01-07"
+image: "/img/algae/algae9.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
 tags:
   - variant metafields
   - dawn

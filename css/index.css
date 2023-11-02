@@ -3,10 +3,10 @@
 /* Defaults */
 
 html {
-  --brand-light1: var(--violet-6);
-  --brand-light2: var(--violet-7);
-  --brand-light3: var(--violet-8);
-  --brand-light4: var(--violet-9);
+  --brand-light1: var(--orange-6);
+  --brand-light2: var(--orange-7);
+  --brand-light3: var(--orange-8);
+  --brand-light4: var(--orange-9);
 
   --text1-light: var(--stone-8);
   --text2-light: var(--stone-7);
@@ -17,10 +17,10 @@ html {
   --surface4-light: var(--stone-3);
 }
 html {
-  --brand-dark1: var(--violet-4);
-  --brand-dark2: var(--violet-3);
-  --brand-dark3: var(--violet-2);
-  --brand-dark4: var(--violet-1);
+  --brand-dark1: var(--orange-4);
+  --brand-dark2: var(--orange-3);
+  --brand-dark3: var(--orange-2);
+  --brand-dark4: var(--orange-1);
 
   --text1-dark: var(--stone-1);
   --text2-dark: var(--stone-3);
@@ -189,7 +189,7 @@ pre,
 code {
   font-family: var(--ff-code);
   line-height: 1.5;
-  /* background-color: violet; */
+  /* background-color: orange; */
 }
 
 pre {
@@ -379,8 +379,8 @@ p a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 1px solid var(--brand4);
-  border-left: 1px solid var(--brand4);
+  /* border-right: 1px solid var(--brand4);
+  border-left: 1px solid var(--brand4); */
   padding-inline: 1rem;
   /* box-shadow: 0px 0px 20px 5px var(--surface4);  */
   border-radius: 1.25rem;
@@ -402,8 +402,8 @@ p a:hover {
   justify-content: space-around;
   min-height: 60px;
   margin-top: 2rem;
-  border-bottom: 1px solid var(--brand4);
-  border-top: 1px solid var(--brand4);
+  /* border-bottom: 1px solid var(--brand4);
+  border-top: 1px solid var(--brand4); */
   background-color: var(--surface3);
   box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
@@ -436,8 +436,8 @@ p a:hover {
   flex-wrap: wrap;
   align-items: baseline;
   line-height: 1.6;
-  border: 1px solid var(--brand3);
-  padding: 2rem;
+  /* border: 1px solid var(--brand3); */
+  /* padding: 2rem; */
   background-color: var(--surface3);
   box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
@@ -481,7 +481,7 @@ p a:hover {
   gap: var(--size-2);
   margin: auto;
   padding: 1rem;
-  border: 1px solid var(--brand3);
+  /* border: 1px solid var(--brand3); */
   background-color: var(--surface3);
   box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
@@ -500,7 +500,7 @@ textarea {
 }
 .contact-form input:focus,
 textarea:focus {
-  border-color: var(--violet-3);
+  border-color: var(--orange-3);
 }
 .contact-form input:focus,
 textarea:focus {
@@ -534,15 +534,15 @@ button.contact-btn {
   /* padding-inline: var(--size-6);
   padding-block: var(--size-3); */
   padding: var(--size-3) var(--size-6);
-  color: var(--violet-8);
-  border: var(--border-size-2) solid var(--violet-5);
+  color: var(--orange-8);
+  border: var(--border-size-2) solid var(--orange-5);
   background-color: transparent;
   border-radius: var(--radius-2);
 }
 button.contact-btn:hover {
   cursor: pointer;
-  color: var(--violet-0);
-  background-color: var(--violet-5);
+  color: var(--orange-0);
+  background-color: var(--orange-5);
 }
 
 /* contact page links*/
@@ -566,7 +566,7 @@ button.contact-btn:hover {
 }
 .contacts-li a:hover,
 .contacts-li a:focus {
-  color: var(--violet-6);
+  color: var(--orange-6);
 }
 .contacts-li a:focus {
   outline: 2px dotted;
@@ -697,12 +697,12 @@ button.contact-btn:hover {
 }
 
 .tagline {
-  grid-column: 1/-1;
-  display: grid;
-  place-content: center;
+  /* grid-column: 1/-1; */
+  /* display: grid; */
+  /* place-content: center; */
   text-align: center;
-  border: 1px solid var(--brand4);
-  background-color: var(--surface3);
+  /* border: 1px solid var(--brand4); */
+  /* background-color: var(--surface3); */
   padding: 1rem;
   box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
@@ -717,15 +717,16 @@ button.contact-btn:hover {
 }
 
 .posts {
-  --min: 20rem;
+  --min: 15rem;
   --gap: 1rem;
-  display: flex;
-  flex-wrap: wrap;
+  /* display: flex;
+  flex-wrap: wrap; */
+  display: grid;
   gap: var(--gap);
-  /* grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--min)), 1fr));
 }
 .posts .postlist-item {
-  flex: 1 1 var(--min);
+  /* flex: 1 1 var(--min); */
 }
 
 /* testimonial page */
@@ -829,4 +830,7 @@ button.contact-btn:hover {
 }
 
 .testimonial > p:last-of-type {
+}
+.lazy-img {
+  filter: blur(20px);
 }

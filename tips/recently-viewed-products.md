@@ -3,6 +3,8 @@ title: Display Recently Viewed Products Without App or jQuery.
 myurl: six
 description: Show your recently viewed products without using an app or jquery.
 date: "2022-09-16"
+image: "/img/algae/algae5.jpg"
+image_low_res: "/img/algae/algae1-low.jpg"
 tags:
   - Recently Viewed Products
 layout: layouts/post.njk
