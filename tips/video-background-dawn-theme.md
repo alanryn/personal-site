@@ -2,8 +2,8 @@
 title: Adding a Video Background to Dawn Theme.
 description: Add a fullscreen background video to the Dawn theme.
 date: 2022-06-02
-image: "/img/algae/algae16.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image: "/img/moon/moon2.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 tags:
   - video background
   - dawn

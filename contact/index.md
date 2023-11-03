@@ -7,62 +7,18 @@ eleventyNavigation:
 ---
 
 <div class="contact">
-  <div style="padding: 1rem" class="postlist-item flow">
+  <div style="padding: 1rem; background-image:url('/img/moon1.jpg'); color: var(--stone-1);opacity:0.8;" class="postlist-item flow">
       <h1 class="fs-400">{{ title }}</h1>
       <p>A freelance frontend developer, specializing in Shopify. 
-      I am currently working on <a href="https://www.thelocals.cc/">the-locals</a>, a cycling e-commerce start-up.</p>
+      I am currently working on <a style="color:var(--brand1)" href="https://www.thelocals.cc/">the-locals</a>, a cycling e-commerce start-up.</p>
       <p>Does your Shopify site need some fixing?</p>
       <p>I'm available for hire, on a retainer, for a one off project, or if you just want some free advice.</p>
-  </div>
-
-<div>
-  <form id="my-form" class="contact-form" name="contact" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact" />
-  <label style="margin-top:0" for="inputName">Name</label>
-  <input type="text"   
-         name="name" 
-         id="inputName" 
-         placeholder="Enter your name"
-         required="required">
-  </input>
-  <label for="inputEmail" required="required">Email Address</label>
-  <input type="email" 
-         name="email"
-         id="inputEmail" 
-         placeholder="Enter your email address">
-  </input>
-  <label for="message">Your Message</label>            
-  <textarea
-          rows="5" 
-          name="message" 
-          id="message" 
-          placeholder="Add your message here" required=""></textarea>
-  <button class="contact-btn" type="submit">Send</button>
-<p id="my-form-status"></p>
-</form>
+      <p>Email: <span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span>al.limerick@gmail.com</p>
+</div>
 </div>
 
-</div>
-
-<script>
-    var form = document.getElementById("my-form");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        status.innerHTML = "Thanks. I will get back to you soon.";
-        form.reset()
-      }).catch(error => {
-        status.innerHTML = "Sorry! There was a problem submitting your form, try again"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
-</script>
+<style>
+  span.blockspam {
+  display: none;
+}
+</style>

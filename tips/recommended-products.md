@@ -3,8 +3,8 @@ title: Custom Recommended Products Section
 myurl: four
 description: Setting your own recommended products for a particular product.
 date: 2022-09-16
-image: "/img/algae/algae4.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image: "/img/moon/moon11.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 tags:
   - recommended products
 layout: layouts/post.njk

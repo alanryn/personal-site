@@ -483,8 +483,8 @@ p a:hover {
   padding: 1rem;
   /* border: 1px solid var(--brand3); */
   background-color: var(--surface3);
-  box-shadow: 0px 0px 20px 5px var(--surface4);
-  border-radius: 1.25rem;
+  /* box-shadow: 0px 0px 20px 5px var(--surface4);
+  border-radius: 1.25rem; */
 }
 .contact-form input,
 textarea {

@@ -3,8 +3,8 @@ title: Shopify Resources
 myurl: seven
 description: Some useful shopify development resources.
 date: 2021-06-04
-image: "/img/algae/algae2.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image: "/img/moon/moon12.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 layout: layouts/post.njk
 ---
 

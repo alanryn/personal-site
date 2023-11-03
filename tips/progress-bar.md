@@ -2,8 +2,8 @@
 title: Cart Progress Bar Dawn Theme.
 description: Adding a progress bar to shopping cart.
 date: "2023-01-02"
-image: "/img/algae/algae17.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image: "/img/moon/moon9b.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 tags:
   - progress bar
   - dawn theme

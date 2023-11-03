@@ -3,8 +3,8 @@ title: Customized Menu for Logged-in Users Dawn Themes.
 myurl: five
 description: Provide customized content for logged-in customers.
 date: 2022-03-01
-image: "/img/algae/algae15.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image: "/img/moon/moon8a.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 tags:
   - menu
   - dawn

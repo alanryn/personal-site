@@ -1,8 +1,8 @@
 ---
 title: Color swatch linking to other products
 date: 2022-08-30
-image: "/img/algae/algae12.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image: "/img/moon/moon5.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 tags:
   - colors
   - product list metafields

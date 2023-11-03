@@ -2,8 +2,8 @@
 title: Waiting List for Sold Out Products Dawn Theme.
 description: Adding a waiting list button to a product page.
 date: "2022-03-04"
-image: "/img/algae/algae18.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image: "/img/moon/moon3.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 tags:
   - waiting list
   - dawn theme
