@@ -4,7 +4,7 @@ myurl: product variant metafields
 description: Add variant metafields that update as you select different variant options.
 date: "2022-01-07"
 image: "/img/moon/moon9.jpg"
-image_low_res: "/img/algae/algae1-low.jpg"
+image_low_res: "/img/moon/moon-low-res.jpg"
 tags:
   - variant metafields
   - dawn
