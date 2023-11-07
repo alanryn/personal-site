@@ -16,9 +16,3 @@ eleventyNavigation:
       <p>Email: <span class="blockspam" aria-hidden="true">PLEASE GO AWAY!</span>al.limerick@gmail.com</p>
 </div>
 </div>
-
-<style>
-  span.blockspam {
-  display: none;
-}
-</style>

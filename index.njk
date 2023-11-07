@@ -1,10 +1,11 @@
 ---
 layout: layouts/home.njk
-
+tags: 
+  - home
 ---
 
 <div class="flow">
-  <section style="min-height:75vh; background-image:url('/img/moon2.jpg'); color:var(--stone-1);opacity:0.8" class="flow tagline">
+  <section style="min-height:75vh; background-image:url('/img/moon2.jpg'); color:var(--stone-1);" class="flow tagline">
     <h1 class="fs-500 ff-sans uppercase">
       <p>Shopify Solutions</p>
     </h1>
@@ -13,17 +14,62 @@ layout: layouts/home.njk
   </section>
 </div>
 
-<section style="margin-top: 2rem;">
-    {% set maxPosts = collections.posts.length %}
-    {% set postslist = collections.posts %}
+<section class="section" style="margin-top: 2rem;" id="work">
+    <div class="section-title">
+     <h1 class="fs-500">Latest Work</h1>
+    </div>
+<div class="posts flow--space-small">
+
+              <div class=" postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+                  <img style="border-radius:1.25rem 1.25rem 0 0; aspect-ratio: 3/2; object-fit: cover; width: 100%;" 
+                  src="/img/moon/moon-low-res.jpg" data-src="/img/The-Locals.png" class="lazy-img">
+                  <a style="padding:1rem" href="https://www.thelocals.cc/" class="postlist-link">The Locals</a>
+                  <p style="padding:0 1rem 1rem 1rem">A community based equitable retail model for independent bike shops</p>
+              </div>
+
+              <div class="postlist-item{% if post.url == url %} postlist-item-active{% endif %}">
+                <img style="border-radius:1.25rem 1.25rem 0 0; aspect-ratio: 3/2; object-fit: cover; width: 100%;" 
+                src="/img/moon/moon-low-res.jpg" data-src="/img/The-Skin-Plan.png" class="lazy-img">
+                <a style="padding:1rem" href="https://theskinplan.es" class="postlist-link">The Skin Plan</a>
+                <p style="padding:0 1rem 1rem 1rem">Specialist skin care from the comfort of your own home.</time>
+              </div>
+</div>
+</section>
+
+<section class="section" style="margin-top: 2rem;" id="tutorials">
+  {% set maxPosts = collections.posts.length | min(3) %}
+    {% set postslist = collections.posts | head(-3) %}
     {% set postslistCounter = collections.posts | length %}
-      <div style="font-weight: var(--font-weight-9);margin-bottom:1rem;padding:2rem; text-align: center; line-height: 1.6; background-color: var(--surface3);
-  box-shadow: 0px 0px 20px 5px var(--surface4);
-  border-radius: 1.25rem;">
+      <div class="section-title" style="">
     <h1 class="fs-500">Latest Shopify Tutorials</h1>
     </div>
     {% include "postslist.njk" %}
+   <p style="text-align:center;margin-top:2rem;"><a class="more-btn" href="/tips">More &rarr;</a></p>
 </section>
+<section class="section" style="margin-top: 3rem;" id="contact">
+        <div class="section-title">
+    <h1 class="fs-500">Contact</h1>
+    </div>
+<div class="contact">
+  <div style="padding: 1rem; background-image:url('/img/moon1.jpg'); color: var(--stone-1);opacity:0.8;" class="postlist-item flow">
+      <h1 class="fs-400">{{ title }}</h1>
+      <p>A freelance frontend developer, specializing in Shopify. 
+      I am currently working on <a style="color:var(--brand1)" href="https://www.thelocals.cc/">the-locals</a>, a cycling e-commerce start-up.</p>
+      <p>Does your Shopify site need some fixing?</p>
+      <p>I'm available for hire, on a retainer, for a one-off project, or if you just want some free advice.</p>
+      <div style="display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem auto;">
+        <div><a class="more-btn" style="color:var(--stone1)" href="mailto:al.limerick@gmail.com">Email</a></div>
+        <div><a class="more-btn" style="color:var(--stone1)" href="https://www.linkedin.com/in/alanryandev/">LinkedIn</a></div>
+        <div><a class="more-btn" style="color:var(--stone1)" href="https://community.shopify.com/c/user/viewprofilepage/user-id/340403">Shopify</a></div>
+      </div>
+</div>
+</div>
+</section>
+
 
 <script>
   const imgTargets = document.querySelectorAll('img[data-src]');
@@ -44,5 +90,23 @@ layout: layouts/home.njk
   }
 );
 imgTargets.forEach(img => imgObserver.observe(img));
+
+// Reveal sections
+const allSections = document.querySelectorAll('.section');
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});
 </script>
 

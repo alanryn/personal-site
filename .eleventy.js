@@ -48,7 +48,9 @@ module.exports = function (eleventyConfig) {
 
   function filterTagList(tags) {
     return (tags || []).filter(
-      (tag) => ["all", "nav", "post", "posts", "projects"].indexOf(tag) === -1
+      (tag) =>
+        ["all", "nav", "post", "posts", "project", "projects"].indexOf(tag) ===
+        -1
     );
   }
 
