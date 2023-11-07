@@ -9,6 +9,7 @@ pagination:
     - posts
     - tagList
     - projects
+    - project
   addAllPagesToCollections: true
 layout: layouts/home.njk
 eleventyComputed:
@@ -19,5 +20,6 @@ permalink: /tags/{{ tag | slugify }}/
 
 {% set postslist = collections[ tag ] %}
 {% include "postslist.njk" %}
-
+{% set projectslist = collections[ tag ] %}
+{% include "projectslist.njk" %}
 <p>See <a style="color:var(--text1)" href="{{ '/tags/' | url }}">all tags</a>.</p>
