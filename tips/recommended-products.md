@@ -4,7 +4,8 @@ myurl: four
 description: Setting your own recommended products for a particular product.
 date: 2022-09-16
 image: "/img/moon/moon11.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon11-low-res.jpg"
+alt: "moon landscape"
 tags:
   - recommended products
 layout: layouts/post.njk

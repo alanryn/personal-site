@@ -2,7 +2,8 @@
 title: Adding a Customized Size Swatch
 date: 2020-12-30
 image: "/img/moon/moon4.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon4-low-res.jpg"
+alt: "moon landscape"
 tags:
   - size selector
 layout: layouts/post.njk

@@ -4,7 +4,8 @@ myurl: five
 description: Provide customized content for logged-in customers.
 date: 2022-03-01
 image: "/img/moon/moon8a.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon8a-low-res.jpg"
+alt: "moon landscape"
 tags:
   - menu
   - dawn

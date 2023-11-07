@@ -4,7 +4,8 @@ myurl: three
 description: How to add an accessible faq section to a Shopify 2.0 theme.
 date: "2022-01-16"
 image: "/img/moon/moon8.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon8-low-res.jpg"
+alt: "moon landscape"
 tags:
   - faq
 layout: layouts/post.njk

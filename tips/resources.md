@@ -4,7 +4,8 @@ myurl: seven
 description: Some useful shopify development resources.
 date: 2021-06-04
 image: "/img/moon/moon12.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon12-low-res.jpg"
+alt: "moon landscape"
 layout: layouts/post.njk
 ---
 

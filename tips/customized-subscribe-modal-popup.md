@@ -2,7 +2,8 @@
 title: A customized subscribe modal popup.
 myurl: one
 image: "/img/moon/moon7.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon7-low-res.jpg"
+alt: "moon landscape"
 description: Add a customizable pop-up dialog.
 date: 2021-05-25
 layout: layouts/post.njk

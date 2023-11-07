@@ -4,7 +4,8 @@ myurl: six
 description: Show your recently viewed products without using an app or jquery.
 date: "2022-09-16"
 image: "/img/moon/moon10.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon10-low-res.jpg"
+alt: "moon landscape"
 tags:
   - Recently Viewed Products
 layout: layouts/post.njk

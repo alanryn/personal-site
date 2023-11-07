@@ -3,7 +3,8 @@ title: Show All Product Color Variants on a Collection Page
 description: Display all the color variants for a single product on a collection page.
 date: 2023-06-16
 image: "/img/moon/moon6.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon6-low-res.jpg"
+alt: "moon landscape"
 tags:
   - color variants
   - collections

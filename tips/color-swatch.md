@@ -2,7 +2,8 @@
 title: Color swatch linking to other products
 date: 2022-08-30
 image: "/img/moon/moon5.jpg"
-image_low_res: "/img/moon/moon-low-res.jpg"
+image_low_res: "/img/moon/moon5-low-res.jpg"
+alt: "moon landscape"
 tags:
   - colors
   - product list metafields
