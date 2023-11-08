@@ -807,3 +807,10 @@ span.blockspam {
   box-shadow: 0px 0px 20px 5px var(--surface4);
   border-radius: 1.25rem;
 }
+.list-img {
+  border-radius: 1.25rem 1.25rem 0 0;
+  aspect-ratio: 3/2;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
