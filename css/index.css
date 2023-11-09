@@ -22,13 +22,13 @@ html {
   --brand-dark3: var(--orange-2);
   --brand-dark4: var(--orange-1);
 
-  --text1-dark: var(--stone-1);
-  --text2-dark: var(--stone-3);
+  --text1-dark: var(--stone-8);
+  --text2-dark: var(--stone-7);
 
-  --surface1-dark: var(--stone-9);
-  --surface2-dark: var(--stone-8);
-  --surface3-dark: var(--stone-7);
-  --surface4-dark: var(--stone-6);
+  --surface1-dark: var(--stone-2);
+  --surface2-dark: var(--stone-0);
+  --surface3-dark: var(--stone-1);
+  --surface4-dark: var(--stone-3);
 }
 :root {
   --brand1: var(--brand-light1);
@@ -46,10 +46,10 @@ html {
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --brand1: var(--brand-dark1);
-    --brand2: var(--brand-dark2);
-    --brand3: var(--brand-dark3);
-    --brand4: var(--brand-dark4);
+    --brand1: var(--brand-dark9);
+    --brand2: var(--brand-dark8);
+    --brand3: var(--brand-dark7);
+    --brand4: var(--brand-dark6);
 
     --text1: var(--text1-dark);
     --text2: var(--text2-dark);
@@ -417,7 +417,7 @@ p a:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  background: hsl(0 0% 100% / 0.1);
+  background-color: var(--surface3);
   backdrop-filter: blur(1rem);
   font-weight: 900;
 }
