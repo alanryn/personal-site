@@ -3,7 +3,7 @@ title: Cart Progress Bar Dawn Theme.
 description: Adding a progress bar to shopping cart.
 date: "2023-01-02"
 image: "/img/moon/moon9b.jpg"
-image_low_res: "/img/moon/moon-9b-low-res.jpg"
+image_low_res: "/img/moon/moon9b-low-res.jpg"
 alt: "moon landscape"
 tags:
   - progress bar
