@@ -1,7 +1,0 @@
-<ul class="postlist flow flow--space-small">
-{% for project in projectslist %}
-  <li class="postlist-item{% if project.url == url %} postlist-item-active{% endif %}">
-    <a href="{{ project.url | url }}" class="postlist-link">{% if project.data.title %}{{ project.data.title }}{% else %}<code>{{ project.url }}</code>{% endif %}</a>
-  </li>
-{% endfor %}
-</ul>
