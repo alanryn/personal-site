@@ -1,7 +1,7 @@
 ---
 title: Adding a Video Background to Dawn Theme.
 description: Add a fullscreen background video to the Dawn theme.
-date: 2022-06-02
+date: 2024-04-09
 image: "/img/moon/moon2.jpg"
 image_low_res: "/img/moon/moon2-low-res.jpg"
 alt: "moon landscape"
@@ -19,6 +19,7 @@ Add the following code:
 {% raw %}
 
 ```
+<div class="isolate">
 <div class="hero">
   <div>
   <h1>{{ section.settings.heading }}</h1>
@@ -28,20 +29,26 @@ Add the following code:
   	<source src={{ section.settings.video_url }} type='video/mp4'>
   </video>
 </div>
-
+</div>
 {% schema %}
   {
-    "name": "Video Background Banner",
+    "name": "tsp Video Background",
     "settings": [
       {
       "type": "text",
       "id": "heading",
       "label": "Overlay text"
     },
+     {
+        "type":"checkbox",
+        "id": "blur_behind_text",
+        "label": "Add blur behind text to make more readable",
+        "default": false
+      },
       {
       "type": "url",
       "id": "video_url",
-      "label": "Enter the video url here"
+      "label": "Enter the video url here (link to mp4 file uploaded to Shopify files)"
     },
     {
       "type": "image_picker",
@@ -80,7 +87,7 @@ Add the following code:
 ],
   "presets": [
     {
-      "name": "Video Background Banner"
+      "name": "tsp Video Background"
     }
   ]
   }
@@ -108,13 +115,16 @@ Add the following code:
     position: relative;
     overflow: hidden;
   }
+{% if section.settings.blur_behind_text %}
 .hero div {
     padding: 1.5em;
     background: hsl(0 100% 100% / 25%);
     backdrop-filter: blur(10px);
   }
+{% endif %}
 
 </style>
+
 
 
 
